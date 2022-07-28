@@ -31,7 +31,7 @@ onEvent("item.registry", event => {
 	}
 	let initMechanisms = () => {
 		registerMechanism("Kinetic", "动力")
-		registerMechanism("Sealed", "气密")
+		registerMechanism("Sealed", "密封")
 		registerMechanism("Infernal", "酷热")
 		registerMechanism("Inductive", "超频")
 		registerMechanism("Abstruse", "深邃")
@@ -47,7 +47,7 @@ onEvent("item.registry", event => {
 			.displayName(localName)
 	}
 	let initMachineParts = () => {
-		registerMachinePart("Saw Blade", "锯盘")
+		registerMachinePart("Saw Blade", "锯片")
 	}
 
 //	Tools
@@ -79,22 +79,22 @@ onEvent("item.registry", event => {
 			.displayName(localName)
 	}
 	let initTypicalItems = () => {
-		registerTypicalItem("Stone Rod", "石棒")
-		registerTypicalItem("Rubber", "生橡胶")
-		registerTypicalItem("Cured Rubber", "橡胶")
+		registerTypicalItem("Stone Rod", "石棍")
+		registerTypicalItem("Rubber", "橡胶")
+		registerTypicalItem("Cured Rubber", "硫化橡胶")
 
 		event.create("screwdriver")
 			.texture(modpackId + ":item/screwdriver")
 			.displayName("强化螺丝刀")
 			.maxDamage(64)
 
-		registerTypicalItem("Invar Ingot", "因瓦合金锭")
+		registerTypicalItem("Invar Ingot", "殷钢锭")
 		registerTypicalItem("Nickel Ingot", "镍锭")
 		registerTypicalItem("Nickel Nugget", "镍粒")
 		registerTypicalItem("Enderium Ingot", "末影合金锭")
 		registerTypicalItem("Nickel Compound", "镶边镍锭")
-		registerTypicalItem("Invar Compound", "镶边因瓦合金锭")
-		registerTypicalItem("Silicon Compound", "镶边银锭")
+		registerTypicalItem("Invar Compound", "殷钢混合物")
+		registerTypicalItem("Silicon Compound", "含硅化合物")
 
 		registerTypicalItem("Ruby", "红宝石")
 		registerTypicalItem("Sapphire", "蓝宝石")
@@ -102,10 +102,10 @@ onEvent("item.registry", event => {
 		registerTypicalItem("Gold Coin", "金币")
 		registerTypicalItem("Silver Coin", "银币")
 
-		registerTypicalItem("Sand Ball", "沙团")
-		registerTypicalItem("Coke Chunk", "沉甸焦炭")
+		registerTypicalItem("Sand Ball", "沙球")
+		registerTypicalItem("Coke Chunk", "小块焦炭")
 		registerTypicalItem("Rough Sand", "粗沙")
-		registerTypicalItem("Purified Sand", "细沙")
+		registerTypicalItem("Purified Sand", "高纯沙")
 
 		registerTypicalItem("Emerald Dust", "绿宝石粉")
 		registerTypicalItem("Diamond Dust", "钻石粉")
@@ -133,7 +133,7 @@ onEvent("item.registry", event => {
 
 		event.create("incomplete_coke_chunk")
 			.texture(modpackId + ":item/incomplete_coke_chunk")
-			.displayName("沉甸焦炭半成品")
+			.displayName("小块焦炭（未完成）")
 
 		event.create("raw_logic_sheet")
 			.texture(modpackId + ":item/raw_logic_sheet")
@@ -297,7 +297,7 @@ onEvent("block.registry", event => {
 			.tagBlock("create:wrench_pickup")
 			.tagBlock("minecraft:mineable/pickaxe")
 	}
-	registerCasing("Invar", "因瓦合金")
+	registerCasing("Invar", "殷钢")
 	registerCasing("Fluix", "福鲁伊克斯")
 	registerCasing("Zinc", "锌")
 	registerCasing("Enderium", "末影合金")
@@ -368,8 +368,8 @@ onEvent("block.registry", event => {
 	reagent(0x32333D, 0x5C5C5C, "basalt", "Basalt", "§7玄武岩§r", "minecraft:basalt")
 	reagent(0x6B5D4F, 0x7D6B5A, "limestone", "Limestone", "§7石灰岩§r", "create:limestone")
 	category()
-	reagent(0xD30000, 0xB80F0A, "red", "Crimson", "§4烟栗§r", "minecraft:red_dye")
-	reagent(0xFC6600, 0xb1560f, "orange", "Orange", "§6赭石§r", "minecraft:orange_dye")		//	biomesoplenty:burning_blossom
+	reagent(0xD30000, 0xB80F0A, "red", "Crimson", "§4绯红§r", "minecraft:red_dye")
+	reagent(0xFC6600, 0xb1560f, "orange", "Orange", "§6橙色§r", "minecraft:orange_dye")		//	biomesoplenty:burning_blossom
 	reagent(0xFFF200, 0xdba520, "yellow", "Goldenrod", "§e藤黄§r", "minecraft:yellow_dye")	//	biomesoplenty:goldenrod
 	reagent(0x9dc183, 0x708238, "green", "Olive", "§2粗孔雀绿§r", "minecraft:green_dye")	 //	 biomesoplenty:watergrass
 	reagent(0x57a0d2, 0x0080fe, "blue", "Azure", "§3品绿§r", "minecraft:light_blue_dye")	//	biomesoplenty:blue_hydrangea

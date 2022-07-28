@@ -3,7 +3,7 @@
 	group: "0810E42B2DD79973"
 	order_index: 0
 	filename: "dl"
-	title: "&d▶ 成就"
+	title: "&d> 成就"
 	icon: "minecraft:enchanting_table"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
@@ -54,7 +54,7 @@
 			}]
 		}
 		{
-			title: "&7&l基建大亨"
+			title: "&7&l基建狂魔"
 			icon: {
 				id: "minecraft:scaffolding"
 				Count: 1b

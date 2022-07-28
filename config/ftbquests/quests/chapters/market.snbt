@@ -3,7 +3,7 @@
 	group: "0810E42B2DD79973"
 	order_index: 1
 	filename: "market"
-	title: "&6▶ 市集"
+	title: "&6> 市集"
 	icon: "minecraft:chest"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
@@ -638,7 +638,7 @@
 			}
 			x: -3.5d
 			y: -6.5d
-			subtitle: "11 金币 - 是时候升级你的 XP 啦！"
+			subtitle: "11 金币 - 是时候升级你的XP啦！"
 			description: ["购买它以在组装&6智能构件&r时最小化工具磨损。"]
 			id: "00D6DD6AE8E3C014"
 			tasks: [
