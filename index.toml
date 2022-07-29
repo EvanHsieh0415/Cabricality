@@ -10,55 +10,55 @@ hash = "eb36f41d05b79a93a42a3d68581040526cac7ec51192ae9db5ecc46cec4a9d3f"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "ee8ba7197ec11ca14e2de279ca37b0226508fd97ba10b54d8bf18cf37fab6080"
+hash = "f2dbc984cd1c1437733894a5f432d3b225b506c7388bde3e539a44f7bbb9f986"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/advancements.snbt"
-hash = "a0fcd69151ac9adb814565976fe81ac5a2b312a5d4bd0d80b7dac1684d5f44f2"
+hash = "020012f41191e52ed926882fc51b546ea2897d3a7f85fe62db4e200e83a79025"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/market.snbt"
-hash = "ff0c384e437e6371e4070f042e00ccd3ad662a690b7b1bdfcb34ba8dc9ccab71"
+hash = "1322df8d2df9612f0a3672de51a64571ad2357fe79a7741618bfee1b9ed92037"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/metallurgy.snbt"
-hash = "05123dce75d25ea19b2dac2bf98ed63df6cf9c4c6de67d7057d81b9490c6cc59"
+hash = "17960f987b486985f41e047e61ef24417ee7f27a70e464d76913173f35a713fd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/overview.snbt"
-hash = "829495c451cb2a58e9b92b76ebdb69dd3caadb14cc2584de762d9a8973b8bacb"
+hash = "4b0ea816a78b42ce02959f537818d9c72cccb6365164a30cedb5cf9a238b1cdf"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_1.snbt"
-hash = "2f03b916146148ba250468dcf1fa68338eb036deabac7868f06032b5dee49d5c"
+hash = "7bfefbb40294580db4f8df6d1f3717384228cb0850ed3ed2979f6b0737c42387"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_2.snbt"
-hash = "0afa60e76dd2842a413eb5ab4250cd7560c4f36970cc5248447e3dd9226bca48"
+hash = "09dc7a51405053b27e2823d912a6190ccf7800bb1de88503c7c02bdd1aee9bcb"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_3.snbt"
-hash = "07ddd228bc593f05815f702b897a79c6e079475a83e60b59d5954e8bbccab834"
+hash = "87435a3e5ccf6a5c3b34c1ec4a57b3d47c9b9ccbafa66d7c1c8d97ea12b53df1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_4.snbt"
-hash = "6ad79b5297bbb8a944aba44dc57953dc57c460691b7a96774de65dc92710442b"
+hash = "a3666de782ff5977f4eaf6e9700262f14e6e0cd3a4c7f81dee5a7df919bfc11d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_4b.snbt"
-hash = "8c70bc92a5747c7009eaa15fe313203d259c6ef639dfdc161ea5f2a6d8d7a411"
+hash = "f9b8a83145888829ed290ac85079ce15ffa7ac4838b11702ac400a78146a96ae"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_5.snbt"
-hash = "2b6b2d99cdc40a06020e008de918462630b7feddaff453c8d45eef4e4184b850"
+hash = "3d3f377d87255992b6c6740001516c9e800803c0c754a28fed7b08ed89dc037b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/thanks.snbt"
-hash = "62717cdc8ca723589b46d781f15e83cf241560c80217a86cb8dc6bbb5ea6f1bd"
+hash = "c282b996bcc41f81c4e12a53fd265a580693aa482c4a3b7e2808855e60ee5925"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/welcome.snbt"
-hash = "4210fee201d4f9c988f4fae6ae253cef9823395b17dd58b60ae3728d57787e1e"
+hash = "c778f0ecfec433f19d6aa54191f39b7236bee235d4e5a71e067b6cf1956c7a50"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -105,8 +105,20 @@ file = "kubejs/assets/ae2/textures/item/printed_calculation_processor.png"
 hash = "ef36d793d83335c4bcbcb31b6f1d48c5a2c3b909023c0e630801e1dd0019f268"
 
 [[files]]
+file = "kubejs/assets/agape_space/lang/zh_cn.json"
+hash = "0d0849d71e386327c4e5564d3deb13225729a658347a06cf4a077b57279bae4f"
+
+[[files]]
 file = "kubejs/assets/agape_space/models/item/laser_pistol.json"
 hash = "84290e6ffd6da9be99f371de97b785a3269c7020df406163f323cf1fc11ff4cb"
+
+[[files]]
+file = "kubejs/assets/alloy_forgery/lang/zh_cn.json"
+hash = "d86eda2903763caa32fae6a71a8ce8f715d6df84edf93bc771f0bfd3c8c08b34"
+
+[[files]]
+file = "kubejs/assets/bitsandchisels/lang/zh_cn.json"
+hash = "75f087cafdedcbbbdd1aac38a78ba45ef578b6e85b204d7520bd6cdbc33628a6"
 
 [[files]]
 file = "kubejs/assets/bitsandchisels/textures/item/smart_chisel.png"
@@ -749,12 +761,28 @@ file = "kubejs/assets/createplus/textures/item/zinc_dust.png"
 hash = "70835d98bb7a98a6cc95813b0fde02263cc27e38c9ba05ccc75b0b0fa1808618"
 
 [[files]]
+file = "kubejs/assets/extended_drawers/lang/zh_cn.json"
+hash = "89e9a49f423d5643d7a3cdea7068d8bc117bb11e4b2d9dec1f92ac1eb43db230"
+
+[[files]]
+file = "kubejs/assets/ftbquests/lang/zh_cn.json"
+hash = "7b0c27b0572e5b8f5de32eee71614bafe709c78c2f1ec67064af382bf84cf147"
+
+[[files]]
+file = "kubejs/assets/ftbteams/lang/zh_cn.json"
+hash = "00e9e7794b80141f33c1343b4e61866453ef2beee0deee2ff554dd09cdedd77f"
+
+[[files]]
 file = "kubejs/assets/ftbteams/textures/teams.png"
 hash = "3dacd87a5c734daee981dc3ca1a45c68ebccf5fc924f751c9968853b6df8030e"
 
 [[files]]
 file = "kubejs/assets/ftbteams/textures/teams.png.mcmeta"
 hash = "82e6b347843f48acff638061f4ba988c1f5f6a441126a9007716a170f02c64db"
+
+[[files]]
+file = "kubejs/assets/indrev/lang/zh_cn.json"
+hash = "9ca777daf4ee6dec727f47c8017caafe7a0b28bdfd49b689583a76575762ca0f"
 
 [[files]]
 file = "kubejs/assets/indrev/textures/block/biomass_generator.png"
@@ -1001,8 +1029,12 @@ file = "kubejs/assets/indrev/textures/item/tin_plate.png"
 hash = "326923296bf29d6b38281604f0fe2701f792f575513c6f4dcbe605d46824d0ef"
 
 [[files]]
+file = "kubejs/assets/itemfilters/lang/zh_cn.json"
+hash = "602100b7b4ad9b5c1d4625f90787689b418d5438d27bc2a53e6196176a4b4378"
+
+[[files]]
 file = "kubejs/assets/minecraft/texts/splashes.txt"
-hash = "92cb12094a3aa2bed143ac86aae3d2aa30d6bd705ac0702f58dd6093cfcb4c9b"
+hash = "7ee37f993fe457d7bfd6683da2db8d28b74d326c47d0eeb9b9d1342bf423521a"
 
 [[files]]
 file = "kubejs/assets/minecraft/textures/gui/title/background/panorama_0.png"
@@ -1027,6 +1059,14 @@ hash = "ab9124635d718408f6bdeadabc6ff7667f11f3093866d6bb25ecf046d645b8b5"
 [[files]]
 file = "kubejs/assets/minecraft/textures/gui/title/background/panorama_5.png"
 hash = "2f5d101242feb1a1c9b3dd77c68cb718846c8afefce0d5b4b6f1b2ed32e3677a"
+
+[[files]]
+file = "kubejs/assets/questsadditions/lang/zh_cn.json"
+hash = "d675f0ac10e0c72f21b3a314acb824cb1d8af888dc737f81433c0c463c74968e"
+
+[[files]]
+file = "kubejs/assets/sodium/lang/zh_cn.json"
+hash = "f843046cf168f04f621ed1989f94c15dc0799a30b79f541ecb3eaaf4023eefc4"
 
 [[files]]
 file = "kubejs/client_scripts/client.js"
@@ -2614,11 +2654,11 @@ hash = "038de9e60189a17ce3084cf30b0aaae0d9cb4b381a1ad838af06a87c958968b2"
 
 [[files]]
 file = "kubejs/startup_scripts/launch.js"
-hash = "1e1385eb84eb2a6d694ab713463a36d3e9667370bc2b168c77e20ab428d81a16"
+hash = "4d9609a53082499b8b053c34d32c3c3c24a6d2fcbb5ba9dc04e3728bcca8ecf9"
 
 [[files]]
 file = "kubejs/startup_scripts/trading.js"
-hash = "1da40071be063286317f3415f729c06c8d9e4a9e51af2cb328aa434cee22c71e"
+hash = "32bf2226d7ccc4244e09928d3b1ed572d8cab21f4051daa3821e1b5c460a7789"
 
 [[files]]
 file = "kubejs/startup_scripts/worldgen.js"
