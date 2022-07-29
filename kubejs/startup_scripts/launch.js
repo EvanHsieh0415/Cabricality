@@ -86,7 +86,7 @@ onEvent("item.registry", event => {
 		event.create("screwdriver")
 			.texture(modpackId + ":item/screwdriver")
 			.displayName("强化螺丝刀")
-			.maxDamage(64)
+			.maxDamage(512)
 
 		registerTypicalItem("Invar Ingot", "殷钢锭")
 		registerTypicalItem("Nickel Ingot", "镍锭")
