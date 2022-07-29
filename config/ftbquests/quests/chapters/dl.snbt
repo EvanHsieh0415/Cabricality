@@ -1,0 +1,316 @@
+{
+	id: "60809628BF9D15BA"
+	group: "0810E42B2DD79973"
+	order_index: 0
+	filename: "dl"
+	title: "&d▶ 成就"
+	icon: "minecraft:enchanting_table"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "&6&l原始积累"
+			icon: "minecraft:spruce_sapling"
+			x: 2.0d
+			y: -4.0d
+			shape: "rsquare"
+			subtitle: "它们是你的朋友！"
+			id: "741C3CF3DCA276F8"
+			tasks: [{
+				id: "1043C7E39B39631F"
+				type: "stat"
+				title: "繁殖动物"
+				icon: "minecraft:bone"
+				stat: "minecraft:animals_bred"
+				value: 128
+			}]
+		}
+		{
+			title: "&f&l到达世界最高层！"
+			icon: "minecraft:barrier"
+			x: 3.0d
+			y: -6.0d
+			shape: "rsquare"
+			subtitle: "怎么下去呢？"
+			id: "4ACF17668C2BCD58"
+			tasks: [{
+				id: "4337D884851C2A87"
+				type: "location"
+				title: "到达320层"
+				icon: "minecraft:ladder"
+				dimension: "minecraft:overworld"
+				ignore_dimension: true
+				position: [I;
+					0
+					320
+					0
+				]
+				size: [I;
+					1569325055
+					1
+					1569325055
+				]
+			}]
+		}
+		{
+			title: "&7&l基建大亨"
+			icon: {
+				id: "minecraft:scaffolding"
+				Count: 1b
+				tag: {
+					Enchantments: [{
+						id: "minecraft:unbreaking"
+						lvl: 1s
+					}]
+				}
+			}
+			x: 0.0d
+			y: -5.0d
+			shape: "rsquare"
+			subtitle: "大兴土木！"
+			id: "115C6C0CF924E584"
+			tasks: [
+				{
+					id: "7A5923AF3DC65A29"
+					type: "questsadditions:place"
+					title: "放置圆石"
+					icon: "minecraft:cobblestone"
+					block: "minecraft:cobblestone"
+					replaced: "minecraft:air"
+					value: 8192L
+					replace: false
+				}
+				{
+					id: "4CE9C91F689B3A47"
+					type: "questsadditions:place"
+					title: "放置泥土"
+					icon: "minecraft:dirt"
+					block: "minecraft:dirt"
+					replaced: "minecraft:air"
+					value: 8192L
+					replace: false
+				}
+				{
+					id: "2E136DC97A981E46"
+					type: "questsadditions:break"
+					title: "使用并拆毁脚手架"
+					icon: "minecraft:scaffolding"
+					block: "minecraft:scaffolding"
+					value: 1024L
+					checkItem: false
+				}
+			]
+		}
+		{
+			title: "&5&l探索所有维度"
+			icon: {
+				id: "minecraft:netherite_pickaxe"
+				Count: 1b
+				tag: {
+					Damage: 0
+					Enchantments: [{
+						id: "minecraft:unbreaking"
+					}]
+				}
+			}
+			x: 1.0d
+			y: -7.0d
+			shape: "rsquare"
+			subtitle: "记得回家！"
+			id: "4677A1ACD967D39B"
+			tasks: [
+				{
+					id: "77A6AAF04D9A8EE5"
+					type: "dimension"
+					title: "&5下界"
+					icon: "minecraft:warped_nylium"
+					dimension: "minecraft:the_nether"
+				}
+				{
+					id: "045469204502E796"
+					type: "dimension"
+					title: "&3末地"
+					icon: "minecraft:dragon_head"
+					dimension: "minecraft:the_end"
+				}
+				{
+					id: "6AC38EDB80078373"
+					type: "dimension"
+					title: "&8月球"
+					icon: "agape_space:moon_soil"
+					dimension: "agape:moon_surface"
+				}
+				{
+					id: "714F616C1C652D96"
+					type: "dimension"
+					title: "&4火星"
+					icon: "agape_space:red_sandy"
+					dimension: "agape:red_planet"
+				}
+				{
+					id: "6FAC36FB107DEE24"
+					type: "dimension"
+					title: "&7木卫三"
+					icon: "agape_space:scorched_soil"
+					dimension: "agape:ganymede"
+				}
+				{
+					id: "54DDC5CF744F844B"
+					type: "dimension"
+					title: "&b水星"
+					icon: "minecraft:packed_ice"
+					dimension: "agape:mercury"
+				}
+				{
+					id: "65366430E8EBA24E"
+					type: "dimension"
+					title: "&6土卫六"
+					icon: "minecraft:sponge"
+					dimension: "agape:titan"
+				}
+				{
+					id: "1BB8C02994B0ED40"
+					type: "dimension"
+					title: "&f木卫二"
+					icon: "minecraft:calcite"
+					dimension: "agape:europa_surface"
+				}
+				{
+					id: "10708BF788D6D43D"
+					type: "dimension"
+					title: "&c木卫一"
+					icon: "minecraft:red_glazed_terracotta"
+					dimension: "agape:io"
+				}
+				{
+					id: "016FB8A722556EEF"
+					type: "dimension"
+					title: "&e金星"
+					icon: "minecraft:smooth_sandstone"
+					dimension: "agape:venus_surface"
+				}
+			]
+		}
+		{
+			title: "&8&l进入存储空间"
+			x: 3.0d
+			y: -8.0d
+			shape: "circle"
+			secret: true
+			id: "685F5E7FE3F97479"
+			tasks: [{
+				id: "3DCF558BD3559764"
+				type: "dimension"
+				title: "&8存储空间"
+				icon: {
+					id: "ftbquests:custom_icon"
+					Count: 1b
+					tag: {
+						Icon: "ae2:textures/block/controller_conflict.png"
+					}
+				}
+				dimension: "ae2:spatial_storage"
+			}]
+		}
+		{
+			title: "&l完成Cabricality"
+			icon: "minecraft:red_glazed_terracotta"
+			x: 1.5714285714285836d
+			y: -5.4642857142857295d
+			shape: "circle"
+			dependencies: [
+				"47965C310D9847DC"
+				"4F7A70041B67A348"
+			]
+			size: 1.7d
+			secret: true
+			id: "614E1F3A082E30FF"
+			tasks: [
+				{
+					id: "6135F4B3B0DDA210"
+					type: "advancement"
+					title: "&2通关Minecraft"
+					icon: "minecraft:grass_block"
+					disable_toast: true
+					advancement: "minecraft:end/respawn_dragon"
+					criterion: ""
+				}
+				{
+					id: "31C1A7176A39C5CF"
+					type: "advancement"
+					title: "&d完成太空探索"
+					icon: "agape_space:starship_engine"
+					disable_toast: true
+					advancement: "agape:advancements_starship"
+					criterion: ""
+				}
+				{
+					id: "67A6AE00C6DD1D6D"
+					type: "advancement"
+					title: "&6完成机械动力"
+					icon: "create:yellow_seat"
+					disable_toast: true
+					advancement: "create:long_travel"
+					criterion: ""
+				}
+				{
+					id: "24A528D36E83BB02"
+					type: "advancement"
+					title: "&e完成农夫乐事"
+					icon: "farmersdelight:stove"
+					disable_toast: true
+					advancement: "farmersdelight:main/master_chef"
+					criterion: ""
+				}
+			]
+		}
+		{
+			title: "&d&l你这是在干什么⁈"
+			x: 4.0d
+			y: -4.0d
+			shape: "circle"
+			secret: true
+			id: "2C6025186BB3B0BD"
+			tasks: [{
+				id: "2FD42B89C6840F44"
+				type: "stat"
+				title: "&d飞行距离"
+				icon: {
+					id: "minecraft:elytra"
+					Count: 1b
+					tag: {
+						Damage: 0
+						Enchantments: [{
+							id: "minecraft:unbreaking"
+						}]
+					}
+				}
+				stat: "minecraft:fly_one_cm"
+				value: 1145141919
+			}]
+		}
+		{
+			title: "&6&l感谢陪伴！"
+			x: 0.0d
+			y: -3.0d
+			shape: "circle"
+			secret: true
+			id: "35477338325F6CAE"
+			tasks: [{
+				id: "26604F44DEF34750"
+				type: "questsadditions:days"
+				title: "游玩5000天"
+				icon: "minecraft:clock"
+				days: 5000
+			}]
+		}
+		{
+			title: "&8&l想不到写点什么了啊啊啊"
+			x: -1.0d
+			y: -7.0d
+			shape: "circle"
+			secret: true
+			id: "5A995B896CC6D30D"
+		}
+	]
+}
