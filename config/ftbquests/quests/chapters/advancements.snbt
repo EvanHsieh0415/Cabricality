@@ -2,8 +2,8 @@
 	id: "130377393DA7AF6B"
 	group: "0810E42B2DD79973"
 	order_index: 0
-	filename: "dl"
-	title: "&d> 成就"
+	filename: "advancements"
+	title: "&d▶ 成就"
 	icon: "minecraft:enchanting_table"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
@@ -32,7 +32,7 @@
 			x: 3.0d
 			y: -6.0d
 			shape: "rsquare"
-			subtitle: "怎么下去呢？"
+			subtitle: "到底该怎么下去呢？"
 			id: "48B93059B325B230"
 			tasks: [{
 				id: "169EFAAAE095C621"
@@ -215,7 +215,7 @@
 		}
 		{
 			title: "&l完成Cabricality"
-			icon: "minecraft:grass_block"
+			icon: "minecraft:red_glazed_terracotta"
 			x: 1.5714285714285836d
 			y: -5.4642857142857295d
 			shape: "circle"
@@ -291,15 +291,16 @@
 			}]
 		}
 		{
-			title: "&6&l感谢陪伴！"
+			title: "&6&l路途漫漫"
 			x: 0.0d
 			y: -3.0d
 			shape: "circle"
+			secret: true
 			id: "38DCB9AD8BBDEA34"
 			tasks: [{
 				id: "0F86A9C202CADA8B"
 				type: "questsadditions:days"
-				title: "游玩天数"
+				title: "游玩5000天"
 				icon: "minecraft:clock"
 				days: 5000
 			}]
