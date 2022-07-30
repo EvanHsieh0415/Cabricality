@@ -56,7 +56,7 @@
 			description: [
 				"在矿洞中寻找安山岩可是件累活。不过万幸的是，基岩可以让上方的岩浆和水迅速变成安山岩...和其他怪石。"
 				""
-				"动力钻头可以有效地代替你手中的镐子。但因基岩阻挡，你必须从其它方向收集石头..."
+				"&6动力钻头&r可以有效地代替你手中的镐子。但因基岩的阻挡，你必须从其它方向收集石头..."
 			]
 			hide_dependency_lines: true
 			dependencies: ["5799D55BB26BA52C"]
@@ -86,7 +86,7 @@
 			icon: "minecraft:dripstone_block"
 			x: 3.0d
 			y: 1.0d
-			description: ["把石灰岩和水混合并压制就可以批量生产滴水石块了，而后者则可以被磨制成粘土球。"]
+			description: ["把&6石灰岩&r和&6水&r混合并压制就可以批量生产滴水石块了，而后者则可以被磨制成粘土球。"]
 			dependencies: ["106C6DFDCB97327C"]
 			id: "31A0FFA3DFEB3D7D"
 			tasks: [
@@ -153,7 +153,7 @@
 			x: 4.0d
 			y: 3.0d
 			subtitle: "6-1号发明"
-			description: ["石磨可以将滴水石块处理成粘土球。"]
+			description: ["&6石磨&r可以将滴水石块处理成粘土球。"]
 			dependencies: ["31A0FFA3DFEB3D7D"]
 			dependency_requirement: "one_completed"
 			id: "729FB5DD07C234E8"
@@ -177,7 +177,7 @@
 			x: 5.0d
 			y: 3.5d
 			subtitle: "6-2号发明"
-			description: ["快来搓碟！将海带和黏土球放到动力搅拌器下的工作盆中并提供动力，迅速搅拌均匀！"]
+			description: ["快来搓碟！将海带和黏土球放到&6动力搅拌器&r下的工作盆中并提供动力，把它们搅拌均匀。"]
 			dependencies: [
 				"729FB5DD07C234E8"
 				"608BF7BE3CB666F3"
@@ -203,7 +203,7 @@
 			x: -1.0d
 			y: 3.5d
 			subtitle: "7-1号发明"
-			description: ["面向上方的动力锯可以进一步处理原木..."]
+			description: ["面向上方的&6动力锯&r则可以进一步处理原木..."]
 			dependencies: ["2CB570195DA7E106"]
 			id: "532EFE32C3A515B5"
 			tasks: [
@@ -339,7 +339,7 @@
 			x: -0.5d
 			y: 4.5d
 			subtitle: "7-2号发明"
-			description: ["...你可以试试继续这么做..."]
+			description: ["...继续处理..."]
 			dependencies: ["532EFE32C3A515B5"]
 			id: "19921941321965A4"
 			tasks: [
@@ -372,7 +372,7 @@
 			subtitle: "7-3号发明"
 			description: [
 				"...再来一次，把它们切割成一切构件的基础材料。"
-				"&7记得在动力锯的过滤槽中放入这一步要处理的物品，不然你猜不到它们会输出什么。"
+				"&7记得在动力锯的过滤槽中放入这一步需要处理的物品，不然你猜不到它们会输出什么。"
 			]
 			dependencies: ["19921941321965A4"]
 			id: "59E4A6163753BC12"
@@ -404,7 +404,7 @@
 			x: 3.5d
 			y: 5.0d
 			subtitle: "6-4号发明"
-			description: ["没错！你需要将它们再次搅拌——不过这回的主角变成了海藻砖和你辛苦运上来的安山岩圆石。"]
+			description: ["没错！你需要将它们再次搅拌——不过这回的主角变成了&6海藻砖&r和你辛苦运上来的&6安山岩圆石。&r"]
 			dependencies: [
 				"106C6DFDCB97327C"
 				"32786E9D145FFE25"
@@ -430,7 +430,7 @@
 			x: 4.5d
 			y: 4.5d
 			subtitle: "6-3号发明"
-			description: ["你需要将上一步产出的海藻混合物烧制成为更坚硬的海藻砖。熔炉确实很好用，但为什么不考虑一下不需要燃料的岩浆鼓风机组合呢？"]
+			description: ["你需要将上一步产出的海藻混合物烧制成为更坚硬的海藻砖。熔炉确实很好用，但为什么不考虑一下不需要燃料的岩浆和&6鼓风机&r的组合呢？"]
 			dependencies: ["72BE175C83834838"]
 			id: "32786E9D145FFE25"
 			tasks: [
@@ -453,7 +453,7 @@
 			x: 2.0d
 			y: 6.5d
 			subtitle: "8号发明"
-			description: ["将搅拌好的安山合金华丽地安装到木质台阶上，优雅地收尾你的第一条生产线。"]
+			description: ["将搅拌好的&6安山合金&r华丽地安装到&6木质台阶&r上，优雅地收尾你的第一条生产线。"]
 			dependencies: [
 				"59E4A6163753BC12"
 				"73FCA432DEFC1DED"
@@ -487,8 +487,9 @@
 			y: 6.5d
 			shape: "circle"
 			description: [
-				"你肯定需要存一些手锯以便及时更换。"
-				"但它们并不是即时消耗品，所以手动合成一些也许就够用了。"
+				"你肯定需要存一些&6手锯&r以便及时更换。"
+				""
+				"但它们并不是即时消耗品，所以手动合成一些就够用了。"
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -518,11 +519,11 @@
 			shape: "hexagon"
 			subtitle: "&6第一章"
 			description: [
-				"Welcome to the Factory Guide!"
+				"&6欢迎来到科技树！&r"
 				""
-				"These Quests are an Automation Plan for your upcoming Assembly Line. Always view them as recommendations on what you should construct a passive supply for. The flowgraph depicts the connections between relevant recipes/processing."
+				"这些任务告诉你接下来的生产线应该如何制作，跟随指引即可以满足工厂的充足材料供应。任务间的连接线代表了生产/处理不同材料时的顺序。"
 				""
-				"Happy engineering!"
+				"&6积极出谋划策吧！&r"
 			]
 			dependencies: ["5A8DF2D8553904BF"]
 			hide: true
@@ -531,6 +532,7 @@
 			tasks: [{
 				id: "1B5F1E9F5EE6EB2C"
 				type: "checkmark"
+				title: "开始！"
 			}]
 			rewards: [{
 				id: "49A9C8798141C302"
@@ -586,7 +588,7 @@
 			y: 10.0d
 			shape: "square"
 			subtitle: "9-1号发明"
-			description: ["试着把提取器放置在一棵完整的树木旁然后右键它，你会在下方得到一格树脂流体！"]
+			description: ["试着把提取器放置在一棵完整的树木旁然后不断右键它，你将会在下方得到&4树脂流体！&r"]
 			dependencies: [
 				"3F45DFEF31838A00"
 				"681DACF11F193771"
@@ -614,7 +616,7 @@
 			x: 1.0d
 			y: 10.5d
 			subtitle: "9-2号发明"
-			description: ["用流体管道和动力泵将树脂流体泵到工作盆中，再用辊压机使其压制成型。"]
+			description: ["用流体管道和动力泵将&4树脂流体&r泵到工作盆中，再用辊压机使其压制成型。"]
 			dependencies: ["3728DF562D6DCE3A"]
 			id: "3EF5F89DBD6959E3"
 			tasks: [
@@ -639,7 +641,7 @@
 			shape: "square"
 			subtitle: "9-3号发明"
 			description: [
-				"最后一步，用火焰洗礼刚刚成型的固态橡胶，使其硫化！"
+				"最后一步，用火焰洗礼刚刚成型的&4固态橡胶，&r使其硫化！"
 				""
 				"Bon Appétit!&7&o（祝你胃口好！）&r"
 			]
@@ -664,7 +666,7 @@
 			x: 3.5d
 			y: 11.5d
 			shape: "circle"
-			description: ["这一步很简单，以至于你完全可以用双手来完成。如果你想自动生产，晚些时候再用动力合成器替换你的工作台也无妨。"]
+			description: ["这一步很简单，以至于你完全可以用双手来完成。如果你想自动生产，晚些时候再用&4动力合成器&r替换你的工作台也无妨。"]
 			dependencies: ["29D37095C73B3DEC"]
 			id: "6545C3F427B12106"
 			tasks: [{
@@ -679,7 +681,7 @@
 			x: 2.0d
 			y: 13.0d
 			shape: "hexagon"
-			description: ["好样的，你有足够的气密构件了！以后你肯定会谢谢你自己的！"]
+			description: ["好样的，现在你有足够的&4气密构件&r了！以后你肯定会感谢你自己的！"]
 			dependencies: ["6545C3F427B12106"]
 			size: 2.0d
 			id: "0E0535849D8D9279"
@@ -717,7 +719,7 @@
 			y: -1.0d
 			shape: "circle"
 			description: [
-				"也许你并不想死板地跟随这些任务前进。没有问题，你可以选择只建造你想要的机械，甚至全部由双手完成而留下时间去探索，有余力的你还可以可以试试发掘新的制造方法或使用高阶材料来简化生产流程。但别忘了，这些可不能是你偷工减料的理由。"
+				"也许你并不想死板地跟着任务前进，没有问题。你可以选择只建造你想要的机械，甚至全部由双手完成而留下时间去探索，有余力的你还可以试试发掘新的制造方法或使用高阶材料来简化生产流程。但别忘了，这些可不能是你偷工减料的理由。"
 				"&7玩的开心才最重要！"
 			]
 			dependencies: ["5799D55BB26BA52C"]

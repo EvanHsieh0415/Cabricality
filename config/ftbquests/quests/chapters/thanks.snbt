@@ -26,14 +26,14 @@
 		dependencies: ["4D94E2619DDAADC4"]
 		hide: true
 		size: 2.2d
-		id: "349ABBDAFC65B803"
+		id: "09842CDC7A331BEE"
 		tasks: [{
-			id: "142B8B8667581557"
+			id: "7C16EA0DB0F54BCB"
 			type: "item"
 			item: "minecraft:stick"
 		}]
 		rewards: [{
-			id: "52BAF3A6E866F4C7"
+			id: "70BC5824FF4A3B74"
 			type: "item"
 			team_reward: true
 			auto: "enabled"
