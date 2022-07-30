@@ -16,7 +16,7 @@
 	"item.itemfilters.xor.description": "匹配两过滤器之一",
 	"item.itemfilters.tag": "标签过滤器",
 	"item.itemfilters.tag.description": "匹配物品标签，例如“minecraft:logs“",
-	"item.itemfilters.item_group": "物品组过滤器r",
+	"item.itemfilters.item_group": "物品组过滤器",
 	"item.itemfilters.item_group.description": "使用物品组/创造模式物品栏ID",
 	"item.itemfilters.mod": "模组过滤器",
 	"item.itemfilters.mod.description": "使用模组ID",
