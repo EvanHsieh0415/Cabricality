@@ -286,7 +286,7 @@ onEvent("block.registry", event => {
 	registerMachine("Copper", "铜机", "cutout")
 	registerMachine("Zinc", "锌机", "cutout")
 	registerMachine("Enderium", "末影合金机", "cutout")
-	registerMachine("Obsidian", "黑曜石机", "translucent")
+	registerMachine("Obsidian", "黑曜机", "translucent")
 
 	let registerCasing = (name, localName) => {
 		let id = name.toLowerCase() + "_casing"
