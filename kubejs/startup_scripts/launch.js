@@ -369,8 +369,8 @@ onEvent("block.registry", event => {
 	reagent(0x32333D, 0x5C5C5C, "basalt", "Basalt", "§7玄武岩§r", "minecraft:basalt")
 	reagent(0x6B5D4F, 0x7D6B5A, "limestone", "Limestone", "§7石灰岩§r", "create:limestone")
 	category()
-	reagent(0xD30000, 0xB80F0A, "red", "Crimson", "§4绯红§r", "minecraft:red_dye")
-	reagent(0xFC6600, 0xb1560f, "orange", "Orange", "§6橙色§r", "minecraft:orange_dye")		//	biomesoplenty:burning_blossom
+	reagent(0xD30000, 0xB80F0A, "red", "Crimson", "§4烟栗§r", "minecraft:red_dye")
+	reagent(0xFC6600, 0xb1560f, "orange", "Orange", "§6赭石§r", "minecraft:orange_dye")		//	biomesoplenty:burning_blossom
 	reagent(0xFFF200, 0xdba520, "yellow", "Goldenrod", "§e藤黄§r", "minecraft:yellow_dye")	//	biomesoplenty:goldenrod
 	reagent(0x9dc183, 0x708238, "green", "Olive", "§2粗孔雀绿§r", "minecraft:green_dye")	 //	 biomesoplenty:watergrass
 	reagent(0x57a0d2, 0x0080fe, "blue", "Azure", "§3品绿§r", "minecraft:light_blue_dye")	//	biomesoplenty:blue_hydrangea
