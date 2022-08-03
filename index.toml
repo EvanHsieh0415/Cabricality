@@ -185,6 +185,10 @@ file = "kubejs/assets/cabricality/models/block/machine/invar_machine.json"
 hash = "db9f93be535c815754922b2b756c582e26f16e674e381fee7bbf58cb082cba00"
 
 [[files]]
+file = "kubejs/assets/cabricality/models/block/machine/obsidian_machine.json"
+hash = "3225a1d8314436c5081f4f8fd4b12c95fd14317374cf302e6a2ff02a40c2e31f"
+
+[[files]]
 file = "kubejs/assets/cabricality/models/block/machine/zinc_machine.json"
 hash = "37cad8dea9ce8f79e7476c63eb02b2400809cd8677cf33630ea214013ae2ac02"
 
@@ -533,6 +537,10 @@ file = "kubejs/assets/cabricality/textures/item/mechanism/incomplete/incomplete_
 hash = "ae6ac0aae5f0d06c067c78aa1d968164606382e3ac889789f864ec000c1ae12a"
 
 [[files]]
+file = "kubejs/assets/cabricality/textures/item/mechanism/incomplete/incomplete_sturdy_mechanism.png"
+hash = "af9faca20ec5674169bb897db8a5b930011a0b3b0ab6fcbbc616e24b6abcaf31"
+
+[[files]]
 file = "kubejs/assets/cabricality/textures/item/mechanism/inductive_mechanism.png"
 hash = "b52228a7dd5445819a3919984e2066d521b677b543c78e845c498275362e9238"
 
@@ -547,6 +555,10 @@ hash = "5245721f0571489fbe4152ab12e71a2d45002f00fa6003375dca45bc6766700b"
 [[files]]
 file = "kubejs/assets/cabricality/textures/item/mechanism/sealed_mechanism.png"
 hash = "5322b586fd584392c593a553fb0802c2a849f4156fd287910048eca9b8953115"
+
+[[files]]
+file = "kubejs/assets/cabricality/textures/item/mechanism/sturdy_mechanism.png"
+hash = "fde889290125de56b04e6d4fc12b94ce187bf03bef466cc199ea00e9b8c4a53a"
 
 [[files]]
 file = "kubejs/assets/cabricality/textures/item/nickel_compound.png"
@@ -774,7 +786,7 @@ hash = "00e9e7794b80141f33c1343b4e61866453ef2beee0deee2ff554dd09cdedd77f"
 
 [[files]]
 file = "kubejs/assets/ftbteams/textures/teams.png"
-hash = "3dacd87a5c734daee981dc3ca1a45c68ebccf5fc924f751c9968853b6df8030e"
+hash = "3d78a708e0de579d36fee3a46d5964fd584fb211b599c20ce7e63fef13726851"
 
 [[files]]
 file = "kubejs/assets/ftbteams/textures/teams.png.mcmeta"
@@ -1037,6 +1049,18 @@ file = "kubejs/assets/minecraft/texts/splashes.txt"
 hash = "7ee37f993fe457d7bfd6683da2db8d28b74d326c47d0eeb9b9d1342bf423521a"
 
 [[files]]
+file = "kubejs/assets/minecraft/textures/block/deepslate_iron_ore.png"
+hash = "914c6873e0bf04fc19d0654b5fbf20236758644452fc3d45978f22a15ad1597b"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/block/iron_ore.png"
+hash = "2b95cee6bd56ea4a18b552e71fa8679ce402abe593639fda2b240caf14866420"
+
+[[files]]
+file = "kubejs/assets/minecraft/textures/block/nether_gold_ore.png"
+hash = "3959633578c6c7787ad3aece29eb61ff8b40f99b14faf5ea339fa518b4139a91"
+
+[[files]]
 file = "kubejs/assets/minecraft/textures/gui/title/background/panorama_0.png"
 hash = "469cfba2b5e089e0aafabb4c4ee912f453dd149b90273fb155493bbea758f566"
 
@@ -1109,6 +1133,14 @@ file = "kubejs/data/c/tags/items/circuit_press.json"
 hash = "50366a2560c91a1c9a747a8e9146023fdb1d75bbf22b148fc8bf5f5499303c8a"
 
 [[files]]
+file = "kubejs/data/c/tags/items/coins/gold.json"
+hash = "140d4ebf1fca4d672af5cb1d2cf422bf4acf96306a9f30a55a2f2af714e46cbd"
+
+[[files]]
+file = "kubejs/data/c/tags/items/coins/silver.json"
+hash = "01c83bc8e499bcde59dc816eb8052e26a62ac8b2b1b848047d078b1f1cfcaa78"
+
+[[files]]
 file = "kubejs/data/c/tags/items/copper_nuggets.json"
 hash = "2d2d9b9108bb79b8e3ed2ec935a5b76a809360789c494e6e5c2a77b1bd5b6220"
 
@@ -1119,6 +1151,14 @@ hash = "68358122f47dfac7acac895b4f2101c2625a3e62a729c0f58951ae409b2b44f1"
 [[files]]
 file = "kubejs/data/c/tags/items/doughs.json"
 hash = "98c87006c9b7d4fb123c66fa491db6c50cdafeddee1474f3018d2d0f2519c488"
+
+[[files]]
+file = "kubejs/data/c/tags/items/dusts/diamond.json"
+hash = "1d8f92838edd93c0a197838eb275466575a8ca53275c4a0ab6e87ae1a88b6c69"
+
+[[files]]
+file = "kubejs/data/c/tags/items/dusts/emerald.json"
+hash = "c64ff12ad3933b34ee1237b0dec594950fd2e7d2c85b936f1482aa466cab11c6"
 
 [[files]]
 file = "kubejs/data/c/tags/items/flour.json"
@@ -1135,6 +1175,18 @@ hash = "1129c6384ac2f522509f164686ddd906a84b795ff3561ec938156955f1ecf8e7"
 [[files]]
 file = "kubejs/data/c/tags/items/ingots/brass.json"
 hash = "d8877d9c74fa03c3c0dc6df831afe9cc071818d3366be95ec97b80b6db71a3d0"
+
+[[files]]
+file = "kubejs/data/c/tags/items/ingots/enderium.json"
+hash = "01a51390f22e51ae848fc6a1450442e3faf170dc01464313b153318116ccf320"
+
+[[files]]
+file = "kubejs/data/c/tags/items/ingots/invar.json"
+hash = "bcb1e0b88316576f272f28b0ec9590b15935fdf7e83213e0adb432002c84ea5f"
+
+[[files]]
+file = "kubejs/data/c/tags/items/ingots/nickel.json"
+hash = "fce95ca8d9b37f55a2a79aee1e7437f453fc302dc6d13b8868ac3272a4b4bdf0"
 
 [[files]]
 file = "kubejs/data/c/tags/items/ingots/zinc.json"
@@ -1155,6 +1207,10 @@ hash = "bf06e9e78d0f867d0363b6641c4bfa26ea864f9e977ec4168d6cd651d0d5a0e7"
 [[files]]
 file = "kubejs/data/c/tags/items/nuggets/copper.json"
 hash = "5a227b2f75d630a118e9dde355b0a516f3a2917d90a409188a771ed806c658a8"
+
+[[files]]
+file = "kubejs/data/c/tags/items/nuggets/nickel.json"
+hash = "606be87724c45439407a14bf9d7c6e5477896a21db960ee1a84a725f0addb676"
 
 [[files]]
 file = "kubejs/data/c/tags/items/nuggets/zinc.json"
@@ -1638,7 +1694,7 @@ hash = "9e26ec0312afecf2522568097d9b73b7256de0712f3b07264abc9885f8cd7608"
 
 [[files]]
 file = "kubejs/data/cabricality/recipes/smelter/glass/molten_glass_from_block.json"
-hash = "5017750f7884c9bbcaf3b07157c80616d0842b9c82c5f0bbde986a4f092b75e3"
+hash = "5aff34ea4d388b5d46280adf8b6727d138983e914076e6e1f1a01696d83be594"
 
 [[files]]
 file = "kubejs/data/cabricality/recipes/smelter/number_array.json"
@@ -2637,6 +2693,54 @@ file = "kubejs/data/minecraft/loot_tables/blocks/weeping_vines_plant.json"
 hash = "74603d5d72632fd835ae23d8b11e4af0a7ee326b4f3290cd064297c20b2e2521"
 
 [[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_brass.json"
+hash = "8b5a4ac6a99aaf755c540115580a2c0909d94d25b5665531c025a197a880aa50"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_copper.json"
+hash = "60d60fbf63ae43a9996b76de567332492e9d73770d536f5751609e89ad533977"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_diamond.json"
+hash = "07870c72524457a374f70747e3cb68c54789fe45b81d1bbbcb818ecad62c751a"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_enderium.json"
+hash = "e682466585929ac99569fc8aa137a6d3dd48791e6dc9ad220f74139855472e0b"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_glass.json"
+hash = "cd45323465a347d4080fcd58600b8919d9430ad16d042e1a7b0dadc315e6f574"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_gold.json"
+hash = "bfe484e32ff705fa7e15aca37f2ec4f468fbe5e94b54c1c7ccb4ef0b8362ee8f"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_iron.json"
+hash = "9cb41153fc55c23813004a6bbec38e82a0845daa4aa90a29467df4df5b062b35"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_lead.json"
+hash = "ac782c8f8891893b7f4da03c4f8d79aeeaee330c6441b8da036b9199239bfa86"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_netherite.json"
+hash = "e682466585929ac99569fc8aa137a6d3dd48791e6dc9ad220f74139855472e0b"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_silver.json"
+hash = "210b67b8d2425324e75208932444c0b0c2f71cbc2d7f7bfd05f20b55ee2795a0"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_tin.json"
+hash = "6fccf7c612cb701ebab2a9c96508867c1d46572bd13bea669590cff7ffea3044"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/fluids/molten_zinc.json"
+hash = "6dd4386582fe5f2ffab659c9bcbe10fb65a1c3eeac6bcd34ed0483784908e2e2"
+
+[[files]]
 file = "kubejs/server_scripts/extractor.js"
 hash = "14e75af1f6d25cb6f5329c9a8d3f5925b311ed05e1702c69af5ec44caa9c6ed9"
 
@@ -2646,7 +2750,11 @@ hash = "a75cac640a7dd1ba9976ade5396a26087f89536ccd091c8fc7e6c93a1c297d75"
 
 [[files]]
 file = "kubejs/server_scripts/recipe.js"
-hash = "022cc67466edc5e249cfb6460a9910c4d604e270f19e5a455ff7e8b59c4ad9e6"
+hash = "eb0d319403437599c47d2352ecf73578c6105eed9714e80fc8dc4bc98f4a7a42"
+
+[[files]]
+file = "kubejs/server_scripts/tags.js"
+hash = "e453aa0e6dd59abf7b749a577284bac17cb9f50b09b91a9669afba66dd3842f9"
 
 [[files]]
 file = "kubejs/server_scripts/trader.js"
@@ -2665,8 +2773,12 @@ file = "kubejs/startup_scripts/worldgen.js"
 hash = "b50096647da6dc98125a9c3f958e8d7f7aa1f6c41f488c4fc7394e799bedecf0"
 
 [[files]]
+file = "mods/TConstruct-1.18.2-3.5.1.DEV.3d9894a.jar"
+hash = "d25aae63f83643cf110549da1695354462fe0bb19b439509ec747dd162b34048"
+
+[[files]]
 file = "mods/ae2.pw.toml"
-hash = "7854bfed9702edf6733199d7c13eb119eecac715542ed991e8b6dde3f9c05cd0"
+hash = "cf5dc84f8614662235d680ad9cd601de26e0f35690bc4aabb1427cc01a9ae66f"
 metafile = true
 
 [[files]]
@@ -2681,7 +2793,7 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "49a22647b2ec0cf9c7ededb6d4a4655f064a6d1ebbadaff3bf544e201bbea5a1"
+hash = "37c11528bcdb10c771c37d7e129a7841a8f0ebc08f91d04231914fec8a729fbd"
 metafile = true
 
 [[files]]
@@ -2768,7 +2880,7 @@ metafile = true
 
 [[files]]
 file = "mods/ftb-library-fabric.pw.toml"
-hash = "1ccfd677a7cb6b2f5ab58f7b4b631f3c4974bf597111d3a8700036a811518b4c"
+hash = "ff48e48e828ba58db59ade1d3b05ab01373e528bba4ca74417566c9f6ed208a9"
 metafile = true
 
 [[files]]
@@ -2788,7 +2900,7 @@ metafile = true
 
 [[files]]
 file = "mods/indium.pw.toml"
-hash = "b8e50e473a9a5f9d41dba92a20e6af19156a23d3f70cc87c4fe164ea83e0e238"
+hash = "f5751b1f49dfd5d0a78a4573b334651748e02e65dfe093774ab0d0c0886d950c"
 metafile = true
 
 [[files]]
@@ -2821,8 +2933,9 @@ hash = "07431087764d1ec78878ab0dea140cd8627fd7e1948cd46e76ff159429711c9b"
 metafile = true
 
 [[files]]
-file = "mods/kubejs-fabric-1802.5.3-build.461.jar"
-hash = "40f5cba03dcf5f9f23b5e371137ec97e68c867a91b6a15c080f0737bc688d61c"
+file = "mods/kubejs.pw.toml"
+hash = "9fdb491538541907bef5ae665c3458371b4485252cce3579a93781383805b121"
+metafile = true
 
 [[files]]
 file = "mods/lazydfu.pw.toml"
@@ -2852,6 +2965,11 @@ metafile = true
 [[files]]
 file = "mods/moon-and-space-dimensions-fabric.pw.toml"
 hash = "e054c2574b17da77170e8202bb25e2ac12d8cce95b6315219f385baedf9825f1"
+metafile = true
+
+[[files]]
+file = "mods/no-unused-chunks.pw.toml"
+hash = "abd19626e120aefb6b7dad8581df29cbf9dd5b279261fa69e1d814d8ef6e0a1a"
 metafile = true
 
 [[files]]
@@ -2889,8 +3007,9 @@ file = "mods/replaymod-1.18.2-2.6.6.jar"
 hash = "289dfab2986c3a16e18954c94c0f9c8a0ef36ac40dedce1128faecb1a68d109c"
 
 [[files]]
-file = "mods/rhino-fabric-1802.1.14-build.182.jar"
-hash = "06a95f12b39edadcd918e9dd0135b6aea7972107e2317831e57e033af6776c6b"
+file = "mods/rhino.pw.toml"
+hash = "c8237d62ff964cd0d22e3293d536f00163f718b39d93dec880398882fb608dab"
+metafile = true
 
 [[files]]
 file = "mods/roughly-enough-characters.pw.toml"

@@ -16,8 +16,25 @@ let AP = (id, x) => MOD("architects_palette", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
 let ED = (id, x) => MOD("extended_drawers", id, x)
 let BC = (id, x) => MOD("bitsandchisels", id, x)
+let TC = (id, x) => MOD("tconstruct", id, x)
 
-let wood_types = [MC("oak"), MC("spruce"), MC("birch"), MC("jungle"), MC("acacia"), MC("dark_oak"), MC("crimson"), MC("warped"), PMD("dark_amaranth"), PMD("palm"), PMD("cherry_oak"), AP("twisted")]
+let wood_types = [
+	MC("oak"), MC("spruce"), MC("birch"), MC("jungle"), MC("acacia"), MC("dark_oak"), MC("crimson"), MC("warped"),
+	PMD("dark_amaranth"), PMD("palm"), PMD("cherry_oak"),
+	AP("twisted"),
+	TC("bloodshroom"), TC("skyroot"), TC("greenheart")
+]
+
+let donutCraft = (event, output, center, ring) => {
+	event.shaped(output, [
+		'SSS',
+		'SCS',
+		'SSS'
+	], {
+		C: center,
+		S: ring
+	})
+}
 
 function ifiniDeploying(output, input, tool) {
 	return {
@@ -78,6 +95,11 @@ function tweaks(event) {
 	event.remove({ output: IV("hammer") })
 	event.remove({ input: IV("hammer") })
 
+	event.remove({ id: TC("smeltery/casting/metal/gold/coin_sand_cast") })
+	event.remove({ id: TC("smeltery/casting/metal/gold/coin_gold_cast") })
+	event.remove({ id: TC("smeltery/casting/metal/silver/coin_sand_cast") })
+	event.remove({ id: TC("smeltery/casting/metal/silver/coin_gold_cast") })
+
 	event.replaceInput("#c:gold_plates", "create:golden_sheet")
 	event.replaceInput("#c:iron_plates", "create:iron_sheet")
 	event.replaceInput("#c:copper_plates", "create:copper_sheet")
@@ -87,7 +109,6 @@ function tweaks(event) {
 	event.replaceInput("indrev:nikolite_dust", "minecraft:redstone")
 
 	event.blasting(IV("steel_ingot"), MC("iron_ingot")).cookingTime(400)
-	event.stonecutting(AR("netherite_gear"), MC("netherite_ingot"))
 
 	event.remove({ id: CR("splashing/gravel") })
 	event.recipes.createSplashing([
@@ -227,7 +248,7 @@ function tweaks(event) {
 
 	event.remove({ output: BC("smart_chisel") })
 	event.shaped(BC("smart_chisel", 1), [
-		"SB"
+		"BS"
 	], {
 		S: MC("stick"),
 		B: CR("polished_rose_quartz")
@@ -276,6 +297,39 @@ function tweaks(event) {
 	})
 	event.remove({ output: AP("plating_block") })
 	event.stonecutting(AP("plating_block", 2), IV("steel_plate"))
+
+	event.remove({ output: TC('obsidian_pane') })
+	event.shaped(TC('obsidian_pane', 8), [
+		'SSS',
+		'SSS'
+	], {
+		S: MC('obsidian')
+	})
+
+	event.replaceInput(AP('withered_bone'), TC('necrotic_bone'))
+
+
+	event.remove({ id: TC('compat/create/andesite_alloy_zinc') })
+	event.remove({ id: TC('compat/create/andesite_alloy_iron') })
+}
+
+function alloying(event) {
+	event.remove({ id: TC('smeltery/alloys/molten_bronze') })
+	event.remove({ id: TC('smeltery/alloys/molten_brass') })
+	event.remove({ id: TC('smeltery/alloys/molten_invar') })
+	event.remove({ id: TC('smeltery/alloys/molten_electrum') })
+	event.remove({ id: TC('smeltery/alloys/molten_rose_gold') })
+	event.remove({ id: TC('smeltery/alloys/molten_enderium') })
+
+	event.remove({ type: MC("crafting_shapeless"), output: "createplus:brass_dust" })
+
+	event.remove({ id: TC("smeltery/casting/seared/smeltery_controller") })
+	event.remove({ id: TC("smeltery/melting/copper/smeltery_controller") })
+	donutCraft(event, TC('smeltery_controller'), TC('seared_bricks'), KJ('sealed_mechanism'))
+
+	event.remove({ id: TC('smeltery/casting/scorched/foundry_controller') })
+	donutCraft(event, TC('foundry_controller'), TC('scorched_bricks'), KJ('infernal_mechanism'))
+	event.remove({ id: TC('smeltery/melting/soul/sand') })
 }
 
 function trickierWindmills(event) {
@@ -296,7 +350,11 @@ function trickierWindmills(event) {
 function initAndesiteMachine(event) {
 	event.replaceInput({ id: CR("crafting/kinetics/brass_hand") }, "#c:plates/brass", CR("golden_sheet"))
 	wood_types.forEach(wood => {
-		event.recipes.createCutting("2x " + wood + "_slab", wood + "_planks").processingTime(150)
+		if (wood.startsWith("tconstruct")) {
+			event.recipes.createCutting("2x " + wood + "_planks_slab", wood + "_planks").processingTime(150)
+		} else {
+			event.recipes.createCutting("2x " + wood + "_slab", wood + "_planks").processingTime(150)
+		}
 	})
 	let transitional = "kubejs:incomplete_kinetic_mechanism"
 	event.recipes.createSequencedAssembly([
@@ -408,7 +466,18 @@ function algalAndesite(event) {
 }
 
 function oreProcessing(event) {
-	let process = (ingot, nugget, raw, crushed, dust, ores) => {
+	let iron = { name: "iron" }
+	let gold = { name: "gold" }
+	let nickel = { name: "nickel" }
+
+	let materialBP = new Map([
+		[iron, "nickel"],
+		[gold, "zinc"],
+		[nickel, "copper"]
+	])
+
+	let process = (ingot, nugget, raw, crushed, dust, ores, id) => {
+		let fluid = "tconstruct:molten_" + id
 
 		event.remove({ output: ingot, input: ores })
 		event.remove({ output: ingot, input: raw })
@@ -425,6 +494,7 @@ function oreProcessing(event) {
 		event.recipes.createMilling([Item.of(dust, 3)], crushed)
 		event.recipes.createCrushing([Item.of(dust, 3), Item.of(dust, 3).withChance(0.5)], crushed)
 		event.recipes.createSplashing([Item.of(nugget, 2)], dust)
+
 		event.custom({
 			"type": "alloy_forgery:forging",
 			"inputs": [
@@ -439,6 +509,42 @@ function oreProcessing(event) {
 			"min_forge_tier": 1,
 			"fuel_per_tick": 3
 		})
+		event.remove({ id: TC("smeltery/melting/metal/" + id + "/dust") })
+
+		if (materialBP.get(id) != null) {
+			let byproduct = "tconstruct:molten_" + materialBP.get(id)
+			event.custom({
+				"type": "tconstruct:melting",
+				"ingredient": {
+					"item": dust
+				},
+				"result": {
+					"fluid": fluid,
+					"amount": 3000
+				},
+				"temperature": 500,
+				"time": 30,
+				"byproducts": [
+					{
+						"fluid": byproduct,
+						"amount": 810
+					}
+				]
+			})
+		} else {
+			event.custom({
+				"type": "tconstruct:melting",
+				"ingredient": {
+					"item": dust
+				},
+				"result": {
+					"fluid": fluid,
+					"amount": 3000
+				},
+				"temperature": 500,
+				"time": 30
+			})
+		}
 	}
 	let metalsVanilla = ["iron", "gold"]
 	metalsVanilla.forEach(e => {
@@ -448,7 +554,7 @@ function oreProcessing(event) {
 		let crushed = "create:crushed_" + e + "_ore"
 		let dust = "indrev:" + e + "_dust"
 		let ores = "#minecraft:" + e + "_ores"
-		process(ingot, nugget, raw, crushed, dust, ores)
+		process(ingot, nugget, raw, crushed, dust, ores, e)
 
 		event.remove({ id: "alloy_forgery:" + e + "_from_ores" })
 		event.remove({ id: "alloy_forgery:" + e + "_from_raw_ores" })
@@ -462,24 +568,9 @@ function oreProcessing(event) {
 		let crushed = "create:crushed_" + e + "_ore"
 		let dust = "indrev:" + e + "_dust"
 		let ores = "#minecraft:" + e + "_ores"
-		process(ingot, nugget, raw, crushed, dust, ores)
-
+		process(ingot, nugget, raw, crushed, dust, ores, e,)
 		event.remove({ id: "alloy_forgery:" + e + "_from_ores" })
 		event.remove({ id: "alloy_forgery:" + e + "_from_raw_ores" })
-		event.custom({
-			"type": "alloy_forgery:forging",
-			"inputs": [
-				{ "item": dust },
-				{ "item": dust },
-				{ "item": dust }
-			],
-			"output": {
-				"id": ingot,
-				"count": 1
-			},
-			"min_forge_tier": 1,
-			"fuel_per_tick": 3
-		})
 	})
 	let metalsCreate = ["zinc"]
 	metalsCreate.forEach(e => {
@@ -489,7 +580,7 @@ function oreProcessing(event) {
 		let crushed = "create:crushed_" + e + "_ore"
 		let dust = "createplus:" + e + "_dust"
 		let ores = "#c:ores/" + e
-		process(ingot, nugget, raw, crushed, dust, ores)
+		process(ingot, nugget, raw, crushed, dust, ores, e)
 	})
 	let metalsIndrev = ["tin", "lead"]
 	metalsIndrev.forEach(e => {
@@ -499,7 +590,17 @@ function oreProcessing(event) {
 		let crushed = "create:crushed_" + e + "_ore"
 		let dust = "indrev:" + e + "_dust"
 		let ores = "#c:" + e + "_ores"
-		process(ingot, nugget, raw, crushed, dust, ores)
+		process(ingot, nugget, raw, crushed, dust, ores, e)
+	})
+	let metalsTic = ["cobalt"]
+	metalsTic.forEach(e => {
+		let ingot = "tconstruct:" + e + "_ingot"
+		let nugget = "tconstruct:" + e + "_nugget"
+		let raw = "tconstruct:raw_" + e
+		let crushed = "kubejs:crushed_" + e + "_ore"
+		let dust = "kubejs:" + e + "_dust"
+		let ores = "#c:ores/" + e
+		process(ingot, nugget, raw, crushed, dust, ores, e)
 	})
 }
 
@@ -652,7 +753,7 @@ function initObsidianMachine(event) {
 	]).transitionalItem(transitional)
 		.loops(1)
 		.id("kubejs:sturdy_mechanism")
-	
+
 	let obsidian_machine = (id, amount, other_ingredient) => {
 		event.remove({ output: id })
 		if (other_ingredient) {
@@ -672,14 +773,14 @@ function initInvarMachine(event) {
 	let chop = (type, output) => {
 		event.custom({
 			"type": "farmersdelight:cutting",
-			"ingredients": [{ "item": KJ(type + "_slimy_fern") }],
+			"ingredients": [{ "item": TC(type + "_slime_fern") }],
 			"tool": { "tag": "fabric:tools/knives" },
 			"result": [Item.of(KJ(type + "_slimy_fern_leaf"), 2).toResultJson()]
 		})
 		event.custom({
 			"type": "create:haunting",
 			"ingredients": [{ "item": KJ(type + "_slimy_fern_leaf") }],
-			"results": [{ "item": KJ(type + "_slimy_fern") }]
+			"results": [{ "item": TC(type + "_slime_fern") }]
 		})
 		event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), KJ(type + "_slimy_fern"), "#fabric:tools/knives"))
 		event.recipes.createMilling([KJ(type + "_slimy_fern_paste")], KJ(type + "_slimy_fern_leaf"))
@@ -807,6 +908,33 @@ function initEnderMachine(event) {
 	], {
 		C: KJ("enderium_casing"),
 		S: KJ("abstruse_mechanism")
+	})
+
+	event.custom({
+		"type": "tconstruct:alloy",
+		"inputs": [
+			{ "name": "tconstruct:molten_silver", "amount": 9000 },
+			{ "name": "tconstruct:ender_slime", "amount": 20250 },
+			{ "name": "tconstruct:molten_ender", "amount": 20250 }
+		],
+		"result": {
+			"fluid": "tconstruct:molten_enderium",
+			"amount": 9000
+		},
+		"temperature": 850
+	})
+
+	event.custom({
+		"type": "tconstruct:melting",
+		"ingredient": {
+			"item": "promenade:dark_amaranth_fungus"
+		},
+		"result": {
+			"fluid": "tconstruct:ender_slime",
+			"amount": 27000
+		},
+		"temperature": 100,
+		"time": 10
 	})
 
 	let ender_machine = (id, amount, other_ingredient) => {
@@ -956,7 +1084,7 @@ function alchemy(event) {
 				"type": "indrev:fluid_infuse",
 				"ingredients": Ingredient.of(e.ingredient).toJson(),
 				"fluidInput": {
-					"fluid": "kubejs:molten_glass",
+					"fluid": "tconstruct:molten_glass",
 					"amount": 8100
 				},
 				"output": { "item": e.id },
@@ -990,7 +1118,7 @@ function alchemy(event) {
 		"ingredients": [
 			{ "item": "minecraft:redstone" },
 		],
-		"fluidInput": { "fluid": "kubejs:molten_glass", "amount": 8100 },
+		"fluidInput": { "fluid": "tconstruct:molten_glass", "amount": 8100 },
 		"output": { "item": "kubejs:accellerator_redstone", "count": 1 },
 		"processTime": 400
 	})
@@ -1000,7 +1128,7 @@ function alchemy(event) {
 		"ingredients": [
 			{ "item": "indrev:silver_dust" }
 		],
-		"fluidInput": { "fluid": "kubejs:molten_glass", "amount": 8100 },
+		"fluidInput": { "fluid": "tconstruct:molten_glass", "amount": 8100 },
 		"output": { "item": "kubejs:substrate_silver", "count": 1 },
 		"processTime": 400
 	})
@@ -1010,7 +1138,7 @@ function alchemy(event) {
 		"ingredients": [
 			{ "item": "minecraft:glowstone_dust" }
 		],
-		"fluidInput": { "fluid": "kubejs:molten_glass", "amount": 8100 },
+		"fluidInput": { "fluid": "tconstruct:molten_glass", "amount": 8100 },
 		"output": { "item": "kubejs:accellerator_glowstone", "count": 1 },
 		"processTime": 400
 	})
@@ -1022,12 +1150,13 @@ function initFluixMachine(event) {
 	event.shaped(KJ("flash_drive"), [
 		"SCA"
 	], {
-		A: KJ("sapphire"),
+		A: TC("cobalt_ingot"),
 		C: AE2("logic_processor"),
 		S: MC("iron_ingot")
 	})
 
-	/*	let t = KJ("incomplete_calculation_mechanism")
+	/*
+	let t = KJ("incomplete_calculation_mechanism")
 		event.recipes.createSequencedAssembly([
 			KJ("calculation_mechanism"),
 		], KJ("inductive_mechanism"), [
@@ -1036,7 +1165,8 @@ function initFluixMachine(event) {
 			event.recipes.createDeploying(t, [t, KJ("flash_drive")])
 		]).transitionalItem(t)
 			.loops(1)
-			.id("kubejs:calculation_mechanism")	*/
+			.id("kubejs:calculation_mechanism")
+	*/
 
 	event.remove({ output: AE2("controller") })
 	event.shaped(AE2("controller"), [
@@ -1065,8 +1195,6 @@ function initFluixMachine(event) {
 
 	event.replaceInput({ id: AE2("network/cells/item_storage_components_cell_1k_part") }, C("#redstone_dusts"), KJ("calculation_mechanism"))
 	event.replaceInput({ id: AE2("network/cells/item_storage_components_cell_1k_part") }, AE2("logic_processor"), MC("redstone"))
-	//	event.replaceInput({ id: AE2("network/cells/fluid_storage_components_cell_1k_part") }, MC("green_dye"), KJ("calculation_mechanism"))
-	//	event.replaceInput({ id: AE2("network/cells/fluid_storage_components_cell_1k_part") }, AE2("logic_processor"), MC("green_dye"))
 	event.replaceInput({ id: AE2("network/cells/spatial_components") }, C("#glowstone_dusts"), KJ("calculation_mechanism"))
 	event.replaceInput({ id: AE2("network/cells/spatial_components") }, AE2("engineering_processor"), MC("glowstone_dust"))
 	event.replaceInput({ id: AE2("network/crafting/patterns_blank") }, C("#glowstone_dusts"), KJ("calculation_mechanism"))
@@ -1075,7 +1203,19 @@ function initFluixMachine(event) {
 function initMath(event) {
 	let types = ["three", "eight", "plus", "minus", "multiply", "divide"]
 	types.forEach(e => {
-		event.stonecutting(KJ(e), KJ("raw_logic_sheet"))
+		event.stonecutting(KJ(e + "_cast"), IV("bronze_plate"))
+		event.custom({
+			"type": "tconstruct:casting_table",
+			"cast": {
+				"item": KJ(e + '_cast')
+			},
+			"fluid": {
+				"name": "kubejs:raw_logic",
+				"amount": 81
+			},
+			"result": Item.of(KJ(e)).toResultJson(),
+			"cooling_time": 10
+		})
 	})
 
 	let nums = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
@@ -1123,6 +1263,64 @@ function initMath(event) {
 			}
 		}
 	}
+
+	let meltOrCrucible = (id, out, outAmount) => {
+		event.custom({
+			"type": "tconstruct:melting",
+			"ingredient": { "item": id },
+			"result": {
+				"fluid": out,
+				"amount": outAmount
+			},
+			"temperature": 200,
+			"time": 20
+		})
+	}
+
+	let alloyAmount = 810
+	let outAmount = 4050
+	event.custom({
+		"type": "tconstruct:alloy",
+		"inputs": [
+			{ "name": "kubejs:number_0", "amount": alloyAmount },
+			{ "name": "kubejs:number_1", "amount": alloyAmount },
+			{ "name": "kubejs:number_2", "amount": alloyAmount },
+			{ "name": "kubejs:number_3", "amount": alloyAmount },
+			{ "name": "kubejs:number_4", "amount": alloyAmount },
+			{ "name": "kubejs:number_5", "amount": alloyAmount },
+			{ "name": "kubejs:number_6", "amount": alloyAmount },
+			{ "name": "kubejs:number_7", "amount": alloyAmount },
+			{ "name": "kubejs:number_8", "amount": alloyAmount },
+			{ "name": "kubejs:number_9", "amount": alloyAmount }
+		],
+		"result": {
+			"fluid": "kubejs:matrix",
+			"amount": outAmount
+		},
+		"temperature": 200
+	})
+
+	meltOrCrucible(KJ("calculation_mechanism"), KJ("raw_logic"), 2430)
+	meltOrCrucible(KJ("zero"), KJ("number_0"), 81)
+	meltOrCrucible(KJ("one"), KJ("number_1"), 81)
+	meltOrCrucible(KJ("two"), KJ("number_2"), 81)
+	meltOrCrucible(KJ("three"), KJ("number_3"), 81)
+	meltOrCrucible(KJ("four"), KJ("number_4"), 81)
+	meltOrCrucible(KJ("five"), KJ("number_5"), 81)
+	meltOrCrucible(KJ("six"), KJ("number_6"), 81)
+	meltOrCrucible(KJ("seven"), KJ("number_7"), 81)
+	meltOrCrucible(KJ("eight"), KJ("number_8"), 81)
+	meltOrCrucible(KJ("nine"), KJ("number_9"), 81)
+
+	event.custom({
+		"type": "tconstruct:casting_basin",
+		"fluid": {
+			"name": "kubejs:matrix",
+			"amount": 81000
+		},
+		"result": Item.of(KJ("computation_matrix")).toResultJson(),
+		"cooling_time": 20
+	})
 }
 function trading(event) {
 	let trade = (card_id, ingredient, output) => {
@@ -1200,7 +1398,7 @@ onEvent("recipes", event => {
 	initFluixMachine(event)
 	initMath(event)
 	spaceCraft(event)
-	//	trading(event)
+	alloying(event)
 })
 
 onEvent("item.tags", event => {

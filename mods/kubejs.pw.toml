@@ -1,0 +1,13 @@
+name = "KubeJS"
+filename = "kubejs-fabric-1802.5.4-build.533.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/umyGl7zF/versions/1802.5.4-build.533+fabric/kubejs-fabric-1802.5.4-build.533.jar"
+hash-format = "sha1"
+hash = "7c19991d6b64cacf2037ca1dc618b5ca9ffd9e07"
+
+[update]
+[update.modrinth]
+mod-id = "umyGl7zF"
+version = "Kyktn61M"

@@ -14,7 +14,7 @@ let AP = (id, x) => MOD("architects_palette", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
 
 onEvent("item.registry", event => {
-//	Mechanism
+	//	Mechanism
 	let registerMechanism = (name, localName, rarity) => {
 		let id = name.toLowerCase() + "_mechanism"
 		let incompleteId = "incomplete_" + id
@@ -39,7 +39,7 @@ onEvent("item.registry", event => {
 		registerMechanism("Calculation", "智能")
 	}
 
-//	Machine Parts
+	//	Machine Parts
 	let registerMachinePart = (name, localName) => {
 		let id = name.replace(" ", "_").toLowerCase()
 
@@ -51,7 +51,7 @@ onEvent("item.registry", event => {
 		registerMachinePart("Saw Blade", "锯片")
 	}
 
-//	Tools
+	//	Tools
 	let registerSaw = (materialName, materialId, durability) => {
 		let id = materialId + "_saw"
 
@@ -71,10 +71,9 @@ onEvent("item.registry", event => {
 		registerToolMaterial("Netherite", "下界合金", 2031)
 	}
 
-//	Other items
+	//	Other items
 	let registerTypicalItem = (name, localName) => {
 		let id = name.replace(" ", "_").toLowerCase()
-
 		event.create(id)
 			.texture(modpackId + ":item/" + id)
 			.displayName(localName)
@@ -108,16 +107,14 @@ onEvent("item.registry", event => {
 		registerTypicalItem("Rough Sand", "粗沙")
 		registerTypicalItem("Purified Sand", "高纯沙")
 
+		registerTypicalItem("Cobalt Dust", "钴粉")
 		registerTypicalItem("Emerald Dust", "绿宝石粉")
 		registerTypicalItem("Diamond Dust", "钻石粉")
 
 		registerTypicalItem("Basalz Shard", "玄武碎片")
 		registerTypicalItem("Basalz Powder", "玄武粉末")
-//		registerTypicalItem("Blitz Mote")
-//		registerTypicalItem("Blitz Powder")
 		registerTypicalItem("Blizz Cube", "暴雪结晶")
 		registerTypicalItem("Blizz Powder", "暴雪粉末")
-//		registerTypicalItem("Smoke Mote")
 
 		registerTypicalItem("Ice Charge", "冰荷弹")
 		registerTypicalItem("Earth Charge", "岩荷弹")
@@ -136,27 +133,6 @@ onEvent("item.registry", event => {
 			.texture(modpackId + ":item/incomplete_coke_chunk")
 			.displayName("小块焦炭（未完成）")
 
-		event.create("raw_logic_sheet")
-			.texture(modpackId + ":item/raw_logic_sheet")
-			.displayName("逻辑母板")
-			.glow(true)
-
-
-
-		event.create("earth_slimy_fern")
-			.texture(modpackId + ":item/fern/earth_slimy_fern")
-			.displayName("史莱姆蕨")
-
-		event.create("ender_slimy_fern")
-			.texture(modpackId + ":item/fern/ender_slimy_fern")
-			.displayName("史莱姆蕨")
-
-		event.create("sky_slimy_fern")
-			.texture(modpackId + ":item/fern/sky_slimy_fern")
-			.displayName("史莱姆蕨")
-
-
-
 		event.create("earth_slimy_fern_leaf")
 			.texture(modpackId + ":item/fern/leaf/earth_slimy_fern_leaf")
 			.displayName("史莱姆蕨叶片")
@@ -168,8 +144,6 @@ onEvent("item.registry", event => {
 		event.create("sky_slimy_fern_leaf")
 			.texture(modpackId + ":item/fern/leaf/sky_slimy_fern_leaf")
 			.displayName("史莱姆蕨叶片")
-
-
 
 		event.create("earth_slimy_fern_paste")
 			.texture(modpackId + ":item/fern/paste/earth_slimy_fern_paste")
@@ -183,8 +157,6 @@ onEvent("item.registry", event => {
 			.texture(modpackId + ":item/fern/paste/sky_slimy_fern_paste")
 			.displayName("史莱姆蕨粉末")
 
-
-
 		event.create("radiant_sheet")
 			.texture(modpackId + ":item/radiant_sheet")
 			.displayName("光辉板")
@@ -194,8 +166,6 @@ onEvent("item.registry", event => {
 			.texture(modpackId + ":item/radiant_coil")
 			.displayName("光辉线圈")
 			.glow(true)
-
-
 
 		event.create("chromatic_resonator")
 			.texture(modpackId + ":item/chromatic_resonator")
@@ -212,10 +182,9 @@ onEvent("item.registry", event => {
 			.displayName("闪存")
 			.maxDamage(512)
 
-		event.create("charged_calculator")
-			.texture(modpackId + ":item/charged_calculator")
-			.displayName("计算中枢")
-			.maxDamage(64)
+		event.create("crushed_cobalt_ore")
+			.texture(modpackId + ":item/crushed_cobalt_ore")
+			.displayName("粉碎钴矿石")
 
 		let processors = ["Calculation", "Logic", "Engineering"]
 		let processorsLocalName = ["运算", "逻辑", "工程"]
@@ -228,7 +197,7 @@ onEvent("item.registry", event => {
 		})
 	}
 
-//	Final init
+	//	Final init
 	let initItems = () => {
 		initMechanisms()
 		initMachineParts()
@@ -259,15 +228,23 @@ onEvent("item.registry", event => {
 	number("Divide", "÷")
 	number("Missingno", "NaN")
 
-	event.create("number_array")
-		.texture(modpackId + ":item/number/number_array")
-		.displayName("数组")
-		.glow(true)
-	
+	/*
+		event.create("number_array")
+			.texture(modpackId + ":item/number/number_array")
+			.displayName("Number Array")
+			.glow(true)
+	*/
+
+	event.create('three_cast').texture(modpackId + ":item/cast/three_cast").displayName('整数铸模 (3)').unstackable()
+	event.create('eight_cast').texture(modpackId + ":item/cast/eight_cast").displayName('整数铸模 (8)').unstackable()
+	event.create('plus_cast').texture(modpackId + ":item/cast/plus_cast").displayName('运算符铸模 (+)').unstackable()
+	event.create('minus_cast').texture(modpackId + ":item/cast/minus_cast").displayName('运算符铸模 (-)').unstackable()
+	event.create('multiply_cast').texture(modpackId + ":item/cast/multiply_cast").displayName('运算符铸模 (×)').unstackable()
+	event.create('divide_cast').texture(modpackId + ":item/cast/divide_cast").displayName('运算符铸模 (÷)').unstackable()
 })
 
 onEvent("block.registry", event => {
-//	Machine
+	//	Machine
 	let registerMachine = (name, localName, layer) => {
 		let id = name.toLowerCase() + "_machine"
 		event.create(id)
@@ -356,6 +333,7 @@ onEvent("block.registry", event => {
 			.displayName(localName)
 			.renderType("cutout")
 			.item(e => e.rarity(model == "catalyst" ? RARITY_UNCOMMON : RARITY_COMMON).color(0, c1).color(1, c2))
+			.tagBoth(modpackId + ":substrates")
 		substrate_index++
 	}
 
@@ -417,6 +395,7 @@ onEvent("block.registry", event => {
 		.displayName("§b§khu§on§mДa§r§b§k§oャ§lt.化§r§b§k§n劑§l\"【")
 		.renderType("cutout")
 		.item(e => e.rarity(RARITY_RARE).color(0, 0xb200ed).color(1, 0xff66cc))
+		.tagBoth(modpackId + ":substrates")
 
 	event.create("substrate_silicon")
 		.material("glass")
@@ -428,6 +407,7 @@ onEvent("block.registry", event => {
 		.displayName("§d高能硅试剂")
 		.renderType("cutout")
 		.item(e => e.rarity(RARITY_EPIC).color(0, 0x474449).color(1, 0x967DA0))
+		.tagBoth(modpackId + ":substrates")
 
 
 	event.create("substrate_silver")
@@ -440,6 +420,7 @@ onEvent("block.registry", event => {
 		.displayName("§7银元素§r试剂")
 		.renderType("cutout")
 		.item(e => e.color(0, 0x9FADB4).color(1, 0xBECCD2))
+		.tagBoth(modpackId + ":substrates")
 
 	event.create("accellerator_glowstone")
 		.material("glass")
@@ -460,8 +441,6 @@ onEvent("block.registry", event => {
 		.displayName("§c红石§r稳定剂")
 		.renderType("cutout")
 		.item(e => e.color(0, 0xAA0F01))
-
-
 })
 
 onEvent("fluid.registry", event => {
@@ -479,16 +458,6 @@ onEvent("fluid.registry", event => {
 		.thinTexture(0x404344)
 		.noBlock()
 
-	event.create("liquid_soul")
-		.displayName("液态灵魂")
-		.thinTexture(0x604b3f)
-		.noBlock()
-
-	event.create("slime")
-		.displayName("§a史莱姆酱")
-		.thinTexture(0x75db89)
-		.noBlock()
-
 	event.create("waste")
 		.displayName("废液")
 		.thinTexture(0x123d36)
@@ -502,34 +471,6 @@ onEvent("fluid.registry", event => {
 		.displayName("液态焦炭")
 		.thinTexture(0x323232).noBlock()
 
-
-
-	event.create("molten_zinc")
-		.displayName("熔融锌")
-		.thickTexture(0xb0b29f)
-
-	event.create("molten_tungsten")
-		.displayName("熔融钨")
-		.thickTexture(0x57594c)
-
-	event.create("molten_brass")
-		.displayName("熔融黄铜")
-		.thickTexture(0xe0c36f)
-
-	event.create("molten_diamond")
-		.displayName("熔融钻石")
-		.thickTexture(0x4ee5ca)
-
-	event.create("molten_enderium")
-		.displayName("熔融末影合金").
-		thinTexture(0x185f74)
-	
-	event.create("molten_glass")
-		.displayName("熔融玻璃")
-		.thinTexture(0xcfe6e5)
-
-
-
 	event.create("fine_sand")
 		.displayName("细砂").noBlock()
 		.thickTexture(0xded6a4)
@@ -539,11 +480,14 @@ onEvent("fluid.registry", event => {
 		.displayName("玻色-爱因斯坦凝聚态逻辑（未处理）")
 		.thinTexture(0xE7FFCB)
 		.noBlock()
-/*	for (i = 0; i < 10; i++) {
+
+	for (i = 0; i < 10; i++) {
 		event.create("number_" + i)
-			.displayName("玻色-爱因斯坦凝聚态逻辑（${i}）")
-			.thinTexture(colors[i]).noBlock()
-	}	*/
+			.displayName("玻色-爱因斯坦凝聚态逻辑 （" + i + "）")
+			.thinTexture(colors[i])
+			.noBlock()
+			.noBucket()
+	}
 	event.create("matrix")
 		.displayName("液态智能矩阵")
 		.thinTexture(colors[0])
