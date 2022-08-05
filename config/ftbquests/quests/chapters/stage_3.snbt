@@ -9,17 +9,17 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "Chapter 3 Start!"
+			title: "&6&l钢铁洪流"
 			icon: "create:precision_mechanism"
 			x: -1.5d
 			y: -1.0d
 			shape: "hexagon"
 			description: [
-				"Working towards a passive supply of Radiant Induction Coils, you'll be sure to encounter some new and unfamiliar tasks. "
+				"在批量生产&6光辉线圈&r的路上，你会遇到更加困难的挑战。"
 				""
-				"Once again it's time to grab the Wrench, re-stock the toolbox and to clear out a new plot."
+				"再一次拿起扳手、挎起工具箱，为你的工厂开辟新地界吧！"
 				""
-				"Happy Creating!"
+				"&6创造最伟大！&r"
 			]
 			dependencies: ["780E8AE86250C73D"]
 			hide: true
@@ -28,6 +28,7 @@
 			tasks: [{
 				id: "2236686383D4E61B"
 				type: "checkmark"
+				title: "&6开始！"
 			}]
 			rewards: [{
 				id: "296358DF5AEC671C"
@@ -36,16 +37,16 @@
 			}]
 		}
 		{
-			title: "Keeping Stock"
+			title: "库存克星"
 			x: -3.5d
 			y: -1.0d
 			shape: "circle"
 			description: [
-				"A few of the following contraptions involve dropping items on the ground. Whenever a process will not backstack on overflow (e.g. belt items waiting automatically), it is important to toggle the production at certain buffer thresholds."
+				"接下来的几个装置都需要在物品形态（掉落物形态）处理部分材料，然而这些操作都无法自动止损（例如掉落物的拥堵并不会使传送带上的物品停下）。手动增加止损机构和缓冲区因此成为了必要操作。"
 				""
-				"More concretely: When the output buffer exceeds 75%, stop producing items. Once it reaches below 25%, start the process up again. This prevents overflow and machines from spewing items everywhere."
+				"更具体来说：当输出缓冲区内的物品个数达到设定值的75%时，停止材料生产；当它不足25%时，重新开始材料生产。这类机构能够防止物品到处散落，从而节约库存。"
 				""
-				"The Stockpile Switch is designed for this purpose exactly. "
+				"&6存量转换器&r正是为此而设计的。"
 			]
 			dependencies: ["397232F676CB621B"]
 			id: "472FB03D0E5A38D6"
@@ -63,12 +64,32 @@
 			}]
 		}
 		{
-			title: "Express Sticks"
+			title: "动力锤"
+			icon: "kubejs:invar_ingot"
+			x: 0.5d
+			y: -1.0d
+			shape: "circle"
+			subtitle: "30 号装置"
+			description: [
+				"除了&6超频构件，&r你还需要用&6殷钢&r（某种铁镍合金）制造&6殷钢机器&r才能完成&6机器方块&r的制造。"
+				""
+				"由于精炼&6殷钢&r的过程漫长而又枯燥，所以你可能需要建造一条自动生产线..."
+			]
+			dependencies: ["397232F676CB621B"]
+			id: "26A1E68DA7ACB025"
+			tasks: [{
+				id: "428A5B60D9C268BD"
+				type: "checkmark"
+				title: "完成"
+			}]
+		}
+		{
+			title: "木棍次日达"
 			icon: "minecraft:stick"
 			x: -3.0d
 			y: 1.0d
-			subtitle: "Contraption 19"
-			description: ["For this next trick a supply of Wooden Sticks is required. Whether that calls for a new harvester or just a scheduled shipment from Contraption 1 is up to you."]
+			subtitle: "19 号装置"
+			description: ["下面材料的生产需要许多木棍。你可以选择重新采集木棍，或用传送带连接到你的&61号装置。&r"]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
 			id: "194B973EAF17809C"
@@ -87,12 +108,12 @@
 			]
 		}
 		{
-			title: "More Cobblestone"
+			title: "石之海"
 			icon: "minecraft:cobblestone"
 			x: -1.5d
 			y: 1.0d
-			subtitle: "Contraption 20-1"
-			description: ["The trusty and cheap multi-purpose material of cobblestone is making its comeback."]
+			subtitle: "20-1 号装置"
+			description: ["鹅卵石可真是廉价啊（笑"]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
 			id: "5C277D27606F64DA"
@@ -100,7 +121,7 @@
 				{
 					id: "35C10E79F8F1E0DF"
 					type: "item"
-					title: "Any Cobblestone"
+					title: "任意圆石"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -113,20 +134,20 @@
 				{
 					id: "36BD580312C8177B"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "The Wall"
+			title: "那一天，人类终于回想起了..."
 			icon: "create:crushing_wheel"
 			x: -1.5d
 			y: 2.5d
-			subtitle: "Contraption 20-2"
+			subtitle: "20-2 号装置"
 			description: [
-				"Next up, we need Crushing Wheels. Not only as a machine, but as an ingredient, too."
+				"下一步，我们需要&6粉碎轮。&r不过不仅要用作机器，还要用作原料。"
 				""
-				"Walls of Mechanical Crafters can quickly get in the way of paths and other infrastructure. Make sure to give them some space."
+				"一面&6动力合成器&r墙可能会迅速阻碍你工厂里的其它基建结构。确保为它们留出足够的空间。"
 			]
 			dependencies: [
 				"194B973EAF17809C"
@@ -143,17 +164,17 @@
 				{
 					id: "764E76A93ED07203"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Inception"
+			title: "全面侵入"
 			icon: "ae2:singularity"
 			x: -1.5d
 			y: 4.0d
-			subtitle: "Contraption 20-3"
-			description: ["By Crushing the Crushing Wheels using Crushing Wheels, a strange anomaly is created and dropped. We can use this to our advantage."]
+			subtitle: "20-3 号装置"
+			description: ["当你使用&6粉碎轮&r粉碎&6粉碎轮&r时，一种奇特的现象产生了...也许我们可以稍加利用..."]
 			dependencies: ["7AAE71F57FB89BCC"]
 			id: "2C81D358594C4352"
 			tasks: [
@@ -166,20 +187,20 @@
 				{
 					id: "09AAD9853B976D69"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Slimy Ferns"
+			title: "利姆露大人的恩惠"
 			icon: "kubejs:earth_slimy_fern"
 			x: 3.5d
 			y: 1.0d
 			shape: "circle"
 			description: [
-				"In order to produce Gunpowder, Bone Meal and Ender Dust, the peculiar 'slimy fern' can be used as an alternative to Monster farms."
+				"如果你想与怪物们友好相处，那也许你可以试试使用&6史莱姆蕨&r来生产&6火药、骨粉&r和&6末影粉...&r"
 				""
-				"Roam the lands for a bit and look out for egregiously vibrant spots of colour in the vegetation. Don't forget to bring a pair of Shears."
+				"何不漫游大陆，寻找植被中异常鲜艳的颜色呢？别忘了带把剪刀。"
 			]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
@@ -206,18 +227,16 @@
 			]
 		}
 		{
-			title: "The Haunted Cycle"
+			title: "阴魂不散"
 			icon: "kubejs:sky_slimy_fern_leaf"
 			x: 3.5d
 			y: 2.5d
-			subtitle: "Contraption 21"
+			subtitle: "21 号装置"
 			description: [
-				"Slimy Ferns have the property of instant regeneration when exposed to Spirit Fire. Much like the Quartz Incubator in the other Factory, we can use this property to create a passive supply."
+				"当接触到&6灵魂火&r时，&6史莱姆蕨叶片&r可以在一瞬间重新生长为蕨。就像之前的&6赛特斯石英种子&r循环一样，我们也许可以对这一特点加以利用。"
 				""
-				"The cycle is simple: Cut the fern plant into halves using a Deployer, then haunt one of the leaves in the soul flame. It is recommended to ensure that all colours of fern are duplicated at similar rates."
-				""
-				""
-				"Oh, and keep a backup of each fern somewhere safe."
+				"这一循环相当简单：使用&6机械手&r将每个&6史莱姆蕨&r切成两片叶片，再用&6灵魂火&r将其中之一缠魂。所有颜色的&6史莱姆蕨&r最好以相同速度循环。"
+				"&7啊，留一些用作备份总不是什么坏事。"
 			]
 			dependencies: ["01BE1A7FCE79C63D"]
 			id: "38D19F4EC634F33B"
@@ -243,17 +262,17 @@
 				{
 					id: "40B23393B8A6D2E8"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Mysterious Biomass"
+			title: "神秘生物量"
 			icon: "kubejs:earth_slimy_fern_paste"
 			x: 3.5d
 			y: 4.0d
-			subtitle: "Contraption 22-1"
-			description: ["Route the excess leaves into a crusher, in preparation for the upcoming magic trick."]
+			subtitle: "22-1 号装置"
+			description: ["把多余的叶片粉碎，好戏即将开场。"]
 			dependencies: ["38D19F4EC634F33B"]
 			id: "3D1EEB596FDBE4E7"
 			tasks: [
@@ -278,21 +297,21 @@
 				{
 					id: "65864C0AE5B28091"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "I like Mobs, actually"
+			title: "其实我更喜欢折磨怪物"
 			icon: "minecraft:zombie_head"
 			x: 3.5d
 			y: 5.5d
 			shape: "circle"
-			subtitle: "Alt. Contraption 21 \\& 22"
+			subtitle: "可替代 21 和 22 号装置"
 			description: [
-				"An automation alternative to the Spirit Cycle is to set up a Monster Spawner of some kind."
+				"如果你不想搞那么麻烦，几个刷怪塔就可以解决一切。"
 				""
-				"Click the Checkmark to skip the Fern Duplication Contraption."
+				"勾选“使用刷怪塔”以跳过&6史莱姆蕨&r机器。"
 			]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
@@ -300,19 +319,19 @@
 			tasks: [{
 				id: "53728BDEA8F1938C"
 				type: "checkmark"
-				title: "Checkmark"
+				title: "使用刷怪塔"
 			}]
 		}
 		{
-			title: "Cooking up some Gunpowder"
+			title: "你需要煮点药"
 			icon: "minecraft:gunpowder"
 			x: 1.5d
 			y: 4.0d
-			subtitle: "Contraption 22-2"
+			subtitle: "22-2 号装置"
 			description: [
-				"Transmuting the green reactive blend requires very special heating conditions, only available on Campfires or Stoves."
+				"加工这些绿色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。"
 				""
-				"This Contraption will need the special ability to both place and collect items from these places."
+				"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。"
 			]
 			dependencies: [
 				"3D1EEB596FDBE4E7"
@@ -330,20 +349,20 @@
 				{
 					id: "34EFEE60A6755C01"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Cooking up some Ender Dust"
+			title: "炒粉"
 			icon: "ae2:ender_dust"
 			x: 1.5d
 			y: 5.5d
-			subtitle: "Contraption 22-3"
+			subtitle: "22-3 号装置"
 			description: [
-				"Transmuting the purple reactive blend requires very special heating conditions, only available on Campfires or Stoves."
+				"加工这些紫色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。"
 				""
-				"This Contraption will need the special ability to both place and collect items from these places."
+				"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。"
 			]
 			dependencies: [
 				"3D1EEB596FDBE4E7"
@@ -361,20 +380,20 @@
 				{
 					id: "37A6393C0AD6E861"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Cooking up some Fertiliser"
+			title: "煎点化肥"
 			icon: "minecraft:bone_meal"
 			x: 1.5d
 			y: 7.0d
-			subtitle: "Contraption 22-4"
+			subtitle: "22-4 号装置"
 			description: [
-				"Transmuting the blue reactive blend requires very special heating conditions, only available on Campfires or Stoves."
+				"加工这些蓝色生物材料的过程需要特殊的环境温度。目前，只有&6篝火&r和&6炉子&r才能满足这一要求。"
 				""
-				"This Contraption will need the special ability to both place and collect items from these places."
+				"设计这一装置时不仅要考虑如何放置原料，更要考虑到如何才能安全地收集产物才行。"
 			]
 			dependencies: [
 				"3D1EEB596FDBE4E7"
@@ -392,17 +411,17 @@
 				{
 					id: "4002627D52C3A616"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "More Sand"
+			title: "无法自拔"
 			icon: "minecraft:sand"
 			x: 0.0d
 			y: 1.0d
-			subtitle: "Contraption 23-1"
-			description: ["Sand will be required to build the Explosives needed for the Reactor. Thankfully, new standards have allowed you access to Crushing Wheels, which make sand production a lot less of a nuisance."]
+			subtitle: "23-1 号装置"
+			description: ["你需要更多沙子以制造反应堆中必须的炸药。可今非昔比的你有了粉碎轮，使这一切变得如此简单。"]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
 			id: "5F9BA7BA46D2E5B8"
@@ -416,17 +435,17 @@
 				{
 					id: "2A3EAC60765E5C7A"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Checker Crafters"
+			title: "不要在这里下国际象棋"
 			icon: "minecraft:tnt"
 			x: 0.0d
 			y: 4.0d
-			subtitle: "Contraption 23-2"
-			description: ["Use Mechanical Crafters to build TNT. Since most of its slots will have to be supplied individually, a mechanical Arm might help for provinding the necessary logistics."]
+			subtitle: "23-2 号装置"
+			description: ["用&6动力合成器&r来造些易爆品吧！在合成&6TNT&r时，你需要重复在不相邻的格子中分别放入&6沙子&r和&6火药。&r这时，一些&6动力臂&r或许能派上大用场。"]
 			dependencies: [
 				"5F9BA7BA46D2E5B8"
 				"050A20198A80CF1A"
@@ -442,22 +461,23 @@
 				{
 					id: "2AD912C0E25F5D65"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "The Reactor"
+			title: "切尔诺贝利"
 			icon: "ae2:quantum_entangled_singularity"
 			x: -1.5d
 			y: 5.5d
-			subtitle: "Contraption 24"
+			subtitle: "24 号装置"
 			description: [
-				"Here comes the central feature of this Factory Wing: the Reactor."
+				"你将亲手打造出这一工厂片区的核心装置：反应堆。"
 				""
-				"Progressing towards Inductive Coils requires a controlled Explosion where nearby Singularities and Ender Dust are combined. See if you can come up with a circuit to continuously blow up these dropped item-stacks."
+				"要制造&6光辉线圈，&r你必须先让&6奇点&r和&6末影粉&r同时参与一次次的可控爆炸才行。希望你能想出一种万全的方法，使反应堆能够在三种材料的供应下稳定运转..."
 				""
-				"Note: Ender dust and Singularities are consumed in a 1:1 ratio. They do not have to be in the exact same location. One TNT can transform multiple sets of ingredients. The result will drop at the location of the Singularity item."
+				"注意，&6奇点&r和&6末影粉&r需要以1:1的比率供应。他们并不需要离得特别近，且一次爆炸可以同时转换多组物品。最终产物会在&6奇点&r所在位置生成。"
+				"&7由于产物的堆叠规则为2个每组，所以你需要精细控制物品输入数量...抽屉是没用的。"
 			]
 			dependencies: [
 				"02B2E249421FAE58"
@@ -475,17 +495,17 @@
 				{
 					id: "3A68EA184DE4D9B4"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Your Favourite Colour"
+			title: "选择困难症"
 			icon: "minecraft:rose_bush"
 			x: 0.0d
 			y: 7.0d
-			subtitle: "Contraption 25"
-			description: ["For production of chromatic materials, a colour pigment is needed. It is up to you which colour dye should be automated for this purpose. The only exception is white dye."]
+			subtitle: "25 号装置"
+			description: ["你首先需要选择一种颜料以生产&6异彩奇点。&r选择哪种颜色都可以，除了&f白色。&r"]
 			dependencies: ["402F89CABF6BCDA4"]
 			id: "27C191346BB14D9D"
 			tasks: [
@@ -566,17 +586,17 @@
 				{
 					id: "32E697E9386ABF17"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Painting Space itself"
+			title: "染上星空的颜色"
 			icon: "kubejs:dye_entangled_singularity"
 			x: -1.5d
 			y: 7.0d
-			subtitle: "Contraption 26-1"
-			description: ["Mixing the Entangled Singularities with a dye of choice creates the very essence of colour! Just what we need for producing a perfected chromatic compound."]
+			subtitle: "26-1 号装置"
+			description: ["将&6量子缠绕态奇点&r与染料混合以探索颜色的究极奥秘！有了它，我们才能够着手制作&6异彩化合物。&r"]
 			dependencies: [
 				"27C191346BB14D9D"
 				"5A199B898D41A309"
@@ -592,19 +612,19 @@
 				{
 					id: "4B4BDAA9DFB0518A"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Spectral Correction (Red)"
+			title: "&c光谱校正&r"
 			x: -0.85d
 			y: 9.0d
 			shape: "circle"
 			description: [
-				"Crushing Dyed Singularities has a chance to yield little orbs of red colour."
+				"通过粉碎&6异彩奇点，&r你有概率获得一些&c染色球（红色）。&r"
 				""
-				"Since this is not the colour needed for chromatic compound, you can use Item Drains for frequency correction."
+				"你并不需要&c红色染色球&r来生产&6异彩化合物，&r试着放入&6分液池&r以校正它的光谱。"
 			]
 			dependencies: ["2CCD84D55DE71EB2"]
 			id: "3B421C8F7947E542"
@@ -616,14 +636,14 @@
 			}]
 		}
 		{
-			title: "Spectral Correction (Yellow)"
+			title: "&e光谱校正&r"
 			x: -2.0d
 			y: 9.0d
 			shape: "circle"
 			description: [
-				"Crushing Dyed Singularities has a chance to yield little orbs of yellow colour, aswell."
+				"通过粉碎&6异彩奇点，&r你同样有概率获得一些&e染色球（黄色）。&r."
 				""
-				"Much like the red ones, these have to be drained once again to shift the frequency in the right direction."
+				"就像红色的一样，&e黄色染色球&r也需要被再次分液以校正光谱。"
 			]
 			dependencies: [
 				"2CCD84D55DE71EB2"
@@ -638,11 +658,11 @@
 			}]
 		}
 		{
-			title: "Spectral Correction (Green)"
+			title: "&a光谱校正&r"
 			x: -3.0d
 			y: 8.5d
 			shape: "circle"
-			description: ["The cycle continues. "]
+			description: ["你需要继续改变光谱频率。"]
 			dependencies: [
 				"2CCD84D55DE71EB2"
 				"381F8F373605BB97"
@@ -656,11 +676,11 @@
 			}]
 		}
 		{
-			title: "Spectral Correction (Blue)"
+			title: "&1光谱校正&r"
 			x: -3.5d
 			y: 7.5d
 			shape: "circle"
-			description: ["Being almost there, all the Paint Balls now brought to the blue frequency will have to be run through the Item Drain one last time."]
+			description: ["就快完成了！&1蓝色染色球&r只需再进行一次分液就可以投入使用了。"]
 			dependencies: [
 				"2CCD84D55DE71EB2"
 				"6A76E65324F0ACC0"
@@ -674,12 +694,12 @@
 			}]
 		}
 		{
-			title: "Toxic Byproducts"
+			title: "光盘行动"
 			icon: "kubejs:waste_bucket"
 			x: 0.5d
 			y: 9.0d
 			shape: "square"
-			description: ["Draining paint balls creates a significant amount of liquid byproduct, which has to be disposed of before it starts clogging up the production line."]
+			description: ["分液的过程会产生大量流体副产物，你需要在生产线被堵塞之前及时处理它们。"]
 			dependencies: [
 				"3B421C8F7947E542"
 				"302FCD205CC2F708"
@@ -692,15 +712,16 @@
 			tasks: [{
 				id: "7058D1CE264D6769"
 				type: "checkmark"
+				title: "完成"
 			}]
 		}
 		{
-			title: "Spectral Correction (Magenta)"
+			title: "&d光谱校正&r"
 			icon: "ae2:magenta_paint_ball"
 			x: -3.5d
 			y: 6.35d
-			subtitle: "Contraption 26-2"
-			description: ["Magenta Paint Balls contain the essence needed for production of Chromatic Compound. Some will come directly from the crushed singularity, but the majority can be obtained by spectral correction on the other colours."]
+			subtitle: "26-2 号装置"
+			description: ["&d品红色染色球&r拥有制造&6异彩化合物&r所需的精华。你有几率在粉碎&6异彩奇点&r时直接获得它们，但大多数还是通过光谱校正得到的。"]
 			dependencies: [
 				"2CCD84D55DE71EB2"
 				"302FCD205CC2F708"
@@ -716,12 +737,12 @@
 				{
 					id: "27D5CBB137116AB1"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Colours Refined"
+			title: "极致色彩"
 			icon: {
 				id: "create:chromatic_compound"
 				Count: 1b
@@ -729,8 +750,8 @@
 			}
 			x: -5.0d
 			y: 6.35d
-			subtitle: "Contraption 26-3"
-			description: ["Use Mechanical Crafters once more to refine the paint orbs into Chromatic Compound."]
+			subtitle: "26-3 号装置"
+			description: ["再次使用&6动力合成器&r以合成&6异彩化合物！&r"]
 			dependencies: ["3BE15AA5C237AB80"]
 			id: "7B23C933D76458BA"
 			tasks: [
@@ -747,35 +768,36 @@
 				{
 					id: "27A8B7785CAB07C8"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Overcorrection"
+			title: "失去高光"
 			icon: "ae2:black_paint_ball"
 			x: -3.5d
 			y: 5.0d
 			shape: "circle"
-			description: ["Oops! Draining the colour's essence one too many times will create a mundane paint ball not able to be used for further processing."]
+			description: ["呃，对&6染色球&r的光谱进行过度校正只会使其失去颜色，无法继续处理。"]
 			dependencies: ["3BE15AA5C237AB80"]
 			id: "03B7909623F97843"
 			tasks: [{
 				id: "07521D1C50A8B75F"
 				type: "checkmark"
+				title: "知道了"
 			}]
 		}
 		{
-			title: "Let there be light"
+			title: "快说，“要有光”"
 			icon: "minecraft:torch"
 			x: -6.5d
 			y: 3.5d
 			shape: "circle"
-			subtitle: "Contraption 27"
+			subtitle: "27 号装置"
 			description: [
-				"The production of Refined Radiance requires either a steady supply of light emitting blocks, or an active Beacon Beam."
+				"&6光辉石&r的生产需要稳定供应的&6光源方块，&r或是一条&6信标光柱。&r"
 				""
-				"Choose which path you would like to take, and provide necessary preparation/automation."
+				"选择一种你喜爱的方式并做好充足准备。"
 			]
 			hide_dependency_lines: true
 			dependencies: ["397232F676CB621B"]
@@ -783,22 +805,23 @@
 			tasks: [{
 				id: "7FB92D9DB34672AE"
 				type: "checkmark"
+				title: "完成"
 			}]
 		}
 		{
-			title: "Throwing Flash"
+			title: "闪光弹"
 			icon: "create:refined_radiance"
 			x: -6.5d
 			y: 6.35d
-			subtitle: "Contraption 28-1"
+			subtitle: "28-1 号装置"
 			description: [
-				"When dropped as an item, Chromatic Compound will absorb light around itself and eventually turn into Refined Radiance. Choose one of three approaches:"
+				"当&6异彩化合物&r作为物品掉落的时候，它会汲取身旁的光源并进一步转化为&6光辉石&r。你有以下三种方式可以选择："
 				""
-				"- Autoplacing light emitting blocks near the dropped compound items (blocks need line of sight to item)"
+				"- 在物品形态的&6异彩化合物&r旁边不断放置&6光源方块&r（两者间无遮挡）。"
 				""
-				"- Supplying light emitting blocks as items on nearby depots/belts (blocks need line of sight to item)"
+				"- 将物品形态的&6异彩化合物&r和物品形态的&6光源方块&r放到一起（两者间无遮挡）。"
 				""
-				"- Throwing the compound into a Beacon Beam for free and instant conversion"
+				"- 将物品形态的&6异彩化合物&r扔进&6信标光柱&r中。"
 			]
 			dependencies: [
 				"3025B5861FE17ADF"
@@ -815,20 +838,20 @@
 				{
 					id: "2DC30322D81D9999"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Post-Process"
+			title: "通天之路"
 			icon: "kubejs:radiant_sheet"
 			x: -6.0d
 			y: 9.0d
-			subtitle: "Contraption 28-2"
+			subtitle: "28-2 号装置"
 			description: [
-				"The main work is done. All that's left is a small assembly line to process Refined Radiance into Radiant Coils."
+				"主要工作已经完成！你只需要最后两步就能生产&6光辉线圈&r了。"
 				""
-				"Start with a Mechanical Press."
+				"第一步，你需要一个&6动力辊压机。&r"
 			]
 			dependencies: ["286510750C333C1F"]
 			id: "410FF28B63E0FC0C"
@@ -842,17 +865,17 @@
 				{
 					id: "37BF06FF4255C1B1"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Neon lights"
+			title: "霓虹灯光"
 			icon: "kubejs:radiant_coil"
 			x: -4.0d
 			y: 11.0d
-			subtitle: "Contraption 28-3"
-			description: ["And finally, one last Crafter to cut and wind up the radiant sheet into an Induction Coil."]
+			subtitle: "28-3 号装置"
+			description: ["第二步，你需要一个&6动力合成器&r将压制好的&6光辉板&r切割并卷起，熠熠生辉的&6光辉线圈&r就做好了。"]
 			dependencies: ["410FF28B63E0FC0C"]
 			id: "626A7D9947D82B89"
 			tasks: [
@@ -865,17 +888,17 @@
 				{
 					id: "27C737E08A9027A5"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Deploy the Payload"
+			title: "有效载荷"
 			icon: "kubejs:inductive_mechanism"
 			x: -1.5d
 			y: 11.5d
-			subtitle: "Contraption 29"
-			description: ["You know the drill. It is time to upgrade your previously automated Precision Mechanisms to the next level!"]
+			subtitle: "29 号装置"
+			description: ["你知道现在应该干什么了吧。是时候将&6精密构件&r升级一下了！"]
 			dependencies: [
 				"59D2104DB6AE93FD"
 				"626A7D9947D82B89"
@@ -891,37 +914,18 @@
 				{
 					id: "057A05C13C55ABC4"
 					type: "checkmark"
-					title: "Automated"
+					title: "自动生产"
 				}
 			]
 		}
 		{
-			title: "Mechanical Auto Hammer"
-			icon: "kubejs:invar_ingot"
-			x: 0.5d
-			y: -1.0d
-			shape: "circle"
-			subtitle: "Contraption 30"
-			description: [
-				"Aside from the Inductive Mechanism, Invar Machinery builds on a tough Metal Alloy between Iron and Nickel."
-				""
-				"Since the full refinement process of Invar takes a few lengthy steps, automation is recommended."
-			]
-			dependencies: ["397232F676CB621B"]
-			id: "26A1E68DA7ACB025"
-			tasks: [{
-				id: "428A5B60D9C268BD"
-				type: "checkmark"
-			}]
-		}
-		{
-			title: "Arming the Deployer III"
+			title: "武装到头发！"
 			x: 0.0d
 			y: 11.5d
 			shape: "circle"
 			description: [
-				"It'll be good to stock up on a couple of resonators for the Mechanism Assembly."
-				"Don't worry about automating them fully, though."
+				"还是那句话，多贮存些&6共鸣器&r是个好习惯。"
+				"&7不必要自动生产它们。"
 			]
 			hide_dependency_lines: true
 			dependencies: ["626A7D9947D82B89"]
@@ -940,14 +944,13 @@
 			}]
 		}
 		{
-			title: "Chapter 3 Complete!"
+			title: "&f&l第三章完成！&r"
 			x: -1.5d
 			y: 13.5d
 			shape: "hexagon"
 			description: [
-				"Congrats! Inductive Mechanisms will now be generated passively. This opens the door to new exciting technological and magical exploits!"
-				""
-				"Once you are happy with the Assembly Line, head on back to the overview. There will be new options to explore."
+				"好耶！&6超频构件&r正在被源源不断地生产！全新的技术和魔法之门将为你打开！"
+				"&7当你认为你的生产线已经万无一失时，去&a纵览&7解锁新的目标吧！"
 			]
 			dependencies: ["6CBA3D97CAD5DB63"]
 			size: 2.0d
@@ -980,14 +983,14 @@
 			]
 		}
 		{
-			title: "Insert Coin"
+			title: "点赞、投币、收藏"
 			x: -3.0d
 			y: 15.0d
 			shape: "circle"
 			description: [
-				"The Special properties of Silver can prove useful in creating Enderium Alloy."
+				"&6银币&r的特殊属性可以用来制造&6末影机器。&r"
 				""
-				"As it turns out, the only source of Silver seems to be your money. Makes you wonder where the official mints get it from.."
+				"事实证明，&6银币&r的唯一来源似乎只有你的口袋。这不禁让你对铸币厂产生了好奇心..."
 			]
 			hide_dependency_lines: true
 			dependencies: [
@@ -1004,12 +1007,12 @@
 			}]
 		}
 		{
-			title: "Not the End"
+			title: "此行未终"
 			icon: "minecraft:end_portal_frame"
 			x: 0.0d
 			y: 15.0d
 			shape: "circle"
-			description: ["The Secrets to Teleportation lie behind the dimensional gate to the End."]
+			description: ["空间移动的秘密就在&6末地之门&r的另一端..."]
 			hide_dependency_lines: true
 			dependencies: [
 				"6CBA3D97CAD5DB63"
@@ -1025,11 +1028,11 @@
 			}]
 		}
 		{
-			title: "Dissolved"
+			title: "化作雪白的灰"
 			x: -1.5d
 			y: 15.5d
 			shape: "circle"
-			description: ["Take the coins and throw them into your Smeltery. Watch out: this is an irreversible process."]
+			description: ["把你手中的银币投入&6冶炼炉&r中以继续...这是不可逆的，记住了。"]
 			dependencies: ["38B063C8DE71E86D"]
 			id: "0C11EC34D5FA508B"
 			tasks: [{
@@ -1040,14 +1043,13 @@
 			}]
 		}
 		{
-			title: "Expensive Bricks"
+			title: "贵重物品"
 			icon: "indrev:silver_block"
 			x: -1.5d
 			y: 16.5d
 			shape: "circle"
 			description: [
-				"Cool down the molten silver into a Block and admire how shiny it is."
-				"How to cool a molten block: put it under a Extractor Machine, and put a bucket of water above the machine. Right-click the machine and collect it!"
+				"将你的&6熔融银&r铸成方块，并欣赏它的光泽..."
 			]
 			dependencies: ["0C11EC34D5FA508B"]
 			id: "0D146AD9FE774F8B"
@@ -1069,11 +1071,11 @@
 			]
 		}
 		{
-			title: "Ender for Garnish"
+			title: "加花"
 			x: -3.0d
 			y: 17.5d
 			shape: "circle"
-			description: ["Set aside some Ender dust from your Reactor. In case your supply is bottlenecked, you can use Ender Pearls, too."]
+			description: ["从你的反应堆拿点&6末影粉&r来。如果你怕生产线被堵塞，使用末影珍珠也是可以的。"]
 			hide_dependency_lines: true
 			dependencies: [
 				"2BB2C7B95E3C89AE"
@@ -1089,14 +1091,14 @@
 			}]
 		}
 		{
-			title: "Gateway Expedition"
+			title: "远征之门"
 			x: 0.0d
 			y: 17.5d
 			shape: "circle"
 			description: [
-				"After your flawless encounter with the Ender Dragon, make your way to the Gateway and travel to the outer Islands."
+				"在你英勇击败末影龙后，通过&6折跃门&r前往外岛。"
 				""
-				"Here you should be able to find the poise bushes necessary for creating Enderium Alloy."
+				"在那里，你能够采集到&6末影合金&r的原材料之一——&6暗紫真菌。&r"
 			]
 			dependencies: ["05C7E580ED88B556"]
 			id: "794B3C10C6110CB5"
@@ -1108,14 +1110,14 @@
 			}]
 		}
 		{
-			title: "Alien Alloys"
+			title: "地外合金"
 			x: -1.5d
 			y: 18.0d
 			shape: "circle"
 			description: [
-				"Fire up your End Stone Alloy Smelter for two rounds of processing:"
+				"再次点燃你的&6冶炼炉，&r进行两轮处理："
 				""
-				"First off, refine your Silver Ingots with Ender Dust and Poise Bushes."
+				"首先，使用&6末影粉（或末影珍珠）&r以及&6暗紫真菌&r加固&6银锭。&r"
 			]
 			dependencies: [
 				"0D146AD9FE774F8B"
@@ -1131,11 +1133,11 @@
 			}]
 		}
 		{
-			title: "Enderium Infused"
+			title: "注入林魂"
 			x: -1.5d
 			y: 19.0d
 			shape: "circle"
-			description: ["And finally, upgrade some of your Inductive Mechanisms in the Smelter using the newly obtained Alloy."]
+			description: ["然后，在&6冶炼炉&r中使用&6熔融末影合金&r升级你的&6超频构件...&r"]
 			dependencies: ["7B080B5C87247EA1"]
 			id: "6DBEF7A11890ADF8"
 			tasks: [{
@@ -1146,12 +1148,12 @@
 			}]
 		}
 		{
-			title: "The Poise Cycle"
+			title: "暗紫循环"
 			icon: "promenade:dark_amaranth_wart_block"
 			x: 0.0d
 			y: 19.5d
 			shape: "circle"
-			description: ["Thanks to Inductive Technology, you have the option to replicate Poise Bushes passively, should you require a steadier and more convenient supply of Enderium."]
+			description: ["感谢&6超频&r技术，现在你可以循环生产&6暗紫真菌&r了。这样一来，稳定生产&6末影合金&r也就不再成问题。"]
 			dependencies: ["794B3C10C6110CB5"]
 			id: "1CCDA748B237F6F5"
 			tasks: [{
@@ -1168,11 +1170,11 @@
 			}]
 		}
 		{
-			title: "Bonus 3A Complete!"
+			title: "&3&l第三章支线完成！"
 			x: -1.5d
 			y: 21.0d
 			shape: "hexagon"
-			description: ["Marvellous! The power of instant transportation is in your hands at last. Surely there are some places in your factory where this could really speed things up."]
+			description: ["无可比拟的空间移动技术正被你捧在手中！在你庞大的工厂中，一定有某处可以利用它们进一步提高效率。看你的了！"]
 			dependencies: ["6DBEF7A11890ADF8"]
 			size: 2.0d
 			id: "4EDD9A8F14E48EAE"

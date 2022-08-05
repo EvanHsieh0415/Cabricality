@@ -56,6 +56,7 @@
 			tasks: [{
 				id: "4418A795B9FB076D"
 				type: "checkmark"
+				title: "完成"
 			}]
 		}
 		{
@@ -361,12 +362,12 @@
 			]
 		}
 		{
-			title: "融化啦"
+			title: "呜哇，化掉啦"
 			icon: "indrev:molten_iron_bucket"
 			x: 1.0d
 			y: 9.5d
 			subtitle: "15-4 号装置"
-			description: ["把&6铁粒&r扔进你的高温熔炼设备里以生产熔融铁。你可以用&6匠魂&r的冶炼炉，或是&6Alloy Forgery&r的合金炉。"]
+			description: ["把&6铁粒&r扔进你的高温熔炼设备里以生产熔融铁。&6匠魂&r的&6冶炼炉&r是最优选择。"]
 			dependencies: ["53735DC4231AB566"]
 			id: "2167272204B6627B"
 			tasks: [
@@ -442,7 +443,7 @@
 			y: 11.5d
 			shape: "circle"
 			description: [
-				"多贮存些&2螺丝刀&r是好习惯。"
+				"多贮存些&2螺丝刀&r是个好习惯。"
 				"&7像&2手锯&7一样，它们消耗得很慢，所以不必制造自动生产线。"
 			]
 			hide_dependency_lines: true

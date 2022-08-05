@@ -430,9 +430,8 @@
 			y: 6.5d
 			shape: "circle"
 			description: [
-				"你肯定需要存些&6手锯&r以便及时更换。"
-				""
-				"但它们并不是即时消耗品，所以手动合成一些就够用了。"
+				"你肯定需要多贮存些&6手锯&r以便及时更换。"
+				"&7它们并不是即时消耗品，所以手动合成一些就够用了。"
 			]
 			hide_dependency_lines: true
 			dependencies: [
