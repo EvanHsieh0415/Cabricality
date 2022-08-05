@@ -14,7 +14,7 @@ let AP = (id, x) => MOD("architects_palette", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
 
 onEvent("item.registry", event => {
-	//	Mechanism
+//	Mechanism
 	let registerMechanism = (name, localName, rarity) => {
 		let id = name.toLowerCase() + "_mechanism"
 		let incompleteId = "incomplete_" + id
@@ -39,7 +39,7 @@ onEvent("item.registry", event => {
 		registerMechanism("Calculation", "智能")
 	}
 
-	//	Machine Parts
+//	Machine Parts
 	let registerMachinePart = (name, localName) => {
 		let id = name.replace(" ", "_").toLowerCase()
 
@@ -51,7 +51,7 @@ onEvent("item.registry", event => {
 		registerMachinePart("Saw Blade", "锯片")
 	}
 
-	//	Tools
+//	Tools
 	let registerSaw = (materialName, materialId, durability) => {
 		let id = materialId + "_saw"
 
@@ -71,7 +71,7 @@ onEvent("item.registry", event => {
 		registerToolMaterial("Netherite", "下界合金", 2031)
 	}
 
-	//	Other items
+//	Other items
 	let registerTypicalItem = (name, localName) => {
 		let id = name.replace(" ", "_").toLowerCase()
 		event.create(id)
@@ -197,7 +197,7 @@ onEvent("item.registry", event => {
 		})
 	}
 
-	//	Final init
+//	Final init
 	let initItems = () => {
 		initMechanisms()
 		initMachineParts()
@@ -228,23 +228,45 @@ onEvent("item.registry", event => {
 	number("Divide", "÷")
 	number("Missingno", "NaN")
 
-	/*
-		event.create("number_array")
-			.texture(modpackId + ":item/number/number_array")
-			.displayName("Number Array")
-			.glow(true)
+/*	event.create("number_array")
+		.texture(modpackId + ":item/number/number_array")
+		.displayName("Number Array")
+		.glow(true)
 	*/
 
-	event.create('three_cast').texture(modpackId + ":item/cast/three_cast").displayName('整数铸模 (3)').unstackable()
-	event.create('eight_cast').texture(modpackId + ":item/cast/eight_cast").displayName('整数铸模 (8)').unstackable()
-	event.create('plus_cast').texture(modpackId + ":item/cast/plus_cast").displayName('运算符铸模 (+)').unstackable()
-	event.create('minus_cast').texture(modpackId + ":item/cast/minus_cast").displayName('运算符铸模 (-)').unstackable()
-	event.create('multiply_cast').texture(modpackId + ":item/cast/multiply_cast").displayName('运算符铸模 (×)').unstackable()
-	event.create('divide_cast').texture(modpackId + ":item/cast/divide_cast").displayName('运算符铸模 (÷)').unstackable()
+	event.create('three_cast')
+		.texture(modpackId + ":item/cast/three_cast")
+		.displayName('整数铸模 (3)')
+		.unstackable()
+
+	event.create('eight_cast')
+		.texture(modpackId + ":item/cast/eight_cast")
+		.displayName('整数铸模 (8)')
+		.unstackable()
+
+	event.create('plus_cast')
+		.texture(modpackId + ":item/cast/plus_cast")
+		.displayName('运算符铸模 (+)')
+		.unstackable()
+
+	event.create('minus_cast')
+		.texture(modpackId + ":item/cast/minus_cast")
+		.displayName('运算符铸模 (-)')
+		.unstackable()
+
+	event.create('multiply_cast')
+		.texture(modpackId + ":item/cast/multiply_cast")
+		.displayName('运算符铸模 (×)')
+		.unstackable()
+
+	event.create('divide_cast')
+		.texture(modpackId + ":item/cast/divide_cast")
+		.displayName('运算符铸模 (÷)')
+		.unstackable()
 })
 
 onEvent("block.registry", event => {
-	//	Machine
+//	Machine
 	let registerMachine = (name, localName, layer) => {
 		let id = name.toLowerCase() + "_machine"
 		event.create(id)
@@ -370,7 +392,7 @@ onEvent("block.registry", event => {
 	reagent(0x232456, 0x7C95A4, "lead", "Lead", "§8铅元素§r", "indrev:lead_dust")
 	reagent(0xD99413, 0xFAF25E, "gold", "Gold", "§e金元素§r", "indrev:gold_dust")
 	category()
-	//	reagent(0xFC7781, 0xFCCED0, "cinnabar", "Cinnabar", "§c朱砂", "thermal:cinnabar")
+//	reagent(0xFC7781, 0xFCCED0, "cinnabar", "Cinnabar", "§c朱砂", "thermal:cinnabar")
 	reagent(0x335DC1, 0x7395E7, "lapis", "Lapis Lazuli", "§1青金石§r", "minecraft:lapis_lazuli")
 	reagent(0x00A82B, 0xADFACB, "emerald", "Emerald", "§2绿宝石§r", "kubejs:emerald_dust")
 	reagent(0x20C3B3, 0xD2FCF3, "diamond", "Diamond", "§b钻石§r", "kubejs:diamond_dust")
