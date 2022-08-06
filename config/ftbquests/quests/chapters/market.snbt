@@ -52,11 +52,8 @@
 				id: "160328DECC54AD5A"
 				type: "item"
 				item: {
-					id: "structurescompass:structures_compass"
+					id: "explorerscompass:explorerscompass"
 					Count: 1b
-					tag: {
-						Structure: "minecraft:fortress"
-					}
 				}
 			}]
 		}
@@ -557,7 +554,7 @@
 				{
 					id: "364AA663BD7C519F"
 					type: "item"
-					item: "minecraft:chest"
+					item: "minecraft:barrel"
 				}
 				{
 					id: "440DF47BEF341626"
