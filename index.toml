@@ -2858,7 +2858,7 @@ hash = "a75cac640a7dd1ba9976ade5396a26087f89536ccd091c8fc7e6c93a1c297d75"
 
 [[files]]
 file = "kubejs/server_scripts/recipe.js"
-hash = "824930dd36ca6265ec8296e586d69bc3dd82b88cbd343976aec51b21a7856a8d"
+hash = "ad213fea17c1dbd1da2b5dbbdc83f629c0b7ba2956d2bdfe2f5c7270be000793"
 
 [[files]]
 file = "kubejs/server_scripts/tags.js"
@@ -2912,6 +2912,16 @@ metafile = true
 [[files]]
 file = "mods/bits-and-chisels.pw.toml"
 hash = "1dea45a775887e68b1cafb587498dfa5514b3ea8d17ea58783920397f89ff7d7"
+metafile = true
+
+[[files]]
+file = "mods/cc-restitched.pw.toml"
+hash = "1fb3cbb8ef71a59fbbc722afff7f4f9a9bbaa45838caf0a99f1ed4fce96a4c6c"
+metafile = true
+
+[[files]]
+file = "mods/cccbridge.pw.toml"
+hash = "cd067f1b9534808fdd9db3e5a41f22e7b334b0a19b64fcdd19ac74754c889fec"
 metafile = true
 
 [[files]]
