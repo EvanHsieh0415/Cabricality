@@ -61,7 +61,7 @@
 			x: -1.0d
 			y: 1.0d
 			shape: "square"
-			subtitle: "1 号装置"
+			subtitle: "步骤 1"
 			description: [
 				"首先，你需要木头，很多木头以及更多的木头。从大自然一昧地索取总不是个长久的办法，你最好赶快实现木材的自给自足和充足供应。"
 				""
@@ -99,7 +99,7 @@
 			icon: "minecraft:bedrock"
 			x: 1.0d
 			y: 1.0d
-			subtitle: "2 号装置"
+			subtitle: "步骤 2"
 			description: [
 				"在矿洞中寻找安山岩可是件累活。不过万幸的是，基岩可以让上方的岩浆和水迅速变成安山岩...和其他怪石。"
 				""
@@ -133,7 +133,7 @@
 			icon: "minecraft:dripstone_block"
 			x: 3.0d
 			y: 1.0d
-			subtitle: "3 号装置"
+			subtitle: "步骤 3"
 			description: ["把&6石灰岩&r和&6水&r混合并压制就可以批量生产滴水石块了，而后者则可以被磨制成粘土球。"]
 			dependencies: ["106C6DFDCB97327C"]
 			id: "31A0FFA3DFEB3D7D"
@@ -156,7 +156,7 @@
 			icon: "minecraft:kelp"
 			x: 5.0d
 			y: 1.0d
-			subtitle: "4 号装置"
+			subtitle: "步骤 4"
 			description: [
 				"海带是&6安山合金&r的必要原材料，而后者正是你第一条生产线上的主角，同时也是许多机械的必要原料之一。"
 				""
@@ -185,7 +185,7 @@
 			x: 1.0d
 			y: 3.0d
 			shape: "circle"
-			subtitle: "5 号装置"
+			subtitle: "步骤 5"
 			description: ["你不太可能把你的工厂建在石缝中，或是搬一块基岩到地面上来。因此，也许你需要一种更加合理的方式来搬运石头。"]
 			dependencies: ["106C6DFDCB97327C"]
 			id: "6B7F0631060A9E62"
@@ -200,7 +200,7 @@
 			icon: "minecraft:clay_ball"
 			x: 4.0d
 			y: 3.0d
-			subtitle: "6-1 号装置"
+			subtitle: "步骤 6-1"
 			description: ["&6石磨&r可以将滴水石块处理成粘土球。"]
 			dependencies: ["31A0FFA3DFEB3D7D"]
 			dependency_requirement: "one_completed"
@@ -224,7 +224,7 @@
 			icon: "architects_palette:algal_blend"
 			x: 5.0d
 			y: 3.5d
-			subtitle: "6-2 号装置"
+			subtitle: "步骤 6-2"
 			description: ["快来搓碟！将海带和黏土球放到&6动力搅拌器&r下的工作盆中并提供动力，把它们搅拌均匀。"]
 			dependencies: [
 				"729FB5DD07C234E8"
@@ -250,7 +250,7 @@
 			icon: "architects_palette:algal_brick"
 			x: 4.5d
 			y: 4.5d
-			subtitle: "6-3 号装置"
+			subtitle: "步骤 6-3"
 			description: ["你需要将上一步产出的海藻混合物烧制成为更坚硬的海藻砖。熔炉确实很好用，但为什么不考虑一下不需要燃料的岩浆和&6鼓风机&r的组合呢？"]
 			dependencies: ["72BE175C83834838"]
 			id: "32786E9D145FFE25"
@@ -273,7 +273,7 @@
 			icon: "create:andesite_alloy"
 			x: 3.5d
 			y: 5.0d
-			subtitle: "6-4 号装置"
+			subtitle: "步骤 6-4"
 			description: ["没错！你需要将它们再次搅拌——不过这回的主角变成了&6海藻砖&r和你辛苦运上来的&6安山岩圆石。&r"]
 			dependencies: [
 				"106C6DFDCB97327C"
@@ -299,7 +299,7 @@
 			icon: "minecraft:stripped_oak_log"
 			x: -1.0d
 			y: 3.5d
-			subtitle: "7-1 号装置"
+			subtitle: "步骤 7-1"
 			description: ["面向上方的&6动力锯&r则可以进一步处理原木..."]
 			dependencies: ["2CB570195DA7E106"]
 			id: "532EFE32C3A515B5"
@@ -330,7 +330,7 @@
 			icon: "minecraft:oak_planks"
 			x: -0.5d
 			y: 4.5d
-			subtitle: "7-2 号装置"
+			subtitle: "步骤 7-2"
 			description: ["...继续处理..."]
 			dependencies: ["532EFE32C3A515B5"]
 			id: "19921941321965A4"
@@ -361,7 +361,7 @@
 			icon: "minecraft:oak_slab"
 			x: 0.5d
 			y: 5.0d
-			subtitle: "7-3 号装置"
+			subtitle: "步骤 7-3"
 			description: [
 				"...再来一次，把它们切割成一切构件的基础材料。"
 				"&7记得在动力锯的过滤槽中放入这一步需要处理的物品，不然你猜不到它们会输出什么。"
@@ -395,7 +395,7 @@
 			icon: "kubejs:kinetic_mechanism"
 			x: 2.0d
 			y: 6.5d
-			subtitle: "8 号装置"
+			subtitle: "步骤 8"
 			description: ["将搅拌好的&6安山合金&r华丽地安装到&6木质台阶&r上，优雅地收尾你的第一条生产线。"]
 			dependencies: [
 				"59E4A6163753BC12"
@@ -500,7 +500,7 @@
 			x: 0.0d
 			y: 10.0d
 			shape: "square"
-			subtitle: "9-1 号装置"
+			subtitle: "步骤 9-1"
 			description: ["试着把提取器放置在一棵完整的树木旁然后不断右键它，你将会在下方得到&4树脂流体！&r"]
 			dependencies: [
 				"3F45DFEF31838A00"
@@ -528,7 +528,7 @@
 			icon: "kubejs:rubber"
 			x: 1.0d
 			y: 10.5d
-			subtitle: "9-2 号装置"
+			subtitle: "步骤 9-2"
 			description: ["用流体管道和动力泵将&4树脂流体&r泵到工作盆中，再用辊压机使其压制成型。"]
 			dependencies: ["3728DF562D6DCE3A"]
 			id: "3EF5F89DBD6959E3"
@@ -552,7 +552,7 @@
 			x: 2.0d
 			y: 11.0d
 			shape: "square"
-			subtitle: "9-3 号装置"
+			subtitle: "步骤 9-3"
 			description: [
 				"最后一步，用火焰洗礼刚刚成型的&4固态橡胶，&r使其硫化！"
 				""

@@ -104,8 +104,8 @@ onEvent("item.registry", event => {
 
 		registerTypicalItem("Sand Ball", "沙球")
 		registerTypicalItem("Coke Chunk", "小块焦炭")
-		registerTypicalItem("Rough Sand", "粗沙")
-		registerTypicalItem("Purified Sand", "高纯沙")
+		registerTypicalItem("Rough Sand", "粗砂")
+		registerTypicalItem("Purified Sand", "高纯砂")
 
 		registerTypicalItem("Cobalt Dust", "钴粉")
 		registerTypicalItem("Emerald Dust", "绿宝石粉")

@@ -14,6 +14,7 @@
 			x: -1.0d
 			y: 2.0d
 			shape: "hexagon"
+			subtitle: "&6第二章"
 			description: [
 				"这一章节自动化的目标是&6电子管&r，把它安装在&6动力构件&r上就可以升往下一级别。"
 				""
@@ -40,7 +41,7 @@
 			x: 1.0d
 			y: 2.0d
 			shape: "circle"
-			subtitle: "10 号装置"
+			subtitle: "步骤 10"
 			description: [
 				"这台装置并不严格是生产线中的一部分，但它举足轻重。"
 				""
@@ -103,7 +104,7 @@
 			icon: "ae2:sky_dust"
 			x: -1.0d
 			y: 4.0d
-			subtitle: "11 号装置"
+			subtitle: "步骤 11"
 			description: [
 				"你可以无限压榨它。这些&6陨石&r尽管数次粉身碎骨却并不会失去质量？迈尔的棺材板压不住啦！"
 				""
@@ -132,7 +133,7 @@
 			x: -4.0d
 			y: 7.0d
 			shape: "circle"
-			subtitle: "12-1 号装置"
+			subtitle: "步骤 12-1"
 			description: [
 				"这片石英也太小了。往里面注水或许能把它变大..."
 				""
@@ -156,7 +157,7 @@
 			icon: "ae2:certus_quartz_crystal"
 			x: -2.5d
 			y: 8.0d
-			subtitle: "12-2 号装置"
+			subtitle: "步骤 12-2"
 			description: ["你见证了它们的成长！当然，别忘了及时用一些&6赛特斯石英水晶&r重新合成&6赛特斯石英种子&r以使不断循环成为可能。"]
 			dependencies: ["345B94F6D17605CD"]
 			id: "1861E583C9DAA0BA"
@@ -179,7 +180,7 @@
 			icon: "ae2:charged_certus_quartz_crystal"
 			x: 1.0d
 			y: 6.0d
-			subtitle: "13 号装置"
+			subtitle: "步骤 13"
 			description: [
 				"稍稍改造一下你的&6充能器，&r让它能够循环不断地给装置13-2所需要的&6赛特斯石英水晶&r充能。"
 				""
@@ -207,7 +208,7 @@
 			icon: "kubejs:sky_stone_bucket"
 			x: -1.0d
 			y: 5.5d
-			subtitle: "14-1 号装置"
+			subtitle: "步骤 14-1"
 			description: ["将这种易溶于水的粉末与&6水&r搅拌，或许能获得有趣的流体..."]
 			dependencies: [
 				"2FFFE1C5366930BB"
@@ -233,7 +234,7 @@
 			icon: "kubejs:redstone_bucket"
 			x: -0.5d
 			y: 7.0d
-			subtitle: "14-2 号装置"
+			subtitle: "步骤 14-2"
 			description: [
 				"&6充能赛特斯石英水晶&r所蕴含的能量足以让流体中的分子破裂，原子重组，得到&6熔融红石。&r"
 				"&7失去能量的&6赛特斯石英水晶&7并不会消失，你可以将它再次充能。"
@@ -263,7 +264,7 @@
 			icon: "create:polished_rose_quartz"
 			x: -1.0d
 			y: 8.5d
-			subtitle: "14-3 号装置"
+			subtitle: "步骤 14-3"
 			description: [
 				"最后一个&6动力搅拌器&r会用&6熔融红石&r对平平无奇的&6赛特斯石英水晶&r进行一次彻头彻尾的改造，仿佛为其注入了新的活力..."
 				"&7&o（矿物学家们，对不起了）"
@@ -292,7 +293,7 @@
 			icon: "minecraft:cobblestone"
 			x: 3.5d
 			y: 7.0d
-			subtitle: "15-1 号装置"
+			subtitle: "步骤 15-1"
 			description: [
 				"你可以从&6圆石&r中源源不断地提取铁，不过这一过程极为缓慢。"
 				""
@@ -320,7 +321,7 @@
 			icon: "minecraft:gravel"
 			x: 4.0d
 			y: 9.0d
-			subtitle: "15-2 号装置"
+			subtitle: "步骤 15-2"
 			description: ["先把&6圆石&r磨制成&6沙砾。&r"]
 			dependencies: ["0E46C1FCE5AEB1DF"]
 			id: "1139F2E4E6FCFE29"
@@ -343,7 +344,7 @@
 			icon: "minecraft:iron_nugget"
 			x: 2.5d
 			y: 10.0d
-			subtitle: "15-3 号装置"
+			subtitle: "步骤 15-3"
 			description: ["用&6鼓风机&r洗涤&6沙砾&r也许能让其中的燧石和铁粒重见天日。"]
 			dependencies: ["1139F2E4E6FCFE29"]
 			id: "53735DC4231AB566"
@@ -366,8 +367,8 @@
 			icon: "indrev:molten_iron_bucket"
 			x: 1.0d
 			y: 9.5d
-			subtitle: "15-4 号装置"
-			description: ["把&6铁粒&r扔进你的高温熔炼设备里以生产熔融铁。&6匠魂&r的&6冶炼炉&r是最优选择。"]
+			subtitle: "步骤 15-4"
+			description: ["把&6铁粒&r扔进你的高温熔炼设备里以生产熔融铁。匠魂的&6冶炼炉&r是最优选择。"]
 			dependencies: ["53735DC4231AB566"]
 			id: "2167272204B6627B"
 			tasks: [
@@ -390,7 +391,7 @@
 			icon: "create:electron_tube"
 			x: -0.5d
 			y: 10.0d
-			subtitle: "15-5 号装置"
+			subtitle: "步骤 15-5"
 			description: ["将几滴炽热的&6熔融铁&r注入&6玫瑰石英，&r盘虬在石英内的铁一旦冷却，&6电子管&r那精密的电路就形成了。"]
 			dependencies: [
 				"2167272204B6627B"
@@ -416,7 +417,7 @@
 			icon: "create:precision_mechanism"
 			x: -1.0d
 			y: 11.5d
-			subtitle: "16 号装置"
+			subtitle: "步骤 16"
 			description: ["在&6动力构件&r上安装电子管就可以批量生产&6精密构件&r了，你的第二条生产线就此结束！"]
 			dependencies: [
 				"5351AF6CA73CB8E0"
@@ -526,7 +527,7 @@
 			icon: "minecraft:twisting_vines"
 			x: -3.0d
 			y: 15.5d
-			subtitle: "17-1 号装置"
+			subtitle: "步骤 17-1"
 			description: [
 				"&2酷热构件&r难以驾驭，而生产它们更是需要足够的灵魂精华。幸运的是，生长在&2下界&r的&2缠怨藤&r正以灵魂作为养料。"
 				""
@@ -558,7 +559,7 @@
 			icon: "minecraft:weeping_vines"
 			x: 1.0d
 			y: 15.5d
-			subtitle: "17-2 号装置"
+			subtitle: "步骤 17-2"
 			description: [
 				"&2垂泪藤&r向下生长，但你照样可以用&2动力收割机&r来收割。"
 				"&7如果你嫌烦的话，可以尝试用一套装置同时收集两种藤蔓。"
@@ -589,7 +590,7 @@
 			icon: "kubejs:liquid_soul_bucket"
 			x: -1.0d
 			y: 16.0d
-			subtitle: "17-3 号装置"
+			subtitle: "步骤 17-3"
 			description: ["把所有藤蔓放进&2工作盆&r中，然后搅拌..."]
 			dependencies: [
 				"223BB57AD0239511"
@@ -616,7 +617,7 @@
 			icon: "minecraft:lava_bucket"
 			x: -2.5d
 			y: 17.0d
-			subtitle: "18-1 号装置"
+			subtitle: "步骤 18-1"
 			description: ["每生产一个&2锌机器&r总计需要&224桶岩浆。&r你也许感觉这并不环保，但是仅仅将一个&2软管滑轮&r伸入岩浆湖就能够解决燃眉之急。"]
 			hide_dependency_lines: true
 			dependencies: [
@@ -644,7 +645,7 @@
 			x: -1.0d
 			y: 17.5d
 			shape: "circle"
-			subtitle: "18-2 号装置"
+			subtitle: "步骤 18-2"
 			description: [
 				"向&2精密构件&r不断浇筑特定流体就能够将其升格为&2酷热构件！&r"
 				""
