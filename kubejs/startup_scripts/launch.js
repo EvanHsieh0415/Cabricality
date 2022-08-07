@@ -14,7 +14,7 @@ let AP = (id, x) => MOD("architects_palette", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
 
 onEvent("item.registry", event => {
-//	Mechanism
+	//	Mechanism
 	let registerMechanism = (name, localName, rarity) => {
 		let id = name.toLowerCase() + "_mechanism"
 		let incompleteId = "incomplete_" + id
@@ -39,7 +39,7 @@ onEvent("item.registry", event => {
 		registerMechanism("Calculation", "智能")
 	}
 
-//	Machine Parts
+	//	Machine Parts
 	let registerMachinePart = (name, localName) => {
 		let id = name.replace(" ", "_").toLowerCase()
 
@@ -51,7 +51,7 @@ onEvent("item.registry", event => {
 		registerMachinePart("Saw Blade", "锯片")
 	}
 
-//	Tools
+	//	Tools
 	let registerSaw = (materialName, materialId, durability) => {
 		let id = materialId + "_saw"
 
@@ -71,7 +71,7 @@ onEvent("item.registry", event => {
 		registerToolMaterial("Netherite", "下界合金", 2031)
 	}
 
-//	Other items
+	//	Other items
 	let registerTypicalItem = (name, localName) => {
 		let id = name.replace(" ", "_").toLowerCase()
 		event.create(id)
@@ -197,7 +197,7 @@ onEvent("item.registry", event => {
 		})
 	}
 
-//	Final init
+	//	Final init
 	let initItems = () => {
 		initMechanisms()
 		initMachineParts()
@@ -228,10 +228,11 @@ onEvent("item.registry", event => {
 	number("Divide", "÷")
 	number("Missingno", "NaN")
 
-/*	event.create("number_array")
-		.texture(modpackId + ":item/number/number_array")
-		.displayName("Number Array")
-		.glow(true)
+	/*
+		event.create("number_array")
+			.texture(modpackId + ":item/number/number_array")
+			.displayName("Number Array")
+			.glow(true)
 	*/
 
 	event.create('three_cast')
@@ -266,7 +267,7 @@ onEvent("item.registry", event => {
 })
 
 onEvent("block.registry", event => {
-//	Machine
+	//	Machine
 	let registerMachine = (name, localName, layer) => {
 		let id = name.toLowerCase() + "_machine"
 		event.create(id)
