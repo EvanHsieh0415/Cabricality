@@ -50,7 +50,7 @@ hash = "449592c411df8d4f73a57495f07683bcb354c29fe5cae614e408b42a08d48252"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/metallurgy.snbt"
-hash = "17960f987b486985f41e047e61ef24417ee7f27a70e464d76913173f35a713fd"
+hash = "be6d3e6382fb0f1d616a5d0c9beed9db9a473cdcba55177822505a04b00215b8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/overview.snbt"
@@ -58,19 +58,19 @@ hash = "3ecd1a1c9e7848ae77cbe2c6769f37a1f8f15d2373a7b46c4a13df124ddb2d7b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_1.snbt"
-hash = "aa1015c57ceb25df7c677492783bbc45d2e20c78fb65d4e25adb0706ac48cd01"
+hash = "2b8483cbb7946862e1f06d7f6f5a5612bd50607828bef3a0bd53054678a60315"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_2.snbt"
-hash = "f519e7d5318339d600ce91bfe818aabbf27fa80e6faeb93d725a90d703f529e8"
+hash = "77313de7cb04a201f066949096a4f1d3a0cc08e3428ff75f7b2815fca5ba071c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_3.snbt"
-hash = "d4099c662344d6b51d4e589b7425512d14a69db4d9213e83c72b8628a8b1b635"
+hash = "e60d8e55ac2e2b798eba064afd4e07e9a125bd7dbc30caf65811e938bb8c0b5b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_4.snbt"
-hash = "9b9398ee6dbe607aec88899a39cc8287e5049517d2cf8d3403ac2b1bea91fc82"
+hash = "9f4cc898b5472ff417df590b3834c23ec971e76bc34b727758b2607b342e98c8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_4b.snbt"
@@ -718,7 +718,7 @@ hash = "ef36d793d83335c4bcbcb31b6f1d48c5a2c3b909023c0e630801e1dd0019f268"
 
 [[files]]
 file = "config/openloader/resources/cabf-edits/assets/agape_space/lang/zh_cn.json"
-hash = "0d0849d71e386327c4e5564d3deb13225729a658347a06cf4a077b57279bae4f"
+hash = "463d688f77701064bcede810c0e91e9d92873eef5684de01cc044a8596357dbf"
 
 [[files]]
 file = "config/openloader/resources/cabf-edits/assets/agape_space/models/item/laser_pistol.json"
@@ -1054,7 +1054,7 @@ hash = "c1d4cd6d6eef747be7f138318e6c686a3ee6f0b59e7b60e9c608303c91896ddd"
 
 [[files]]
 file = "config/openloader/resources/cabf-edits/assets/minecraft/texts/splashes.txt"
-hash = "fb32b0845e76c8497c6729afb8e7a986aec662850777f6dddf92b3c92404515f"
+hash = "09834e0f24bf90a3abaab455b7d1634ea1ebcb1f38cbfb9b5c908cd3a5ca29fd"
 
 [[files]]
 file = "config/openloader/resources/cabf-edits/assets/minecraft/textures/block/deepslate_iron_ore.png"
@@ -2866,7 +2866,7 @@ hash = "52cd2d9a38daffa8bfaa055b903eae37c2580663585da105b41feda90c70d908"
 
 [[files]]
 file = "kubejs/startup_scripts/launch.js"
-hash = "c5cf841bf3d9a14f1275fd0fb16e2b1f3008e8b6110a67634fb700917e3e5aff"
+hash = "cddb32d40a39ec9555ba317060ef9d740638fc94aa7e632d01c524b31f5396f2"
 
 [[files]]
 file = "kubejs/startup_scripts/trading.js"
