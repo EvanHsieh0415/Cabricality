@@ -62,11 +62,11 @@ hash = "2b8483cbb7946862e1f06d7f6f5a5612bd50607828bef3a0bd53054678a60315"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_2.snbt"
-hash = "77313de7cb04a201f066949096a4f1d3a0cc08e3428ff75f7b2815fca5ba071c"
+hash = "102ba3b14e05b11749fc14947a8d9d35c35c868914dd8921b2d4b7eb32cb2fca"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_3.snbt"
-hash = "e60d8e55ac2e2b798eba064afd4e07e9a125bd7dbc30caf65811e938bb8c0b5b"
+hash = "01ceaceadd3cf8ac15baa1a63b5cd1967308bc14f239f83885e01bf5cc0d2b93"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/stage_4.snbt"
