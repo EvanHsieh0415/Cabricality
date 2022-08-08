@@ -1,12 +1,12 @@
 name = "Cabricality"
 author = "Yjn024, KrLite"
-version = "0.1.0-dev15-zh_cn"
+version = "0.1.0-dev15-fix1-zh_cn"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "8b4a794f4ab45e893d6225d0d2006cc30fd4087e07f1cf252a822fb85770edde"
+hash = "7d5b37ea07071b3b44d5871a258c1731e9b34cc4d5a347f778eebbadba183111"
 
 [versions]
 fabric = "0.14.8"

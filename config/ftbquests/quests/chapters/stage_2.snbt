@@ -587,7 +587,7 @@
 		}
 		{
 			title: "灵魂朗姆酒"
-			icon: "kubejs:liquid_soul_bucket"
+			icon: "tconstruct:liquid_soul_bucket"
 			x: -1.0d
 			y: 16.0d
 			subtitle: "步骤 17-3"
@@ -602,7 +602,7 @@
 				{
 					id: "7BBC2AAED0A77FDC"
 					type: "item"
-					item: "kubejs:liquid_soul_bucket"
+					item: "tconstruct:liquid_soul_bucket"
 					consume_items: false
 				}
 				{
