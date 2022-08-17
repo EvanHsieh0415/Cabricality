@@ -171,13 +171,7 @@
 		}
 		{
 			title: "&6&l任务内容"
-			icon: {
-				id: "patchouli:guide_book"
-				Count: 1b
-				tag: {
-					"patchouli:book": "agape_space:space_guide"
-				}
-			}
+			icon: "ad_astra:astrodux"
 			disable_toast: true
 			x: -1.5d
 			y: -1.5d
@@ -185,7 +179,7 @@
 			description: [
 				"&5&l「成就」&r     不断地达成&5成就&r可以振奋人心！"
 				""
-				"&5这些成就和Minecraft的成就不太一样。他们会更加困难，也更加...奇怪。"
+				"&5这些成就和Minecraft的进度不太一样。他们会更加困难，也更加...奇怪。"
 				""
 				"&6&l「市集」&r     你可以在&6市集&r购物。"
 				""

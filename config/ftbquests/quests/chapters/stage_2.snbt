@@ -364,7 +364,7 @@
 		}
 		{
 			title: "呜哇，化掉啦"
-			icon: "indrev:molten_iron_bucket"
+			icon: "tconstruct:molten_iron_bucket"
 			x: 1.0d
 			y: 9.5d
 			subtitle: "步骤 15-4"
@@ -376,7 +376,7 @@
 					id: "611F921F94FAE142"
 					type: "item"
 					title: "熔融铁"
-					item: "indrev:molten_iron_bucket"
+					item: "tconstruct:molten_iron_bucket"
 					consume_items: false
 				}
 				{
