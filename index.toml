@@ -1389,8 +1389,28 @@ file = "kubejs/assets/cabricality/textures/item/trading/trade_card.png"
 hash = "5721d741782ac1f39de082d8da74b9a824ecfab2cad9199ae56bdbb5bdb98a1b"
 
 [[files]]
+file = "kubejs/assets/kubejs/lang/en_us.json"
+hash = "f55df588ae032e813a6b5b5d652b3509b29e5eac70a16fce69da22d286689782"
+
+[[files]]
+file = "kubejs/assets/kubejs/lang/zh_cn.json"
+hash = "4ed7b19bb334aed7cfc5ef4374a35b920c436bc7b985424ede8d36f2d9258728"
+
+[[files]]
+file = "kubejs/assets/ponderjs_generated/lang/en_us.json"
+hash = "f55df588ae032e813a6b5b5d652b3509b29e5eac70a16fce69da22d286689782"
+
+[[files]]
+file = "kubejs/assets/ponderjs_generated/lang/zh_cn.json"
+hash = "4ed7b19bb334aed7cfc5ef4374a35b920c436bc7b985424ede8d36f2d9258728"
+
+[[files]]
 file = "kubejs/client_scripts/client.js"
 hash = "de12df432c9a6af2f364573f21e0ddae87f90dd409eae330e561393e45ad8b99"
+
+[[files]]
+file = "kubejs/client_scripts/ponder.js"
+hash = "ce00dc19ec88d8049f44b14873565c570187113751c38a2a5f91852f48ae15d9"
 
 [[files]]
 file = "kubejs/data/ad_astra/loot_tables/blocks/deepslate_calorite_ore.json"
@@ -1865,6 +1885,10 @@ file = "kubejs/data/cabricality/recipes/filling/coke.json"
 hash = "b299992d054f2b3a3166e43ffdd0ab8e5210b90a1e9f72571c9c7f463490de29"
 
 [[files]]
+file = "kubejs/data/cabricality/recipes/filling/dark_amaranth_roots.json"
+hash = "5388060975c00112cc70253c4a2561b779f9de7e16c35479408cf7c36b91897f"
+
+[[files]]
 file = "kubejs/data/cabricality/recipes/filling/earth_slime_fern.json"
 hash = "8300c5f7affd76edef1c1da7e473d4134f848112497ddca1a700626722a10d14"
 
@@ -1938,7 +1962,7 @@ hash = "97469732745bbc7fe613cd91f81c5442d71b6530826b6b62668e71408c6b2b96"
 
 [[files]]
 file = "kubejs/data/cabricality/recipes/item_application/fluix_casing_from_log.json"
-hash = "24ada24f621ebe6719f7ee0da909e430326130d54f3cfe5e22ff46df966e8afd"
+hash = "ad2c00c0b84eea80a0f3b96ad0c8cbce89873300646b9c78af44ea7829e324f9"
 
 [[files]]
 file = "kubejs/data/cabricality/recipes/item_application/invar_casing_from_log.json"
@@ -1946,7 +1970,7 @@ hash = "db5e617bff7919126099861e4766adee38957ad4ccf8234331af86822b535f6a"
 
 [[files]]
 file = "kubejs/data/cabricality/recipes/item_application/zinc_casing_from_log.json"
-hash = "bcaabdf5960d6be941c3a39cc763b5e8796ddce9b3831e6bb31d3db9aca8e622"
+hash = "7f18d4cf2414f99eaeba9a2119b676c106d349a0ce69792cdb1cc866c4a66ffc"
 
 [[files]]
 file = "kubejs/data/cabricality/recipes/melting/ender_dust.json"
@@ -3345,6 +3369,190 @@ file = "kubejs/data/indrev/loot_tables/blocks/tin_ore.json"
 hash = "1c65f324672173f86cca1e0735b4f18f470ae51b0b74ec62ecdcb4820f3bbda9"
 
 [[files]]
+file = "kubejs/data/indrev/recipes/condensing/copper_chunk_from_molten_copper.json"
+hash = "5904166be8cf872b6bfc136f325b92cfd3fc43b9c171bfd6a80dca1922d583df"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/condensing/gold_chunk_from_molten_gold.json"
+hash = "54cb644bc8d5dd7b2b18a06929228c399f0a919a972de32d124193db4db7505f"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/condensing/iron_chunk_from_molten_iron.json"
+hash = "471fe0881b96f6bfba0844333c8e8b69a72d0d07b36868fc6b83273ff996a148"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/condensing/lead_chunk_from_molten_lead.json"
+hash = "a0b8bbe6f9ef19228c8c50a4de7253d81f2a5c794bcc621d93312e877be1cd57"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/condensing/netherite_chunk_from_molten_netherite.json"
+hash = "fd396d7bd57b4cee1d87f19495b4b7007368b3e1c2f033e99e302d613598cdb5"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/condensing/silver_chunk_from_molten_silver.json"
+hash = "7bb2c26319391d7ac0467e19937f4d3565ff3bab38a4fbef42faecceab3999a0"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/condensing/tin_chunk_from_molten_tin.json"
+hash = "bbd4c79253dcc6e76404ed5be874c870331dd6069af2206c8e19691d094582dd"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_copper_from_block.json"
+hash = "66b7bc4384acbf663b7aa0a602b693a22c92ea5a2ee59790b5f34b3e9ea4f3ed"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_copper_from_dust.json"
+hash = "e3143eb49ffc036b0d747aa5c9e7c7478043196981da9b0fee6f0f42788c5ff2"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_copper_from_ingot.json"
+hash = "8a840feb4cd5c9d939ce0704157bc4d6637a7523d52209cf96a0941f98c8dec4"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_copper_from_nugget.json"
+hash = "990979d86c0ad37ef2c2810f854db7b78747e908d7c83eead71a2e4bbc99ccd2"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_copper_from_ore.json"
+hash = "be52c9eb241d54af6ec1134309b853102b10b9e2acfd86d5009372139f6e5138"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_copper_from_purified_ore.json"
+hash = "67cdd3d2d40a910ccfd10771a7b4b2312aa0505c80d310f83bade6600878ee91"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_gold_from_block.json"
+hash = "7a5e5506ebbcff6f07109cc018fbcc8169048e8df9648b943128edaf71d1cb0d"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_gold_from_dust.json"
+hash = "0e42603ccf8a090ae4cf4c433e1b7e29f66ea4c57245e7cce2bfd3ded41eea3e"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_gold_from_ingot.json"
+hash = "4a37dfb4d9a16d93bae16a58b30735fe72649bafda1ddd030154f3ba3a4a08f3"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_gold_from_nugget.json"
+hash = "a6bcbe21a8ddfff388301740d400d93315a51a65c62ecaf2ff643b1b402a79fa"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_gold_from_ore.json"
+hash = "572c8d93044eb2ede510ded2b60d0d25d2dd44c7a2d9db62d118883675340d94"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_gold_from_purified_ore.json"
+hash = "412940f3a131920e28c416cea64a74ecc1b782d6cae6792589297d2eeef5ce55"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_iron_from_block.json"
+hash = "135050420c9e06d20fe51f9ffe5785925ba0627b437f455ae1e454bdfdd3d147"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_iron_from_dust.json"
+hash = "32e854073be17367b74f0f38273aa197612d0e6416b9716e019b486553105887"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_iron_from_ingot.json"
+hash = "61535b815c01f488063658ec0413fbd5f22db21f4d75cebfdd8c78d9d39e5497"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_iron_from_nugget.json"
+hash = "a90abcf02558b4874a4b0ec0f676ccba24595f3eef6eb45299eb6526d1ecacdc"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_iron_from_ore.json"
+hash = "bc4c63982a9d1d0abc4b879cfc6de396d61ef3fbf0d3143caf0222b2407cd8f9"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_iron_from_purified_ore.json"
+hash = "6c8965024003b6fc4e416841a71223b2be3da168934506c1c631f7a2e4b5d2bf"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_lead_from_block.json"
+hash = "d1f903fa0df90cf22bf749cbd2b164d90b461291e40f676ebef889e08356ba52"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_lead_from_dust.json"
+hash = "e6d94836d86350406d45a4d17ca353057196507788043bf7778a9395d5b66269"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_lead_from_ingot.json"
+hash = "29271f8dd7c61defaef3685a65978a7380da74eac52d0088b38aff3a94a67c86"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_lead_from_nugget.json"
+hash = "ff2ef9b3cc80a12630b02f8b61e1e0086609f31aeefdf7140dcdb263bb24a5d6"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_lead_from_ore.json"
+hash = "f1111200791f44fce2f262e992fd48ee093f0e4357838635b73386b331044642"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_lead_from_purified_ore.json"
+hash = "49323abd83dafb97efb063a88192703df292ad9c498ea8670fe6198975b4819c"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_netherite_from_dust.json"
+hash = "aabb447a1b212cffed23a6cc53e3b958ff06765db1400846256e4be25ea99343"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_netherite_from_ore.json"
+hash = "cd8c2a6b8bd24feb0e3a6862927d0e41edf40db971f158e42fd529f4f5381c75"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_netherite_from_purified_ore.json"
+hash = "4f80614eb2594721a51a5b365cc68a10397038f1264723e505376c73d9b771ec"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_silver_from_block.json"
+hash = "e61435281407072d1273f453c184fc85c93aa9ef2c0d4ad0c975a750bb45e2d3"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_silver_from_dust.json"
+hash = "46fd426334325f459f67657c934043a23ca354707041c3e977f35d6869605e19"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_silver_from_ingot.json"
+hash = "759cd978d370cb49dc92070fcb4fda2399e161334f50e33ab83963280a5619df"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_silver_from_nugget.json"
+hash = "a33d6c0ff373582c87e69b02e2059350957a1a553969dbaa9b7b958085c79d5a"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_silver_from_ore.json"
+hash = "0442f450eda647cd33e0afa60b79e541e4f8afba09637e598eee91bfa9e81d42"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_silver_from_purified_ore.json"
+hash = "5d01e845ebc8b26bd0c2a9e7db03be0eefed08b9d6b33f87259ac5c3b6a3a94c"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_tin_from_block.json"
+hash = "0a2dfe71d922b2c9a8393761ffca1043bfeb3aa6509a342562e1c2543b2c809d"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_tin_from_dust.json"
+hash = "0656f4850928f5b47aac2c07b516602761281443ecf56ba1f714b57a70e24ebb"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_tin_from_ingot.json"
+hash = "3961b9794f6508b9cfe28fa60f959a185b203ff599dd0dc9dffc049f7346214c"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_tin_from_nugget.json"
+hash = "a54065bea78c7852a09d6fe2ccb5027429dca642fde5b5770f3219b628de6a94"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_tin_from_ore.json"
+hash = "f1929076505f6016e6d7ed59bf52a11a5c72c000befb163b4010a245a7aed7de"
+
+[[files]]
+file = "kubejs/data/indrev/recipes/smelter/molten_tin_from_purified_ore.json"
+hash = "c82930b4845574df7fd042c6c07669b940ca5ee38fa2db2d9238386bc56d2eaa"
+
+[[files]]
 file = "kubejs/data/minecraft/loot_tables/blocks/copper_ore.json"
 hash = "46790c3b195bf3dbca959bbc62817ad29b0b141bf943c155ea3ed43088c1b92c"
 
@@ -3466,7 +3674,7 @@ hash = "9842bacc77f3a329755465f80a268e8f89645d8a29325395619e334993e01c85"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/tweaks/general_tweaks.js"
-hash = "0f91898ddd26d5df9162b30858c8f330478143bd45945a6fed800e29e3ff2083"
+hash = "31c6b97897fc9234dec6b15ae7c20ea916e4c6bcbba7a4c05d886abbd8cfb883"
 
 [[files]]
 file = "kubejs/server_scripts/recipes/tweaks/ore_processing.js"
@@ -3482,7 +3690,7 @@ hash = "9749128b7532c870ae8ee5eb364c0e5fc3d5192736eaebea3fdb9c6d3d263c96"
 
 [[files]]
 file = "kubejs/server_scripts/tags/tags.js"
-hash = "eda99f5444014e1ead3d038b9a0a5a767170548dcf3a0e6a34dd9d64fcce421f"
+hash = "b9070aa513c2af121f629de6a6703ca2cdc06fe57e6a90e836f7c2bc5a557629"
 
 [[files]]
 file = "kubejs/startup_scripts/launch.js"
@@ -3494,7 +3702,7 @@ hash = "29fd7dc6dcd60af1338856bb0c06df9c087fff22c0207ed24eaa28224e278bf3"
 
 [[files]]
 file = "kubejs/startup_scripts/trading.js"
-hash = "32bf2226d7ccc4244e09928d3b1ed572d8cab21f4051daa3821e1b5c460a7789"
+hash = "09bd37c3174c45b587cf2be21ed36db40249a3c16b3145dda39a4dc57b58fb0c"
 
 [[files]]
 file = "kubejs/startup_scripts/worldgen.js"
@@ -3729,11 +3937,6 @@ hash = "c94ba62d4826b6828e618ac19992e8d3a8b30b2eab80d6449a2cc023c0b076dc"
 metafile = true
 
 [[files]]
-file = "mods/memoryleakfix.pw.toml"
-hash = "f61810be98ef52436d3355ecfa4354bc47d142cbe9468fbd14415e5bc6d66125"
-metafile = true
-
-[[files]]
 file = "mods/mo-structures.pw.toml"
 hash = "2d28482058d2d26425ce201ff66684944cbf3bac2841cf4fbc9157fe51830fbe"
 metafile = true
@@ -3781,6 +3984,11 @@ metafile = true
 [[files]]
 file = "mods/polylib.pw.toml"
 hash = "3abd6bfd91f9099a1c744f4c2dd6d77354f64b36c47ca62462ec95c912d94cab"
+metafile = true
+
+[[files]]
+file = "mods/ponder.pw.toml"
+hash = "65edb51604e963fb7b09f06a465e83cd88836a0a5bb07df18efa4838dd95952d"
 metafile = true
 
 [[files]]
