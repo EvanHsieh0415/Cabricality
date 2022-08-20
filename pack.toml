@@ -1,12 +1,12 @@
 name = "Cabricality"
 author = "DM-Earth"
-version = "0.1.0-dev16-zh_cn"
+version = "0.1.0-dev17-zh_cn"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "b8142a41474a567691a67aacfacc7c4fd8d61da9c0f838478c03ec705dc90954"
+hash = "48e5360b13ee246dbc288d40b3cab65a8dd1e431f45e953ce4ee504d5e94d655"
 
 [versions]
 fabric = "0.14.9"
