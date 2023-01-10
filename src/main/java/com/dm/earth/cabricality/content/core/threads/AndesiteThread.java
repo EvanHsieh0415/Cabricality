@@ -20,7 +20,7 @@ import com.dm.earth.cabricality.content.entries.CabfItemTags;
 import com.dm.earth.cabricality.resource.data.core.FreePRP;
 import com.dm.earth.cabricality.tweak.RecipeTweaks;
 import com.dm.earth.cabricality.tweak.core.MechAndSmithCraft;
-import com.dm.earth.cabricality.util.math.RecipeBuilderUtil;
+import com.dm.earth.cabricality.math.RecipeBuilderUtil;
 import com.simibubi.create.content.contraptions.components.deployer.DeployerApplicationRecipe;
 import com.simibubi.create.content.contraptions.components.mixer.CompactingRecipe;
 import com.simibubi.create.content.contraptions.components.mixer.MixingRecipe;
@@ -137,6 +137,19 @@ public class AndesiteThread implements TechThread {
 						.addStep(DeployerApplicationRecipe::new,
 								r -> r.require(CR.asItem("andesite_alloy")))
 						.addStep(CuttingRecipe::new, r -> r).build());
+
+		handler.register(recipeId("crafting", "saw_blade"),
+				id -> VanillaRecipeBuilders.shapedRecipe("NPN", "PLP", "NPN")
+						.ingredient('N', MC.asIngredient("iron_nugget"))
+						.ingredient('P', CR.asIngredient("iron_sheet"))
+						.ingredient('L', IR.asIngredient("lead_ingot"))
+						.output(CABF.asStack("saw_blade")).build(id, ""));
+		handler.register(recipeId("crafting", "iron_drill_head"),
+				id -> VanillaRecipeBuilders.shapedRecipe("NN ", "NLP", " PL")
+						.ingredient('N', MC.asIngredient("iron_nugget"))
+						.ingredient('P', CR.asIngredient("iron_sheet"))
+						.ingredient('L', IR.asIngredient("lead_ingot"))
+						.output(IR.asStack("iron_drill_head")).build(id, ""));
 	}
 
 	@Override
@@ -148,6 +161,8 @@ public class AndesiteThread implements TechThread {
 
 		handler.removeIf(p -> RecipeTweaks.notCabf(p) && p instanceof AbstractCookingRecipe
 				&& p.getOutput().isOf(AP.asItem("algal_brick")));
+		handler.removeIf(
+				p -> RecipeTweaks.notCabf(p) && p.getOutput().isOf(IR.asItem("iron_drill_head")));
 		handler.remove(AP.id("algal_blend_shapeless"));
 	}
 }

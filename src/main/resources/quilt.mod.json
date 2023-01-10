@@ -3,17 +3,23 @@
   "quilt_loader": {
     "group": "com.dm.earth",
     "id": "cabricality",
+    "provides": [
+      {
+        "id": "kubejs",
+        "version": "1802.5.5"
+      }
+    ],
     "version": "${version}",
     "metadata": {
       "name": "Cabricality",
-      "description": "A Create centered challengeable modpack inspired by Create: Above and Beyond",
+      "description": "A Create centered challengeable mod inspired by Create: Above and Beyond",
       "contributors": {
         "DM Earth": "Owner"
       },
       "contact": {
         "source": "https://github.com/DM-Earth/Cabricality"
       },
-      "license": "AGPL-3.0"
+      "license": "GPL-3.0"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
@@ -28,7 +34,8 @@
         "com.dm.earth.cabricality.tweak.RecipeTweaks",
         "com.dm.earth.cabricality.content.trading.data.recipe.Trading"
       ],
-      "rei_client": "com.dm.earth.cabricality.client.rei.CabricalityREIClientPlugin"
+      "rei_client": "com.dm.earth.cabricality.client.rei.CabricalityREIClientPlugin",
+      "modmenu": "com.dm.earth.cabricality.config.modmenu.CabfModMenuImpl"
     },
     "accessWidener": "cabricality.accesswidener",
     "depends": [
@@ -43,6 +50,14 @@
       {
         "id": "quilted_fabric_api",
         "versions": ">=1.0.0-"
+      },
+      {
+        "id": "fabric-key-binding-api-v1",
+        "versions": "*"
+      },
+      {
+        "id": "equator",
+        "versions": "*"
       }
     ]
   },
