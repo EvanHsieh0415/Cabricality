@@ -9,10 +9,10 @@
         "version": "1802.5.5"
       }
     ],
-    "version": "${version}",
+    "version": "${modpack_version}",
     "metadata": {
       "name": "Cabricality",
-      "description": "A Create centered challengeable mod inspired by Create: Above and Beyond",
+      "description": "A Create centered challengeable mod inspired by Create: Above and Beyond.",
       "contributors": {
         "DM Earth": "Owner"
       },
@@ -24,6 +24,7 @@
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
       "init": "com.dm.earth.cabricality.Cabricality",
+      "pre_launch": "com.dm.earth.cabricality.CabricalityPreInit",
       "client_init": "com.dm.earth.cabricality.client.CabricalityClient",
       "server_init": "com.dm.earth.cabricality.server.CabricalityServer",
       "client_events": [
@@ -34,7 +35,7 @@
         "com.dm.earth.cabricality.tweak.RecipeTweaks",
         "com.dm.earth.cabricality.content.trading.data.recipe.Trading"
       ],
-      "rei_client": "com.dm.earth.cabricality.client.rei.CabricalityREIClientPlugin",
+      "rei_client": "com.dm.earth.cabricality.client.plugin.rei.CabfREIClientPlugin",
       "modmenu": "com.dm.earth.cabricality.config.modmenu.CabfModMenuImpl"
     },
     "accessWidener": "cabricality.accesswidener",
@@ -57,7 +58,7 @@
       },
       {
         "id": "equator",
-        "versions": "*"
+        "versions": ">=2.5.3"
       }
     ]
   },

@@ -706,8 +706,8 @@
 
   "chapter_4.cabricality.preparation.task.checkmark.title": "Checkmark",
 
-  "chapter_4.cabricality.laser.title": "The Alchemical Laser &dBOOM&r",
-  "chapter_4.cabricality.laser.content": "A central role in this age of technology is played by the Alchemical Laser.",
+  "chapter_4.cabricality.laser.title": "The Alchemical Laser",
+  "chapter_4.cabricality.laser.content": "A central role in this age of technology is played by the Alchemical Laser. Please check the FAQ in Cabricality Wiki for details.",
 
   "chapter_4.cabricality.laser.task.checkmark.title": "Checkmark",
 
@@ -734,7 +734,7 @@
 
   "contraption.cabricality.32.2.title": "Hot Laser",
   "contraption.cabricality.32.2.subtitle": "Contraption 32-2",
-  "contraption.cabricality.32.2.content": "The first Alchemical Laser forms activated basalz essence from Basalt. This works only if powered water is above the Fluid Hopper.",
+  "contraption.cabricality.32.2.content": "The first Alchemical Laser forms activated basalz essence from Basalt.",
 
   "contraption.cabricality.33.1.title": "Basalz Mill",
   "contraption.cabricality.33.1.subtitle": "Contraption 33-1",
@@ -778,7 +778,7 @@
 
   "contraption.cabricality.38.title": "Cool Laser",
   "contraption.cabricality.38.subtitle": "Contraption 38",
-  "contraption.cabricality.38.content": "The second Alchemical Laser forms activated blizz essence from Snow Blocks.\n\nYour automation strategy from Contraption 32 will perform just as effective here.",
+  "contraption.cabricality.38.content": "The second Alchemical Laser forms activated blizz essence from Snow Balls.\n\nYour automation strategy from Contraption 32 will perform just as effective here.",
 
   "contraption.cabricality.39.1.title": "Blizz Mill",
   "contraption.cabricality.39.1.subtitle": "Contraption 39-1",
@@ -1018,5 +1018,5 @@
 
   "thanks.cabricality.staff.title": "&cThanks &afor &bplaying&f!",
   "thanks.cabricality.staff.subtitle": "Staff",
-  "thanks.cabricality.staff.content": "&f&lSimibubi&r\n&7Original Author&r\n\n&f&lYjn024&r\n&7Modpack Author&r\n\n&f&lKrLite&r\n&7Translator, Visual, Programming&r\n\n&f&lMangoJellyPudding&r\n&7Translator&r\n\n&f&lDerpford\nhrsthrt74\nIcedDog\nKrLite\nMangoJellyPudding\nNot-too\nNyakoFox\nRogenDong\nSylviBlossom&r\n&7Contributors&r"
+  "thanks.cabricality.staff.content": "&f&lSimibubi\n&r&7Original Author§r\n\n&f&lYjn024\n&r&7Modpack Author&r\n\n&f&lKrLite\n§r&7Translator, Visual, Programming&r\n\n&f&lMangoJellyPudding\n§r&7Translator&r\n\n&f&lDerpford\n§f§lEvanHsieh0415 §7§l@MangoJellyPudding\n§f§lhsrthrt74\n§f§lIcedDog\n§f§lLaoZuan §7@虾虾\n§f§lletrad\n§f§lNot-too\n§f§lNyakoFox\n§f§lRatismal\n§f§lRogenDong\n§f§lSylviBlossom\n§f§lTexBlock §7§l@Tex-Bocchi-True\n§f§lZZZank\n&r&7Contributors&r"
 }

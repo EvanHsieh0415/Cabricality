@@ -1,32 +1,29 @@
 package com.dm.earth.cabricality.content.core.threads;
 
-import static com.dm.earth.cabricality.ModEntry.AE2;
-import static com.dm.earth.cabricality.ModEntry.CABF;
-import static com.dm.earth.cabricality.ModEntry.CR;
-import static com.dm.earth.cabricality.ModEntry.IR;
-import static com.dm.earth.cabricality.ModEntry.KB;
-import static com.dm.earth.cabricality.ModEntry.MC;
-import static com.dm.earth.cabricality.ModEntry.PMD;
-import static com.dm.earth.cabricality.ModEntry.TC;
-
+import com.dm.earth.cabricality.content.core.TechThread;
+import com.dm.earth.cabricality.lib.math.RecipeBuilderUtil;
+import com.dm.earth.cabricality.lib.resource.data.core.FreePRP;
+import com.dm.earth.cabricality.tweak.base.MechAndSmithCraft;
+import com.simibubi.create.content.kinetics.deployer.ManualApplicationRecipe;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
+import net.minecraft.recipe.RecipeManager;
+import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.qsl.recipe.api.RecipeLoadingEvents.AddRecipesCallback;
 import org.quiltmc.qsl.recipe.api.builder.VanillaRecipeBuilders;
 
-import com.dm.earth.cabricality.content.core.TechThread;
-import com.dm.earth.cabricality.math.RecipeBuilderUtil;
-import com.dm.earth.cabricality.resource.data.core.FreePRP;
-import com.dm.earth.cabricality.tweak.core.MechAndSmithCraft;
-import com.simibubi.create.content.contraptions.components.deployer.ManualApplicationRecipe;
-
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
-import net.minecraft.recipe.RecipeManager;
-import net.minecraft.util.Identifier;
+import static com.dm.earth.cabricality.ModEntry.AE2;
+import static com.dm.earth.cabricality.ModEntry.CABF;
+import static com.dm.earth.cabricality.ModEntry.CR;
+import static com.dm.earth.cabricality.ModEntry.IR;
+import static com.dm.earth.cabricality.ModEntry.KB;
+import static com.dm.earth.cabricality.ModEntry.MC;
+import static com.dm.earth.cabricality.ModEntry.PM;
+import static com.dm.earth.cabricality.ModEntry.TC;
 
 public class EnderiumThread implements TechThread {
-
 	@Override
 	public void load() {
 		MechAndSmithCraft.addEntry(entry(KB.id("entangled_chest"), 1, MC.id("chest")));
@@ -46,7 +43,7 @@ public class EnderiumThread implements TechThread {
 
 		handler.register(recipeId("melting", "dark_amaranth_fungus"),
 				id -> RecipeManager.deserialize(id,
-						RecipeBuilderUtil.generateMelting(PMD.id("dark_amaranth_fungus"),
+						RecipeBuilderUtil.generateMelting(PM.id("dark_amaranth_fungus"),
 								TC.id("ender_slime"), FluidConstants.BOTTLE, null, 0, 100, 10)));
 
 		handler.register(recipeId("item_application", "enderium_casing"),
@@ -61,10 +58,7 @@ public class EnderiumThread implements TechThread {
 	}
 
 	@Contract("_, _, _ -> new")
-	private MechAndSmithCraft.@NotNull Entry entry(Identifier output, int count,
-			@Nullable Identifier other) {
-		return MechAndSmithCraft.entry(this.getLevel(), CABF.id("enderium_machine"), output, count,
-				other);
+	private MechAndSmithCraft.@NotNull Entry entry(Identifier output, int count, @Nullable Identifier other) {
+		return MechAndSmithCraft.entry(this.getLevel(), CABF.id("enderium_machine"), output, count, other);
 	}
-
 }

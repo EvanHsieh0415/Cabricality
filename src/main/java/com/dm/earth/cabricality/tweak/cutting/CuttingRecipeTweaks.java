@@ -1,15 +1,18 @@
 package com.dm.earth.cabricality.tweak.cutting;
 
 import java.util.Arrays;
+
+import com.simibubi.create.content.kinetics.saw.CuttingRecipe;
+import com.simibubi.create.content.processing.recipe.ProcessingOutput;
 import org.quiltmc.qsl.recipe.api.RecipeLoadingEvents.AddRecipesCallback;
 import com.dm.earth.cabricality.Cabricality;
-import com.dm.earth.cabricality.resource.data.core.FreePRP;
-import com.simibubi.create.content.contraptions.components.saw.CuttingRecipe;
-import com.simibubi.create.content.contraptions.processing.ProcessingOutput;
+import com.dm.earth.cabricality.lib.resource.data.core.FreePRP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+
+import static com.dm.earth.cabricality.ModEntry.*;
 
 public class CuttingRecipeTweaks {
 	public static void register(AddRecipesCallback.RecipeHandler handler) {
@@ -32,10 +35,17 @@ public class CuttingRecipeTweaks {
 				handler.register(createId(entry.getPlankId()),
 						id -> createRecipe(id, entry.getPlankId(), entry.getPlankSlabId(), 2, 50));
 		});
+
+		handler.register(createId(TRE.id("small_oak_log")),
+				id -> createRecipe(id, TRE.id("small_oak_log"), TRE.id("stripped_small_oak_log"), 1, 50));
+		handler.register(createId(TRE.id("stripped_small_oak_log")),
+				id -> createRecipe(id, TRE.id("stripped_small_oak_log"), MC.id("oak_planks"), 6, 50));
 	}
 
-	private static CuttingRecipe createRecipe(Identifier id, Identifier inputId,
-			Identifier outputId, int outputCount, int processingTime) {
+	private static CuttingRecipe createRecipe(
+			Identifier id, Identifier inputId,
+			Identifier outputId, int outputCount, int processingTime
+	) {
 		return new CuttingRecipe(
 				(new FreePRP(id)).setIngredient(Ingredient.ofItems(Registry.ITEM.get(inputId)))
 						.setResult(new ProcessingOutput(

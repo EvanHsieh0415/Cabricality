@@ -1,19 +1,19 @@
 package com.dm.earth.cabricality.content.core.threads;
 
-import static com.dm.earth.cabricality.ModEntry.CABF;
-import static com.dm.earth.cabricality.ModEntry.CR;
-import static com.dm.earth.cabricality.ModEntry.MC;
+import com.dm.earth.cabricality.content.core.TechThread;
+import com.dm.earth.cabricality.lib.math.RecipeBuilderUtil;
+import com.dm.earth.cabricality.tweak.base.MechAndSmithCraft;
+import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.qsl.recipe.api.RecipeLoadingEvents.AddRecipesCallback.RecipeHandler;
-import com.dm.earth.cabricality.content.core.TechThread;
-import com.dm.earth.cabricality.tweak.core.MechAndSmithCraft;
-import com.dm.earth.cabricality.math.RecipeBuilderUtil;
-import net.minecraft.util.Identifier;
+
+import static com.dm.earth.cabricality.ModEntry.CABF;
+import static com.dm.earth.cabricality.ModEntry.CR;
+import static com.dm.earth.cabricality.ModEntry.MC;
 
 public class ObsidianThread implements TechThread {
-
 	@Override
 	public void addRecipes(RecipeHandler handler) {
 		handler.register(recipeId("crafting", "obsidian_machine"),
@@ -35,10 +35,7 @@ public class ObsidianThread implements TechThread {
 	}
 
 	@Contract("_, _, _ -> new")
-	private MechAndSmithCraft.@NotNull Entry entry(Identifier output, int count,
-			@Nullable Identifier other) {
-		return MechAndSmithCraft.entry(this.getLevel(), CABF.id("obsidian_machine"), output, count,
-				other);
+	private MechAndSmithCraft.@NotNull Entry entry(Identifier output, int count, @Nullable Identifier other) {
+		return MechAndSmithCraft.entry(this.getLevel(), CABF.id("obsidian_machine"), output, count, other);
 	}
-
 }

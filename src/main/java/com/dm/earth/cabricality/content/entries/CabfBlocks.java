@@ -13,8 +13,8 @@ import com.dm.earth.cabricality.content.alchemist.block.ReagentJarBlock;
 import com.dm.earth.cabricality.content.core.blocks.CasingBlockEntry;
 import com.dm.earth.cabricality.content.core.blocks.MachineBlockEntry;
 import com.dm.earth.cabricality.content.extractor.ExtractorMachineBlock;
-import com.dm.earth.cabricality.core.ISettableBlockItem;
-import com.dm.earth.cabricality.resource.ResourcedBlock;
+import com.dm.earth.cabricality.lib.core.BlockItemSettable;
+import com.dm.earth.cabricality.lib.resource.ResourcedBlock;
 import com.dm.earth.tags_binder.api.LoadTagsCallback;
 import com.simibubi.create.AllTags.AllBlockTags;
 
@@ -25,32 +25,33 @@ import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.BlockItem;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class CabfBlocks implements LoadTagsCallback<Block> {
 	public static Block EXTRACTOR = registerBlock("extractor_machine",
-			new ExtractorMachineBlock(QuiltBlockSettings.of(Material.METAL, MapColor.BROWN)));
+			new ExtractorMachineBlock(QuiltBlockSettings.of(Material.METAL, MapColor.BROWN).strength(1.5F, 6.0F)));
 	public static Block JAR = registerBlock("jar",
-			new JarBlock(QuiltBlockSettings.of(Material.METAL, MapColor.SPRUCE_BROWN)));
+			new JarBlock(QuiltBlockSettings.of(Material.GLASS, MapColor.SPRUCE_BROWN).strength(0.3F)
+					.sounds(BlockSoundGroup.GLASS).nonOpaque()));
 
 	public static void register() {
-
 		// Substrate Jars
 		Arrays.stream(Reagents.values()).forEach(reagents -> {
 			if (reagents == Reagents.CHAOTIC)
 				registerBlock("catalyst_jar_" + reagents.getCatalyst().hashString(),
 						new ChaoticCatalystJarBlock(
-								QuiltBlockSettings.of(Material.GLASS, MapColor.BROWN)));
+								QuiltBlockSettings.of(Material.GLASS, MapColor.BLACK).strength(1F)));
 			else
 				registerBlock("catalyst_jar_" + reagents.getCatalyst().hashString(),
 						new CatalystJarBlock(
-								QuiltBlockSettings.of(Material.GLASS, MapColor.BROWN)));
+								QuiltBlockSettings.of(Material.GLASS, MapColor.GOLD).strength(0.4F)));
 			reagents.getReagents()
 					.forEach(reagent -> registerBlock("reagent_jar_" + reagent.hashString(),
 							new ReagentJarBlock(
-									QuiltBlockSettings.of(Material.GLASS, MapColor.SPRUCE_BROWN))));
+									QuiltBlockSettings.of(Material.GLASS, MapColor.SPRUCE_BROWN).strength(0.4F))));
 		});
 
 		Arrays.stream(MachineBlockEntry.values())
@@ -71,7 +72,7 @@ public class CabfBlocks implements LoadTagsCallback<Block> {
 
 		Registry.register(Registry.ITEM, Cabricality.id(name),
 				new BlockItem(block,
-						(block instanceof ISettableBlockItem settingable)
+						(block instanceof BlockItemSettable settingable)
 								? settingable.getSettings()
 								: CabfItems.Properties.DEFAULT.get()));
 

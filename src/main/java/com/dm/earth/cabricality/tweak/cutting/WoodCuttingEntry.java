@@ -4,7 +4,7 @@ import static com.dm.earth.cabricality.ModEntry.AD;
 import static com.dm.earth.cabricality.ModEntry.AP;
 import static com.dm.earth.cabricality.ModEntry.MC;
 import static com.dm.earth.cabricality.ModEntry.MLM;
-import static com.dm.earth.cabricality.ModEntry.PMD;
+import static com.dm.earth.cabricality.ModEntry.PM;
 import static com.dm.earth.cabricality.ModEntry.TC;
 import static com.dm.earth.cabricality.ModEntry.TRE;
 import org.jetbrains.annotations.Nullable;
@@ -28,10 +28,10 @@ public enum WoodCuttingEntry {
 
 	WARPED(MC.id("warped"), "warped_planks", "warped_slab", null, null, null, null),
 
-	CHERRY_OAK(PMD.id("cherry_oak"), "cherry_oak_planks", "cherry_oak_slab", "cherry_oak_log",
+	CHERRY_OAK(PM.id("cherry_oak"), "cherry_oak_planks", "cherry_oak_slab", "cherry_oak_log",
 			"stripped_cherry_oak_log", "cherry_oak_wood", "stripped_cherry_oak_wood"),
 
-	PALM(PMD.id("palm"), "palm_planks", "palm_slab", "palm_log", "stripped_palm_log", "palm_wood",
+	PALM(PM.id("palm"), "palm_planks", "palm_slab", "palm_log", "stripped_palm_log", "palm_wood",
 			"stripped_palm_wood"),
 
 	RUNEWOOD(MLM.id("runewood"), "runewood_planks", "runewood_planks_slab", "runewood_log",
@@ -58,14 +58,26 @@ public enum WoodCuttingEntry {
 			"rainbow_eucalyptus_slab", "rainbow_eucalyptus_log", "stripped_rainbow_eucalyptus_log",
 			"rainbow_eucalyptus_wood", "stripped_rainbow_eucalyptus_wood"),
 
+	RAINBOW_EUCALYPTUS_QUARTER(TRE.id("rainbow_eucalyptus_quarter"), "rainbow_eucalyptus_planks", null,
+			"rainbow_eucalyptus_quarter_log", "stripped_rainbow_eucalyptus_quarter_log", null, null),
+
 	CYPRESS(TRE.id("cypress"), "cypress_planks", "cypress_slab", "cypress_log",
 			"stripped_cypress_log", "cypress_wood", "stripped_cypress_wood"),
+
+	CYPRESS_QUARTER(TRE.id("cypress_quarter"), "cypress_planks", "cypress_planks", "cypress_quarter_log",
+			"stripped_cypress_quarter_log", null, null),
 
 	HEMLOCK(TRE.id("hemlock"), "hemlock_planks", "hemlock_slab", "hemlock_log",
 			"stripped_hemlock_log", "hemlock_wood", "stripped_hemlock_wood"),
 
+	HEMLOCK_QUARTER(TRE.id("hemlock_quarter"), "hemlock_planks", null, "hemlock_quarter_log",
+			"stripped_hemlock_quarter_log", null, null),
+
 	REDWOOD(TRE.id("redwood"), "redwood_planks", "redwood_slab", "redwood_log",
 			"stripped_redwood_log", "redwood_wood", "stripped_redwood_wood"),
+
+	REDWOOD_QUARTER(TRE.id("redwood_quarter"), "redwood_planks", null, "redwood_quarter_log",
+			"stripped_redwood_quarter_log", null, null),
 
 	JAPANESE_MAPLE(TRE.id("japanese_maple"), "japanese_maple_planks", "japanese_maple_slab",
 			"japanese_maple_log", "stripped_japanese_maple_log", "japanese_maple_wood",
@@ -95,14 +107,11 @@ public enum WoodCuttingEntry {
 			String wood, String strippedWood) {
 		this.id = id;
 		this.plankId = (plank == null) ? null : new Identifier(id.getNamespace(), plank);
-		this.plankSlabId =
-				(plankSlab == null) ? null : new Identifier(id.getNamespace(), plankSlab);
+		this.plankSlabId = (plankSlab == null) ? null : new Identifier(id.getNamespace(), plankSlab);
 		this.logId = (log == null) ? null : new Identifier(id.getNamespace(), log);
-		this.strippedLogId =
-				(strippedLog == null) ? null : new Identifier(id.getNamespace(), strippedLog);
+		this.strippedLogId = (strippedLog == null) ? null : new Identifier(id.getNamespace(), strippedLog);
 		this.woodId = (wood == null) ? null : new Identifier(id.getNamespace(), wood);
-		this.strippedWoodId =
-				(strippedWood == null) ? null : new Identifier(id.getNamespace(), strippedWood);
+		this.strippedWoodId = (strippedWood == null) ? null : new Identifier(id.getNamespace(), strippedWood);
 	}
 
 	public Identifier getId() {

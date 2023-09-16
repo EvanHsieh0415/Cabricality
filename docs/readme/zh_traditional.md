@@ -1,78 +1,55 @@
+> [!IMPORTANT]
+> 因证书不允许，请手动安装 **[FTB Library、](https://www.curseforge.com/minecraft/mc-mods/ftb-library-fabric)** **[FTB Quests、](https://www.curseforge.com/minecraft/mc-mods/ftb-quests-fabric)** **[FTB Teams、](https://www.curseforge.com/minecraft/mc-mods/ftb-teams-fabric)** **[Item Filters](https://www.curseforge.com/minecraft/mc-mods/item-filters)** 和 **[Quests Additions](https://www.curseforge.com/minecraft/mc-mods/quests-additions-fabric)** 模组！
 
-<h4 align="center">
-  <sup>
-    為獲得最佳遊戲體驗，請手動安裝
-    <a href="https://www.curseforge.com/minecraft/mc-mods/ftb-quests-fabric">
-      FTB Quests |
-    </a>
-    <a href="https://www.curseforge.com/minecraft/mc-mods/ftb-teams-fabric">
-      FTB Teams |
-    </a>
-    <a href="https://www.curseforge.com/minecraft/mc-mods/ftb-library-fabric">
-      FTB Library |
-    </a>
-    <a href="https://www.curseforge.com/minecraft/mc-mods/quests-additions-fabric">
-      Quests Additions
-    </a>
-    模組。
-  </sup>
-  <br>
-  </br>
-</h4>
-
-<div align="center">
-  <br>
-  </br>
-  <img src="https://github.com/DM-Earth/Cabricality/blob/packwiz/1.18.2/quilt/dev/assets/cabricality_banner.png?raw=true" width = 575 alt="Cabricality">
-  </img>
-  <br>
-  </br>
-</div>
+<blockquote>
+  <details>
+    <summary>
+      <code>あ ←→ A</code>
+    </summary>
+    <!--Head-->
+    &emsp;&ensp;<sub><b>永无止境：重缝</b>支持以下语言。<a href="/docs/add_a_localization.md"><code>↗ 添加一种语言</code></a></sub>
+    <br />
+    <!--Body-->
+    <br />
+    &emsp;&ensp;<a href="https://github.com/DM-Earth/Cabricality">English</a>
+    <br />
+    &emsp;&ensp;简体中文
+    <br />
+    &emsp;&ensp;<a href="/docs/readme/zh_traditional.md">繁體中文</a>
+  </details>
+</blockquote>
 
 <div align="center">
-  <br>
-  </br>
-  <a href="https://modrinth.com/modpack/cabricality" title="Modrinth">
-    <img src="https://img.shields.io/modrinth/dt/cabricality?label=%E4%B8%8B%E8%BC%89&style=for-the-badge&labelColor=1b122a&color=blueviolet&logo=data:image/png;base64,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" height = 35 alt="Modrinth下載">
-    </img>
-  </a>
-  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9LrOO_Jyqtvlh6LuyJk4XPmnQNU_vS1w&authKey=mqgrXnsbi/Em0EedP3HwytE8GShoXkL17UnWCbIgW0XHHm+5m0Nrh4lI8DQdK5EA&noverify=0" title="QQ">
-    <img src="https://img.shields.io/badge/722435334-26b8f3?label=QQ&style=for-the-badge&labelColor=1b122a&color=gray&logo=data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiu+SAIrvn/B6Pp/wRRdPEkOkXnQEBA/0FFR/sTLjrpBWyb/wiu+f8IrvnRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABE5vVgAKD++goKD//////////////////////2BgYP8BFh/dCK75IAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAANGAgID/////////////////////////////////QEBA/wAAAIEAAAAAAAAAEAAAAAAAAAAAAAAA8QAAAGAAAAD/8PDw/////////////////////////////////7CwsP8AAADxAAAAYAAAAMEAAAAAAAAAAAAAAOEAAADxICAg/8fH+f9ycvH/ZGTv///////////////////////AwMD/AAAA/wAAAP8AAACRAAAAAAAAAAAAAACxAAAA/wAAAP+Pj/P/Hx/o/x8f6P//////////////////////wMDA/wAAAP8AAAD/AAAAYAAAAAAAAAAAAAAAYAAAAP8AAAD/enrx/x8f6P8fH+j/j4/z/4+P8/+Pj/P/x8f5/6ysxf8AAAD/AAAA/wAAABAAAAAAAAAAAAAAABAYGLXjHx/o/x8f6P8fH+j/Hx/o/x8f6P8fH+j/Hx/o/x8f6P8fH+j/Hh7i9xUVm8EAAAAAAAAAAAAAAAAAAAAAHx/ooR8f6P8fH+j/Hh7h+Rsbx+EbG8fhGxvH4Rsbx+EfH+j/Hx/o/x8f6P8fH+hQAAAAAAAAAAAAAAAAAAAAAAsLVVgKCkn/AgIP/wIhL/8EV33/BoO7/wZ4rP8ETG3/AQsQ/wQEHf8MDFv3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA/wIhL/8IpOr/CK75/wiu+f8Irvn/CK75/weOy/8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAP8AAAD/AAAA/3GGj/8CLD7/GkRW/1plav8AAAD/AAAA/wAAANEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhAAAA/2BgYP9fX1//W1tb/4SEhP+Hh4f/EBAQ/wAAAP8AAAChAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAP8QEBD/xMTE/yAgIP9gYGD/wMDA/wAAAP8AAAD/AAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvLy//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/b29v/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAJEAAADxAAAA/wAAAP8AAADhAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAA4AcAAPAPAADgBwAAoAUAAIABAACAAwAAwAMAAMADAADABwAA4AcAAOAHAADgBwAA4AcAAOAPAADwDwAA+D8AAA==" height=35 alt="QQ">
-    </img>
-  </a>
-  <br>
-  </br>
+  <br />
+  <img src="/assets/banner/banner_full.png?raw=true" width="575" alt="Cabricality" />
+  <br />
 </div>
 
 <h1 align="center">
-  永無止境：重縫
+  Cabricality
+  <br /><br />
+  <a href="https://modrinth.com/modpack/cabricality" title="Modrinth">
+    <img src="https://img.shields.io/modrinth/dt/cabricality?label=%E4%B8%8B%E8%BD%BD&style=for-the-badge&labelColor=1b122a&color=8100ff&logo=data:image/png;base64,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" height="35" alt="Modrinth下载" />
+  </a>
+  <a href="https://qm.qq.com/cgi-bin/qm/qr?k=9LrOO_Jyqtvlh6LuyJk4XPmnQNU_vS1w&authKey=mqgrXnsbi/Em0EedP3HwytE8GShoXkL17UnWCbIgW0XHHm+5m0Nrh4lI8DQdK5EA&noverify=0" title="Community">
+    <img src="https://img.shields.io/badge/722435334-26b8f3?label=%E7%A4%BE%E7%BE%A4&style=for-the-badge&labelColor=1b122a&color=ff5400&logo=data:image/x-icon;base64,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" height="35" alt="社群" />
+  </a>
+  <br />
 </h1>
 
-**永無止境：重縫是一個以 *機械動力* 為中心的Minecraft模組包，依賴 *Quilt 1.18.2* 運行。**
+**永无止境：重缝是一个以*机械动力*为中心的Minecraft整合包，运行于*Quilt 1.20.1。***
 
-在這裡，你可以跟隨任務的指引，通過[機械動力](https://github.com/Fabricators-of-Create/Create)和[工業革命](https://github.com/GabrielOlvH/Industrial-Revolution)模組建造屬於自己的工廠！從山谷中徘徊走向空間站裡遨遊，科技發展的可能性由你决定！
+在這裡，你可以跟隨任務的指引，通過<b>[機械動力](https://github.com/Fabricators-of-Create/Create)</b>和<b>[工業革命](https://github.com/GabrielOlvH/Industrial-Revolution)</b>模組建造屬於自己的工廠！從山谷中徘徊走向空間站裡遨遊，科技發展的可能性由你决定！
 
-> *此模組包在[機械動力：永無止境](https://github.com/simibubi/Above-and-Beyond)的啟發下，重新設計並實現了全部的遊戲流程。我們歡迎每一個挑戰者，並發自內心地希望你們徜徉在Minecraft的遊戲世界中[^wiki]！*
+> ***永無止境：重縫**在<b>[機械動力：永無止境](https://github.com/simibubi/Above-and-Beyond)</b>的啟發下，重新設計並實現了全部的遊戲流程。我們歡迎每一個挑戰者，並發自內心地希望你們徜徉在Minecraft的遊戲世界中[^wiki]！*
 
-[^wiki]: 隨時歡迎翻閱[永無止境：重縫 Wiki！](https://github.com/DM-Earth/Cabricality/wiki)
-
-<h3 align="center">
-  <a href="https://github.com/DM-Earth/Cabricality">
-    English
-  </a>
-  |
-  <a href="zh_simplified.md">
-    简体中文
-  </a>
-  |
-  繁體中文
-</h3>
+[^wiki]: 隨時歡迎翻閱<b>[永無止境：重縫 Wiki！](https://github.com/DM-Earth/Cabricality/wiki)</b>
 
 ## 遊戲內容
 
 ### 主線流程
 
-作為科技向模組包，永無止境：重縫以科技發展作為遊戲主線。在此之外，許多可選的有趣支線內容讓科技樹顯得更加花繁葉茂。
+作為科技向模組包，**永無止境：重縫**以科技發展作為遊戲主線。在此之外，許多可選的有趣支線內容讓科技樹顯得更加花繁葉茂。
 
 每個任務都經過了精心安排，且大部分都有著豐富的描述。別擔心！只要跟緊了它們，絕不會讓你原地打轉、踟蹰不前！
 
@@ -90,11 +67,11 @@
 
 當你擁有足够的黃銅之後，就能够製造**交易站**了。為這精密的儀器通上電源，聽它轟鳴吧！放入`交易銘牌`和`職業銘牌`後，你就可以用手頭的錢幣交換一些罕見的資料了。當然，你也可以用材料**換回**錢幣！*噢，我的寶物啊！*
 
-當你需要生產`諧振終界`材料的時候，交易系統是必需品。這種異世界誕生的怪異材料為什麼會將銀幣融進自身是一個未解之謎...如果那時你還不是一名**煉金術士，**那麼交易就會成為獲取銀幣的唯一方式。
+當你需要生產`諧振終界`材料的時候，交易系統是必需品。這種異世界誕生的怪異材料為什麼會將銀幣融進自身是一個未解之謎...如果那時你還不是一名<b>煉金術士，</b>那麼交易就會成為獲取銀幣的唯一方式。
 
 ### 混沌煉金
 
-在煉金術士手中，珍稀材料從平平無奇的試劑瓶中破蛹而出。現在，你也可以做到！將原材料磨成粉末，摻進熔融玻璃中，能夠方便地生產罐裝試劑。在**煉金催化劑**的作用下攪拌、融合，**點石成金。**這就是魔法！
+在煉金術士手中，珍稀材料從平平無奇的試劑瓶中破蛹而出。現在，你也可以做到！將原材料磨成粉末，摻進熔融玻璃中，能夠方便地生產罐裝試劑。在**煉金催化劑**的作用下攪拌、融合，<b>點石成金。</b>這就是魔法！
 
 催化劑並不是什麼可以簡單製造的材料。要製造催化劑，首先你需要構築一個**煉金雷射發射器**結構，然後對著一些特定的試劑發射高能射線。運氣好的話，你就能得到一瓶催化劑。對於每個世界，催化劑配方都是不同的。所以打起精神來，永遠不要放棄嘗試！
 
@@ -108,7 +85,7 @@
 
 我們建議你根據實際情況對遊戲進行適當最佳化。
 
-**如果你想要更順滑流暢的FPS，**開啟垂直同步也許會有所幫助[^fps]。
+<b>如果你想要更順滑流暢的<abbr title="帧每秒">FPS</abbr>，</b>開啟垂直同步也許會有所幫助[^fps]。
 
 [^fps]: 若遊戲鎖在30FPS，則請嘗試關閉垂直同步。
 
@@ -136,14 +113,14 @@
 packwiz modrinth export
 ```
 
-> *更多資訊請翻閱[packwiz wiki。](https://packwiz.infra.link)*
+> *更多資訊請翻閱<b>[packwiz wiki。](https://packwiz.infra.link)</b>*
 
 ### 啟動器支援
 
-你可以在任意支援**Modrinth整合包**和**Quilt**的啟動器中安裝並運行這個模組包，如[MultiMC、](https://multimcorg)[Prism Launcher](https://prismlauncher.org)和[Hello Minecraft! Launcher](https://hmcl.huangyuhui.net)[^pcl2]。
+你可以在任意支援**Modrinth整合包**和**Quilt**的啟動器中安裝並運行<b>永無止境：重縫，</b>如<b>[MultiMC、](https://multimcorg)</b><b>[Prism Launcher](https://prismlauncher.org)</b>和<b>[Hello Minecraft! Launcher](https://hmcl.huangyuhui.net)[^pcl2]。</b>
 
-[^pcl2]: **注意，[PCL2啟動器](https://github.com/Hex-Dragon/PCL2)不受支援。**
+[^pcl2]: **注意，[Plain Craft Launcher 2啟動器](https://github.com/Hex-Dragon/PCL2)不受支援。**
 
 ### 協議
 
-本項目使用[**GPL-3.0協議。**](LICENSE)
+本項目使用[**GNU General Public License v3協議。**](LICENSE)

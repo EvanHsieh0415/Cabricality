@@ -1,12 +1,12 @@
 package com.dm.earth.cabricality.content.core.blocks.casing;
 
 import com.dm.earth.cabricality.Cabricality;
+import com.dm.earth.cabricality.lib.resource.ResourcedBlock;
+import com.dm.earth.cabricality.lib.resource.assets.gen.block.BlockStatesGenerator;
 
 import org.jetbrains.annotations.Nullable;
 
-import com.dm.earth.cabricality.resource.ResourcedBlock;
-import com.dm.earth.cabricality.resource.assets.gen.block.BlockStatesGenerator;
-import com.simibubi.create.content.contraptions.base.CasingBlock;
+import com.simibubi.create.content.decoration.encasing.CasingBlock;
 
 import net.devtech.arrp.json.blockstate.JBlockStates;
 import net.minecraft.util.Identifier;

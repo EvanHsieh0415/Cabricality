@@ -1,10 +1,15 @@
 package com.dm.earth.cabricality.tweak;
 
 import static com.dm.earth.cabricality.ModEntry.C;
+import static com.dm.earth.cabricality.ModEntry.CR;
+import static com.dm.earth.cabricality.ModEntry.*;
+
 import com.dm.earth.cabricality.content.entries.CabfItemTags;
+import com.dm.earth.cabricality.tweak.base.TagUnifyEntry;
 import com.dm.earth.cabricality.tweak.cutting.WoodCuttingEntry;
 import com.dm.earth.tags_binder.api.LoadTagsCallback;
 import com.dm.earth.tags_binder.api.ResourceConditionCheckTagCallback;
+
 import net.minecraft.item.Item;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.ActionResult;
@@ -13,12 +18,25 @@ import net.minecraft.util.registry.Registry;
 
 public class ItemTagTweaks
 		implements LoadTagsCallback<Item>, ResourceConditionCheckTagCallback<Item> {
+
 	private static final ItemTagTweaks INSTANCE = new ItemTagTweaks();
-	private static final String[] COMPRESSED_TO_PLATE_CONVERSION = {"desh", "ostrum", "calorite"};
+	private static final String[] COMPRESSED_TO_PLATE_CONVERSION = { "desh", "ostrum", "calorite" };
 
 	public static void load() {
 		LoadTagsCallback.ITEM.register(INSTANCE);
 		ResourceConditionCheckTagCallback.ITEM.register(INSTANCE);
+		unifyTags();
+	}
+
+	private static void unifyTags() {
+		TagUnifyEntry.register(() -> CR.asItem("iron_sheet"), "iron_plate");
+		TagUnifyEntry.register(() -> AD.asItem("steel_block"), "steel_block");
+		TagUnifyEntry.register(() -> AD.asItem("steel_nugget"), "steel_nugget");
+		TagUnifyEntry.register(() -> CR.asItem("gold_sheet"), "gold_plate");
+		TagUnifyEntry.register(() -> CR.asItem("copper_sheet"), "copper_plate");
+		TagUnifyEntry.register(() -> IR.asItem("steel_ingot"), "steel_ingot");
+		TagUnifyEntry.register(() -> IR.asItem("steel_plate"), "steel_plate", "compressed_steel");
+		TagUnifyEntry.register(() -> CR.asItem("copper_nugget"), "copper_nugget");
 	}
 
 	@Override
@@ -27,11 +45,18 @@ public class ItemTagTweaks
 		if (!rid.getNamespace().equals("c"))
 			return ActionResult.PASS;
 		String id = rid.getPath();
-		if (id.startsWith("plates/")) {
-			String mat = id.replaceAll("plates/", "");
+		if (id.startsWith("plates/") || id.endsWith("_plates")) {
+			String mat = id.replaceAll("plates/", "").replaceAll("_plates", "");
 			for (String m : COMPRESSED_TO_PLATE_CONVERSION)
 				if (m.equals(mat))
 					return ActionResult.SUCCESS;
+		}
+		if (id.startsWith("ores/")) {
+			String mat = id.replaceAll("ores/", "");
+			String[] allowList = { "tin", "lead", "nickel" };
+			for (String m : allowList)
+				if (mat.equals(m))
+					return ActionResult.CONSUME;
 		}
 		return ActionResult.PASS;
 	}
@@ -47,11 +72,10 @@ public class ItemTagTweaks
 						Registry.ITEM.get(entry.getStrippedWoodId()));
 		}
 
-		for (String mat : COMPRESSED_TO_PLATE_CONVERSION) {
-			Item[] items = handler.get(C.id("compressed_" + mat)).toArray(new Item[0]);
-			handler.register(C.id(mat + "_plates"), items);
-			handler.register(C.id("plates", mat), items);
-			handler.remove(C.id("compressed_" + mat));
-		}
+		handler.register(C.id("compressed_steel"), IR.asItem("steel_plate"));
+		handler.register(C.id("desh_plates"), AD.asItem("compressed_desh"));
+		handler.register(C.id("ostrum_plates"), AD.asItem("compressed_ostrum"));
+		handler.register(C.id("calorite_plates"), AD.asItem("compressed_calorite"));
 	}
+
 }

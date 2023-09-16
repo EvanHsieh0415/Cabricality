@@ -6,7 +6,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import com.dm.earth.cabricality.content.alchemist.Alchemist;
 import com.dm.earth.cabricality.content.entries.CabfItems;
-import com.dm.earth.cabricality.math.PositionUtil;
+import com.dm.earth.cabricality.lib.math.PositionUtil;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -23,12 +24,16 @@ import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 
+import static com.dm.earth.cabricality.ModEntry.*;
+
 public class LaserBehaviors {
 	public static void attackNearby(@NotNull ServerWorld world, BlockPos pos, float power) {
-		float len = power * 3F;
+		float len = power * 2.5F;
 		Box box = Box.of(PositionUtil.fromBlockPos(pos), len, len, len);
 		world.getEntitiesByClass(LivingEntity.class, box, Entity::isLiving)
-				.forEach(entity -> entity.damage(DamageSource.GENERIC, power));
+				.forEach(entity -> entity.damage(DamageSource.GENERIC,
+						(float) (Math.max(Math.max(0, entity.getBlockPos().getSquaredDistance(pos) / len), 1)
+								* power)));
 	}
 
 	// pos should be the lamp's blockPos
@@ -85,6 +90,10 @@ public class LaserBehaviors {
 			return new LaserRecipe(CabfItems.BASALZ_SHARD, ParticleTypes.FLAME);
 		if (item == Items.SNOWBALL)
 			return new LaserRecipe(CabfItems.BLIZZ_CUBE, ParticleTypes.SNOWFLAKE);
+		if (item == IR.asItem("nikolite_ingot"))
+			return new LaserRecipe(IR.asItem("enriched_nikolite_ingot"), ParticleTypes.ELECTRIC_SPARK);
+		if (item == IR.asItem("nikolite_dust"))
+			return new LaserRecipe(IR.asItem("enriched_nikolite_dust"), ParticleTypes.ELECTRIC_SPARK);
 		return null;
 	}
 

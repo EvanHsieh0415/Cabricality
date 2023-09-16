@@ -1,7 +1,8 @@
 package com.dm.earth.cabricality.content.trading.core;
 
 import com.dm.earth.cabricality.Cabricality;
-import com.dm.earth.cabricality.core.IHashStringable;
+import com.dm.earth.cabricality.lib.core.HashStringable;
+
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -9,7 +10,7 @@ import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
-public record Profession(Identifier id, List<TradingEntry> entries, int tint) implements IHashStringable {
+public record Profession(Identifier id, List<TradingEntry> entries, int tint) implements HashStringable {
 	@Contract("_, _, _ -> new")
 	@NotNull
 	public static Profession of(String name, int tint, TradingEntry... entries) {

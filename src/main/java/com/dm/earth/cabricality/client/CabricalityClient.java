@@ -1,6 +1,9 @@
 package com.dm.earth.cabricality.client;
 
 import java.util.Arrays;
+
+import net.minecraft.client.gui.RotatingCubeMapRenderer;
+import org.jetbrains.annotations.Nullable;
 import org.lwjgl.glfw.GLFW;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.loader.api.minecraft.ClientOnly;
@@ -15,33 +18,31 @@ import com.dm.earth.cabricality.content.alchemist.core.Substrate;
 import com.dm.earth.cabricality.content.core.blocks.CasingBlockEntry;
 import com.dm.earth.cabricality.content.core.blocks.MachineBlockEntry;
 import com.dm.earth.cabricality.content.trading.util.ProfessionDebugHelper;
+import com.dm.earth.cabricality.lib.util.PushUtil;
+import com.dm.earth.cabricality.lib.util.ScreenUtil;
+import com.dm.earth.cabricality.lib.util.SoundUtil;
+import com.dm.earth.cabricality.network.CabfReceiver;
 import com.dm.earth.cabricality.tweak.cutting.WoodCuttingEntry;
 import com.dm.earth.cabricality.tweak.ore_processing.OreProcessingEntry;
-import com.dm.earth.cabricality.util.PushUtil;
-import com.dm.earth.cabricality.util.ScreenUtil;
-import com.dm.earth.cabricality.util.SoundUtil;
-import com.dm.earth.cabricality.util.func.CabfBlur;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
 
 @ClientOnly
 public class CabricalityClient implements ClientModInitializer {
-	private static long initTime = -1;
+	public static String ID = Cabricality.ID + "Client";
+	@Nullable
+	private static RotatingCubeMapRenderer cubeMapRenderer;
 
 	public static void finishLoading() {
-		if (initTime != -1) {
-			Cabricality.LOGGER.info("Cabricality has initialized in "
-					+ (System.currentTimeMillis() - initTime) + "ms! ⚙️");
-			initTime = -1;
-		}
-		SoundUtil.playSound(Cabricality.Sounds.FINISH_LOADING);
+		SoundUtil.playSounds(Cabricality.Sounds.FINISH_LOADING);
 		GLFW.glfwRequestWindowAttention(MinecraftClient.getInstance().getWindow().getHandle());
 	}
 
 	@Override
 	public void onInitializeClient(ModContainer mod) {
-		initTime = System.currentTimeMillis();
+		CabfReceiver.registerClient();
 
 		PushUtil.register();
 		ScreenUtil.registerEvents();
@@ -50,8 +51,6 @@ public class CabricalityClient implements ClientModInitializer {
 
 		ColorRegistryListener.load();
 		ProfessionDebugHelper.load();
-
-		CabfBlur.INSTANCE.init();
 
 		WoodCuttingEntry.checkAll();
 		OreProcessingEntry.checkAll();
@@ -70,5 +69,14 @@ public class CabricalityClient implements ClientModInitializer {
 		ResourceLoader.registerBuiltinResourcePack(Cabricality.id("quests_lang"),
 				ResourcePackActivationType.ALWAYS_ENABLED,
 				Cabricality.genTranslatableText("pack", "quests_lang"));
+	}
+
+	public static void cubeMapRenderer(RotatingCubeMapRenderer cubeMapRenderer) {
+		CabricalityClient.cubeMapRenderer = cubeMapRenderer;
+	}
+
+	@Nullable
+	public static RotatingCubeMapRenderer cubeMapRenderer() {
+		return cubeMapRenderer;
 	}
 }

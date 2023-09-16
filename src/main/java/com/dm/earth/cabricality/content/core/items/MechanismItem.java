@@ -2,9 +2,9 @@ package com.dm.earth.cabricality.content.core.items;
 
 import com.dm.earth.cabricality.Cabricality;
 import com.dm.earth.cabricality.content.entries.CabfItems;
-import com.dm.earth.cabricality.core.IncompleteVariant;
-import com.simibubi.create.content.contraptions.itemAssembly.SequencedAssemblyItem;
+import com.dm.earth.cabricality.lib.core.IncompleteVariant;
 
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
